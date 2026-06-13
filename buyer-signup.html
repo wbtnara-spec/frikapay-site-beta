@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>Complétez votre compte — FrikaPay</title>
+  <meta name="description" content="Complétez votre compte client FrikaPay pour suivre votre transaction.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#1A73E8">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#F8FAFF; color:#1F2937; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh; }
+    .container { max-width:520px; margin:0 auto; padding:0 1rem; }
+    .header { background:white; border-bottom:1px solid #EEF2F6; padding:0.8rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:0.6rem; position:sticky; top:0; z-index:30; }
+    .header .logo { display:flex; align-items:center; gap:0.4rem; text-decoration:none; }
+    .header .logo img { height:30px; width:auto; }
+    .beta-tag { font-size:0.68rem; background:#FEF3C7; color:#92400E; padding:0.2rem 0.55rem; border-radius:10px; font-weight:600; }
+    .prep-banner { background:#FFF7ED; border-bottom:1px solid #FDE68A; text-align:center; padding:0.55rem 1rem; font-size:0.78rem; font-weight:500; color:#92400E; }
+    main { padding:1.5rem 0 3rem; }
+    .card { background:white; border-radius:20px; padding:1.5rem; border:1px solid #EEF2F6; box-shadow:0 4px 16px rgba(0,0,0,0.03); margin-bottom:1.2rem; }
+    .card h2 { font-size:1.05rem; color:#0B3D91; margin-bottom:1rem; }
+    .info-box { background:#F0F7FF; border-left:4px solid #1A73E8; padding:0.9rem 1.1rem; border-radius:10px; margin:1rem 0; font-size:0.84rem; color:#1E40AF; font-weight:500; }
+    .tx-row { display:flex; justify-content:space-between; padding:0.4rem 0; border-bottom:1px solid #F3F4F6; font-size:0.85rem; }
+    .tx-row:last-of-type { border-bottom:none; }
+    .tx-row .label { color:#6B7280; }
+    .tx-row .value { font-weight:600; text-align:right; }
+    .form-group { margin-bottom:0.9rem; }
+    .form-group label { display:block; font-weight:600; font-size:0.85rem; margin-bottom:0.3rem; color:#374151; }
+    .form-group input { width:100%; padding:0.75rem 1rem; border:1.5px solid #E5E7EB; border-radius:14px; font-family:'Inter',sans-serif; font-size:0.9rem; background:#FAFBFC; transition:border 0.2s; }
+    .form-group input:focus { outline:none; border-color:#1A73E8; background:white; box-shadow:0 0 0 3px rgba(26,115,232,0.08); }
+    .checkbox-group { margin:0.8rem 0; display:flex; align-items:flex-start; gap:0.5rem; font-size:0.8rem; color:#4B5563; }
+    .checkbox-group input[type="checkbox"] { width:18px; height:18px; margin-top:2px; accent-color:#1A73E8; flex-shrink:0; }
+    .checkbox-group a { color:#1A73E8; text-decoration:underline; }
+    .btn { width:100%; padding:0.9rem; font-weight:700; font-size:0.98rem; border:none; border-radius:14px; cursor:pointer; text-align:center; font-family:'Inter',sans-serif; display:inline-block; text-decoration:none; transition:all 0.2s; margin-bottom:0.6rem; }
+    .btn-primary { background:#1A73E8; color:white; box-shadow:0 4px 12px rgba(26,115,232,0.25); }
+    .btn-primary:hover { background:#0B3D91; }
+    .btn-outline { background:white; color:#1A73E8; border:2px solid #1A73E8; }
+    .btn-outline:hover { background:#F0F7FF; }
+    .spinner { display:inline-block; width:20px; height:20px; border:2px solid rgba(255,255,255,0.4); border-top-color:white; border-radius:50%; animation:spin 0.7s linear infinite; margin-right:0.5rem; vertical-align:middle; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .state-message { text-align:center; padding:2rem 1rem; }
+    footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#9CA3AF; }
+    footer a { color:#6B7280; text-decoration:underline; }
+  </style>
+</head>
+<body>
+  <div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
+    <span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">Compléter mon compte</span>
+  </header>
+  <main>
+    <div class="container" id="container">
+      <div id="step-form">
+        <div class="card">
+          <h2>👤 Complétez votre compte client FrikaPay</h2>
+          <p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Votre paiement a été pris en compte dans le parcours FrikaPay. Complétez votre compte pour suivre votre transaction, recevoir les notifications et accéder à votre espace client.</p>
+
+          <div class="info-box">
+            <strong>Rappel de votre transaction :</strong>
+            <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;" id="txRef">FP-DEMO-001</span></div>
+            <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="txMerchant">Boutique Exemple</span></div>
+            <div class="tx-row"><span class="label">Produit</span><span class="value" id="txProduct">Produit démo</span></div>
+            <div class="tx-row"><span class="label">Montant payé</span><span class="value" id="txAmount">10 300 FCFA</span></div>
+            <div class="tx-row"><span class="label">Statut</span><span class="value" style="color:#1D4ED8;font-weight:600;">PAYMENT_CONFIRMED</span></div>
+          </div>
+
+          <div class="form-group"><label>Nom complet <span style="color:#DC2626;">*</span></label><input type="text" id="fullName" placeholder="Votre nom et prénom" required></div>
+          <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 66 62 30 09" required></div>
+          <div class="form-group"><label>Email</label><input type="email" id="email" placeholder="Votre adresse email"></div>
+          <div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input type="text" id="city" placeholder="Ville" required></div>
+          <div class="form-group"><label>Mot de passe <span style="color:#DC2626;">*</span></label><input type="password" id="password" placeholder="Minimum 8 caractères" minlength="8" required></div>
+
+          <div class="checkbox-group"><input type="checkbox" id="agreeCGU"><label for="agreeCGU">J'accepte les <a href="index.html#legales">Conditions Générales d'Utilisation Client</a>.</label></div>
+          <div class="checkbox-group"><input type="checkbox" id="agreePrivacy"><label for="agreePrivacy">J'accepte la <a href="index.html#legales">Politique de Confidentialité</a>.</label></div>
+          <div class="checkbox-group"><input type="checkbox" id="agreeFollow"><label for="agreeFollow">Je confirme vouloir suivre cette transaction dans mon espace client FrikaPay.</label></div>
+
+          <div class="info-box">Votre compte client vous permet de suivre vos transactions FrikaPay. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</div>
+
+          <button class="btn btn-primary" onclick="createAccount()">✅ Créer mon compte et suivre ma transaction</button>
+
+          <p style="text-align:center;font-size:0.85rem;color:#6B7280;margin-top:1rem;">
+            <a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_ACCOUNT_CREATED&transactionStatus=PAYMENT_CONFIRMED" style="color:#1A73E8;">🔑 J'ai déjà un compte client FrikaPay</a>
+          </p>
+        </div>
+      </div>
+      <div id="step-processing" style="display:none;"><div class="state-message"><h2>⏳ Création du compte en cours</h2><p><span class="spinner"></span>Veuillez patienter...</p></div></div>
+    </div>
+  </main>
+  <footer>
+    <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
+    <p style="margin-top:0.3rem;"><a href="index.html#legales">CGU Client</a> · <a href="index.html#legales">Confidentialité</a> · <a href="index.html#legales">Mentions légales</a></p>
+    <p style="margin-top:0.3rem;"><a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
+  </footer>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const txId = params.get('transactionId') || 'FP-DEMO-001';
+    document.getElementById('txRef').textContent = txId;
+
+    function createAccount() {
+      if(!document.getElementById('agreeCGU').checked||!document.getElementById('agreePrivacy').checked||!document.getElementById('agreeFollow').checked){ alert("Veuillez cocher toutes les cases."); return; }
+      if(!document.getElementById('fullName').value.trim()||!document.getElementById('phone').value.trim()||!document.getElementById('city').value.trim()||!document.getElementById('password').value.trim()){ alert("Veuillez remplir tous les champs obligatoires."); return; }
+      document.getElementById('step-form').style.display='none';
+      document.getElementById('step-processing').style.display='block';
+      setTimeout(()=>{ window.location.href='buyer-dashboard.html?transactionId='+txId+'&accountStatus=BUYER_ACCOUNT_CREATED&transactionStatus=PAYMENT_CONFIRMED'; },2000);
+    }
+  </script>
+</body>
+  </html>
