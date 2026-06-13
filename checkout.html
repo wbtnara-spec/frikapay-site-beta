@@ -13,79 +13,76 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F8FAFF; color: #1F2937; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
-    .container { max-width: 520px; margin: 0 auto; padding: 0 1rem; }
-    .checkout-header { background: white; border-bottom: 1px solid #EEF2F6; padding: 0.8rem 1rem; display: flex; align-items: center; justify-content: space-between; gap: 0.8rem; position: sticky; top: 0; z-index: 30; }
-    .checkout-header .logo { display: flex; align-items: center; gap: 0.4rem; text-decoration: none; }
-    .checkout-header .logo img { height: 30px; width: auto; }
-    .secure-badge { display: flex; align-items: center; gap: 0.3rem; font-size: 0.78rem; color: #059669; font-weight: 600; background: #ECFDF5; padding: 0.3rem 0.7rem; border-radius: 20px; white-space: nowrap; }
-    .beta-tag { font-size: 0.68rem; background: #FEF3C7; color: #92400E; padding: 0.2rem 0.55rem; border-radius: 10px; font-weight: 600; white-space: nowrap; }
-    .prep-banner { background: #FFF7ED; border-bottom: 1px solid #FDE68A; text-align: center; padding: 0.55rem 1rem; font-size: 0.8rem; font-weight: 500; color: #92400E; }
-    main { padding: 1.5rem 0 3rem; }
-    .card { background: white; border-radius: 20px; padding: 1.5rem; border: 1px solid #EEF2F6; box-shadow: 0 4px 16px rgba(0,0,0,0.03); margin-bottom: 1.2rem; }
-    .card h2 { font-size: 1.05rem; color: #0B3D91; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.4rem; }
-    .tx-row { display: flex; justify-content: space-between; padding: 0.55rem 0; border-bottom: 1px solid #F3F4F6; font-size: 0.88rem; }
-    .tx-row:last-of-type { border-bottom: none; }
-    .tx-row .label { color: #6B7280; }
-    .tx-row .value { font-weight: 600; text-align: right; color: #1F2937; }
-    .total-row { background: #F0F7FF; border-radius: 12px; padding: 0.8rem 1rem; margin-top: 0.8rem; display: flex; justify-content: space-between; font-weight: 700; font-size: 1rem; color: #0B3D91; }
-    .status-badge { display: inline-block; padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.75rem; font-weight: 600; margin-top: 0.8rem; }
-    .status-active { background: #ECFDF5; color: #059669; }
-    .status-expired { background: #FEF2F2; color: #DC2626; }
-    .status-paid { background: #EFF6FF; color: #1D4ED8; }
-    .status-cancelled { background: #FEF3C7; color: #92400E; }
-    .trust-block { display: flex; flex-direction: column; gap: 0.7rem; }
-    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; font-weight: 500; color: #1F2937; }
-    .trust-item .icon { color: #1A73E8; font-size: 1.1rem; flex-shrink: 0; }
-    .trust-note { font-size: 0.76rem; color: #6B7280; margin-top: 0.3rem; line-height: 1.5; border-top: 1px solid #F3F4F6; padding-top: 0.8rem; }
-    .form-group { margin-bottom: 0.9rem; }
-    .form-group label { display: block; font-weight: 600; font-size: 0.85rem; margin-bottom: 0.3rem; color: #374151; }
-    .form-group label .optional { font-weight: 400; color: #9CA3AF; font-size: 0.78rem; }
-    .form-group input, .form-group textarea { width: 100%; padding: 0.75rem 1rem; border: 1.5px solid #E5E7EB; border-radius: 14px; font-family: 'Inter', sans-serif; font-size: 0.9rem; background: #FAFBFC; transition: border 0.2s; }
-    .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #1A73E8; background: white; box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.08); }
-    .form-group textarea { resize: vertical; min-height: 65px; }
-    .checkbox-group { margin: 0.8rem 0; display: flex; align-items: flex-start; gap: 0.5rem; font-size: 0.8rem; color: #4B5563; }
-    .checkbox-group input[type="checkbox"] { width: 18px; height: 18px; margin-top: 2px; accent-color: #1A73E8; flex-shrink: 0; }
-    .checkbox-group a { color: #1A73E8; text-decoration: underline; }
-    .btn { width: 100%; padding: 0.9rem; font-weight: 700; font-size: 0.98rem; border: none; border-radius: 14px; cursor: pointer; text-align: center; font-family: 'Inter', sans-serif; display: inline-block; text-decoration: none; transition: all 0.2s; }
-    .btn-primary { background: #1A73E8; color: white; box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25); }
-    .btn-primary:hover { background: #0B3D91; box-shadow: 0 6px 16px rgba(26, 115, 232, 0.3); }
-    .btn-outline { background: white; color: #1A73E8; border: 2px solid #1A73E8; }
-    .btn-outline:hover { background: #F0F7FF; }
-    .btn-whatsapp { background: #25D366; color: white; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25); }
-    .btn-whatsapp:hover { background: #1DA851; }
-    .btn-demo { background: #FEF3C7; color: #92400E; border: 2px dashed #F59E0B; }
-    .btn-demo:hover { background: #FFFBEB; }
-    .state-message { text-align: center; padding: 2rem 1rem; }
-    .state-message .icon-large { font-size: 3.5rem; margin-bottom: 1rem; }
-    .state-message h2 { font-size: 1.25rem; color: #0B3D91; margin-bottom: 0.5rem; }
-    .state-message p { color: #6B7280; margin-bottom: 1.5rem; }
-    .btn-group { display: flex; flex-direction: column; gap: 0.7rem; }
-    .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid rgba(255,255,255,0.4); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; margin-right: 0.5rem; vertical-align: middle; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .checkout-footer { text-align: center; padding: 1.5rem 0; font-size: 0.75rem; color: #9CA3AF; }
-    .checkout-footer a { color: #6B7280; text-decoration: underline; }
-    @media (min-width: 600px) { .btn-group { flex-direction: row; } .btn-group .btn { flex: 1; } }
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#F8FAFF; color:#1F2937; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh; }
+    .container { max-width:520px; margin:0 auto; padding:0 1rem; }
+    .header { background:white; border-bottom:1px solid #EEF2F6; padding:0.8rem 1rem; display:flex; align-items:center; justify-content:space-between; gap:0.8rem; position:sticky; top:0; z-index:30; }
+    .header .logo { display:flex; align-items:center; gap:0.4rem; text-decoration:none; }
+    .header .logo img { height:30px; width:auto; }
+    .secure-badge { display:flex; align-items:center; gap:0.3rem; font-size:0.78rem; color:#059669; font-weight:600; background:#ECFDF5; padding:0.3rem 0.7rem; border-radius:20px; white-space:nowrap; }
+    .beta-tag { font-size:0.68rem; background:#FEF3C7; color:#92400E; padding:0.2rem 0.55rem; border-radius:10px; font-weight:600; white-space:nowrap; }
+    .prep-banner { background:#FFF7ED; border-bottom:1px solid #FDE68A; text-align:center; padding:0.55rem 1rem; font-size:0.78rem; font-weight:500; color:#92400E; }
+    main { padding:1.5rem 0 3rem; }
+    .card { background:white; border-radius:20px; padding:1.5rem; border:1px solid #EEF2F6; box-shadow:0 4px 16px rgba(0,0,0,0.03); margin-bottom:1.2rem; }
+    .card h2 { font-size:1.05rem; color:#0B3D91; margin-bottom:1rem; display:flex; align-items:center; gap:0.4rem; }
+    .tx-row { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #F3F4F6; font-size:0.88rem; }
+    .tx-row:last-of-type { border-bottom:none; }
+    .tx-row .label { color:#6B7280; }
+    .tx-row .value { font-weight:600; text-align:right; color:#1F2937; max-width:55%; word-break:break-word; }
+    .total-row { background:#F0F7FF; border-radius:12px; padding:0.8rem 1rem; margin-top:0.8rem; display:flex; justify-content:space-between; font-weight:700; font-size:1rem; color:#0B3D91; }
+    .status-badge { display:inline-block; padding:0.3rem 0.8rem; border-radius:20px; font-size:0.75rem; font-weight:600; margin-top:0.8rem; }
+    .status-active { background:#ECFDF5; color:#059669; }
+    .status-expired { background:#FEF2F2; color:#DC2626; }
+    .status-paid { background:#EFF6FF; color:#1D4ED8; }
+    .status-cancelled { background:#FEF3C7; color:#92400E; }
+    .trust-block { display:flex; flex-direction:column; gap:0.7rem; }
+    .trust-item { display:flex; align-items:center; gap:0.5rem; font-size:0.85rem; font-weight:500; color:#1F2937; }
+    .trust-item .icon { color:#1A73E8; font-size:1.1rem; flex-shrink:0; }
+    .trust-note { font-size:0.76rem; color:#6B7280; margin-top:0.3rem; line-height:1.5; border-top:1px solid #F3F4F6; padding-top:0.8rem; }
+    .form-group { margin-bottom:0.9rem; }
+    .form-group label { display:block; font-weight:600; font-size:0.85rem; margin-bottom:0.3rem; color:#374151; }
+    .form-group label .optional { font-weight:400; color:#9CA3AF; font-size:0.78rem; }
+    .form-group input, .form-group textarea { width:100%; padding:0.75rem 1rem; border:1.5px solid #E5E7EB; border-radius:14px; font-family:'Inter',sans-serif; font-size:0.9rem; background:#FAFBFC; transition:border 0.2s; }
+    .form-group input:focus, .form-group textarea:focus { outline:none; border-color:#1A73E8; background:white; box-shadow:0 0 0 3px rgba(26,115,232,0.08); }
+    .form-group textarea { resize:vertical; min-height:65px; }
+    .checkbox-group { margin:0.8rem 0; display:flex; align-items:flex-start; gap:0.5rem; font-size:0.8rem; color:#4B5563; }
+    .checkbox-group input[type="checkbox"] { width:18px; height:18px; margin-top:2px; accent-color:#1A73E8; flex-shrink:0; }
+    .checkbox-group a { color:#1A73E8; text-decoration:underline; }
+    .btn { width:100%; padding:0.9rem; font-weight:700; font-size:0.98rem; border:none; border-radius:14px; cursor:pointer; text-align:center; font-family:'Inter',sans-serif; display:inline-block; text-decoration:none; transition:all 0.2s; margin-bottom:0.6rem; }
+    .btn-primary { background:#1A73E8; color:white; box-shadow:0 4px 12px rgba(26,115,232,0.25); }
+    .btn-primary:hover { background:#0B3D91; }
+    .btn-outline { background:white; color:#1A73E8; border:2px solid #1A73E8; }
+    .btn-outline:hover { background:#F0F7FF; }
+    .btn-whatsapp { background:#25D366; color:white; }
+    .btn-whatsapp:hover { background:#1DA851; }
+    .btn-demo { background:#FEF3C7; color:#92400E; border:2px dashed #F59E0B; }
+    .btn-demo:hover { background:#FFFBEB; }
+    .state-message { text-align:center; padding:2rem 1rem; }
+    .state-message .icon-large { font-size:3.5rem; margin-bottom:1rem; }
+    .state-message h2 { font-size:1.25rem; color:#0B3D91; margin-bottom:0.5rem; }
+    .state-message p { color:#6B7280; margin-bottom:1.5rem; }
+    .btn-group { display:flex; flex-direction:column; gap:0.7rem; }
+    .spinner { display:inline-block; width:20px; height:20px; border:2px solid rgba(255,255,255,0.4); border-top-color:white; border-radius:50%; animation:spin 0.7s linear infinite; margin-right:0.5rem; vertical-align:middle; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .info-box { background:#F0F7FF; border-left:4px solid #1A73E8; padding:0.9rem 1.1rem; border-radius:10px; margin:1rem 0; font-size:0.84rem; color:#1E40AF; font-weight:500; }
+    footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#9CA3AF; }
+    footer a { color:#6B7280; text-decoration:underline; }
+    @media (min-width:600px) { .btn-group { flex-direction:row; } .btn-group .btn { flex:1; margin-bottom:0; } }
   </style>
 </head>
 <body>
 
-  <div class="prep-banner">
-    ⚡ Cette page illustre le futur parcours de paiement invité FrikaPay. Le paiement réel sera activé lors du déploiement avec un prestataire de paiement agréé ou habilité.
-  </div>
+  <div class="prep-banner">⚡ Cette page illustre le futur parcours de paiement invité FrikaPay. Le paiement réel sera activé lors du déploiement avec un prestataire de paiement agréé ou habilité.</div>
 
-  <header class="checkout-header">
-    <a href="index.html" class="logo">
-      <img src="logo-frikapay.png" alt="FrikaPay">
-      <span class="beta-tag">Phase bêta</span>
-    </a>
+  <header class="header">
+    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
     <div class="secure-badge">🔒 Paiement sécurisé</div>
   </header>
 
   <main>
-    <div class="container" id="checkoutContainer">
+    <div class="container" id="container">
 
+      <!-- ÉTAT : LIEN ACTIF -->
       <div id="state-active">
         <div class="card">
           <h2>📋 Détail de la transaction</h2>
@@ -96,7 +93,7 @@
           <div class="tx-row"><span class="label">Frais protection FrikaPay (3%)</span><span class="value" id="protectionFee">300 FCFA</span></div>
           <div class="total-row"><span>Total à payer</span><span id="totalAmount">10 300 FCFA</span></div>
           <div class="tx-row" style="margin-top:0.5rem;"><span class="label">Livraison</span><span class="value" id="deliveryInfo" style="font-weight:400;">—</span></div>
-          <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;font-size:0.8rem;" id="txRef">FP-2026-DEMO</span></div>
+          <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;font-size:0.8rem;" id="txRef">FP-DEMO-001</span></div>
           <span class="status-badge status-active" id="linkStatus">● Lien actif</span>
         </div>
 
@@ -117,176 +114,98 @@
           <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 66 62 30 09" required></div>
           <div class="form-group"><label>Email <span class="optional">(optionnel)</span></label><input type="email" id="email" placeholder="Votre adresse email"></div>
           <div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input type="text" id="city" placeholder="Ville de livraison" required></div>
-          <div class="form-group"><label>Note de livraison <span class="optional">(optionnelle)</span></label><textarea id="deliveryNote" placeholder="Indications utiles pour la livraison..."></textarea></div>
+          <div class="form-group"><label>Note de livraison <span class="optional">(optionnelle)</span></label><textarea id="deliveryNote" placeholder="Indications utiles..."></textarea></div>
 
-          <div class="checkbox-group">
-            <input type="checkbox" id="agreeLegal">
-            <label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="index.html#legales">Conditions Générales d'Utilisation Client</a> et de la <a href="index.html#legales">Politique de Confidentialité</a> de FrikaPay.</label>
-          </div>
-          <div class="checkbox-group">
-            <input type="checkbox" id="agreeTransaction">
-            <label for="agreeTransaction">Je comprends que les frais de protection FrikaPay (3 %) sont affichés avant paiement et je confirme vouloir payer cette transaction dans le cadre FrikaPay.</label>
-          </div>
+          <div class="checkbox-group"><input type="checkbox" id="agreeLegal"><label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="index.html#legales">CGU Client</a> et de la <a href="index.html#legales">Politique de Confidentialité</a>.</label></div>
+          <div class="checkbox-group"><input type="checkbox" id="agreeTransaction"><label for="agreeTransaction">Je comprends que les frais de protection (3 %) sont affichés avant paiement et je confirme vouloir payer dans le cadre FrikaPay.</label></div>
 
-          <button class="btn btn-demo" id="demoButton" onclick="initiateDemo()" style="margin-top:1rem;">🔍 Continuer — démo de parcours</button>
+          <button class="btn btn-demo" onclick="initiateDemo()" style="margin-top:1rem;">🔍 Continuer — démo de parcours</button>
           <p style="text-align:center;font-size:0.72rem;color:#9CA3AF;margin-top:0.6rem;">Paiement bientôt disponible</p>
         </div>
       </div>
 
-      <div id="state-processing" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">⏳</div>
-          <h2>Simulation de traitement</h2>
-          <p>Ceci est une démonstration du futur parcours de paiement. Aucun montant réel n'est débité.</p>
-          <div style="margin:1rem 0;"><span class="spinner"></span> Traitement simulé...</div>
-        </div>
-      </div>
+      <!-- ÉTAT : TRAITEMENT -->
+      <div id="state-processing" style="display:none;"><div class="state-message"><div class="icon-large">⏳</div><h2>Simulation de traitement</h2><p><span class="spinner"></span> Aucun montant réel n'est débité.</p></div></div>
 
+      <!-- ÉTAT : SUCCÈS -->
       <div id="state-success" style="display:none;">
         <div class="state-message">
           <div class="icon-large">✅</div>
-          <h2>Paiement reçu (simulation)</h2>
-          <p>Votre transaction sécurisée a été créée avec succès. Voici ce qui sera affiché lors du déploiement réel.</p>
+          <h2>Paiement confirmé</h2>
+          <p>Votre transaction sécurisée a été créée. Vous pouvez maintenant suivre votre commande ou compléter votre compte FrikaPay.</p>
+
           <div class="card" style="text-align:left;">
-            <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;" id="successRef">FP-2026-DEMO</span></div>
+            <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;" id="successRef">FP-DEMO-001</span></div>
             <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="successMerchant">Boutique Exemple</span></div>
+            <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="successProduct">Produit démo</span></div>
             <div class="tx-row"><span class="label">Montant payé</span><span class="value" id="successAmount">10 300 FCFA</span></div>
-            <div class="tx-row"><span class="label">Date</span><span class="value" id="successDate">—</span></div>
-            <div class="tx-row"><span class="label">Prochain statut</span><span class="value">En attente de livraison</span></div>
+            <div class="tx-row"><span class="label">Frais protection FrikaPay</span><span class="value" id="successFees">300 FCFA</span></div>
+            <div class="tx-row"><span class="label">Statut transaction</span><span class="value"><span class="status-badge status-paid">PAYMENT_CONFIRMED</span></span></div>
           </div>
+
+          <div class="info-box">Vous pouvez compléter votre compte maintenant ou plus tard. Vos informations de paiement invité sont déjà enregistrées.</div>
+
           <div class="btn-group">
-            <a href="#" class="btn btn-outline">📋 Suivre ma transaction</a>
-            <a href="#" class="btn btn-outline">👤 Compléter mon compte FrikaPay</a>
+            <a href="buyer-signup.html?transactionId=FP-DEMO-001" class="btn btn-primary">👤 Compléter mon compte FrikaPay</a>
+            <a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_GUEST_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-outline">📋 Suivre ma transaction</a>
             <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
           </div>
         </div>
       </div>
 
-      <div id="state-failed" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">❌</div>
-          <h2>Paiement échoué (simulation)</h2>
-          <p>Une erreur est survenue lors du traitement simulé. Aucun montant n'a été débité.</p>
-          <div class="btn-group">
-            <button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer la démo</button>
-            <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="state-expired" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">⏰</div>
-          <h2>Ce lien de paiement a expiré</h2>
-          <p>Le lien n'est plus valide. Veuillez contacter le commerçant pour obtenir un nouveau lien.</p>
-          <a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a>
-        </div>
-      </div>
-
-      <div id="state-already-paid" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">ℹ️</div>
-          <h2>Cette transaction a déjà été payée</h2>
-          <p>Le paiement pour ce lien a déjà été effectué.</p>
-          <div class="btn-group">
-            <a href="#" class="btn btn-outline">📋 Suivre ma transaction</a>
-            <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
-          </div>
-        </div>
-      </div>
-
-      <div id="state-cancelled" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">🚫</div>
-          <h2>Transaction annulée</h2>
-          <p>Cette transaction a été annulée par le commerçant. Aucun paiement n'est requis.</p>
-          <a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a>
-        </div>
-      </div>
-
+      <!-- ÉTATS ALTERNATIFS -->
+      <div id="state-failed" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Paiement échoué</h2><p>Aucun montant n'a été débité.</p><button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer</button><a href="https://wa.me/22966623009" class="btn btn-whatsapp" style="margin-top:0.5rem;">💬 Contacter FrikaPay</a></div></div>
+      <div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Lien expiré</h2><p>Contactez le commerçant.</p><a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
+      <div id="state-already-paid" style="display:none;"><div class="state-message"><div class="icon-large">ℹ️</div><h2>Déjà payée</h2><p>Cette transaction a déjà été payée.</p><a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_ACCOUNT_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-primary">📋 Voir ma transaction</a></div></div>
+      <div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Annulée</h2><p>Transaction annulée par le commerçant.</p><a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
     </div>
   </main>
 
-  <footer class="checkout-footer">
+  <footer>
     <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
     <p style="margin-top:0.3rem;"><a href="index.html#legales">CGU Client</a> · <a href="index.html#legales">Confidentialité</a> · <a href="index.html#legales">Mentions légales</a></p>
     <p style="margin-top:0.3rem;">Phase bêta de préparation. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
   </footer>
 
   <script>
-    const transactionData = {
-      ref: "FP-2026-DEMO-001",
-      merchantName: "Boutique Exemple",
-      productName: "Chaussures urbaines",
-      productDesc: "Pointure 42, couleur noire",
-      productAmount: 10000,
-      protectionFee: 300,
-      totalAmount: 10300,
-      deliveryInfo: "Livraison à Cotonou sous 48h",
-      status: "active"
-    };
-
-    function formatFCFA(amount) {
-      return amount.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + " FCFA";
+    const data = { ref:"FP-DEMO-001", merchantName:"Boutique Exemple", productName:"Chaussures urbaines", productDesc:"Pointure 42, couleur noire", productAmount:10000, protectionFee:300, totalAmount:10300, deliveryInfo:"Livraison à Cotonou sous 48h", status:"active" };
+    function format(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+" FCFA"; }
+    function populate(){
+      document.getElementById('merchantName').textContent=data.merchantName;
+      document.getElementById('productName').textContent=data.productName;
+      document.getElementById('productDesc').textContent=data.productDesc||"—";
+      document.getElementById('productAmount').textContent=format(data.productAmount);
+      document.getElementById('protectionFee').textContent=format(data.protectionFee);
+      document.getElementById('totalAmount').textContent=format(data.totalAmount);
+      document.getElementById('deliveryInfo').textContent=data.deliveryInfo||"—";
+      document.getElementById('txRef').textContent=data.ref;
     }
-
-    function populateData() {
-      document.getElementById('merchantName').textContent = transactionData.merchantName;
-      document.getElementById('productName').textContent = transactionData.productName;
-      document.getElementById('productDesc').textContent = transactionData.productDesc || "—";
-      document.getElementById('productAmount').textContent = formatFCFA(transactionData.productAmount);
-      document.getElementById('protectionFee').textContent = formatFCFA(transactionData.protectionFee);
-      document.getElementById('totalAmount').textContent = formatFCFA(transactionData.totalAmount);
-      document.getElementById('deliveryInfo').textContent = transactionData.deliveryInfo || "—";
-      document.getElementById('txRef').textContent = transactionData.ref;
+    function show(id){
+      ['state-active','state-processing','state-success','state-failed','state-expired','state-already-paid','state-cancelled'].forEach(s=>{ const e=document.getElementById(s); if(e)e.style.display='none'; });
+      const t=document.getElementById(id); if(t)t.style.display='block';
     }
-
-    function showState(stateId) {
-      ['state-active','state-processing','state-success','state-failed','state-expired','state-already-paid','state-cancelled'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) el.style.display = 'none';
-      });
-      const target = document.getElementById(stateId);
-      if (target) target.style.display = 'block';
+    function init(){
+      populate();
+      if(data.status==='expired') show('state-expired');
+      else if(data.status==='paid') show('state-already-paid');
+      else if(data.status==='cancelled') show('state-cancelled');
+      else show('state-active');
     }
-
-    function initCheckout() {
-      populateData();
-      switch(transactionData.status) {
-        case 'expired': showState('state-expired'); break;
-        case 'paid': showState('state-already-paid'); break;
-        case 'cancelled': showState('state-cancelled'); break;
-        default: showState('state-active'); break;
-      }
+    function initiateDemo(){
+      if(!document.getElementById('agreeLegal').checked||!document.getElementById('agreeTransaction').checked){ alert("Veuillez accepter les conditions."); return; }
+      if(!document.getElementById('fullName').value.trim()||!document.getElementById('phone').value.trim()||!document.getElementById('city').value.trim()){ alert("Veuillez remplir les champs obligatoires."); return; }
+      show('state-processing');
+      setTimeout(()=>{
+        document.getElementById('successRef').textContent=data.ref;
+        document.getElementById('successMerchant').textContent=data.merchantName;
+        document.getElementById('successProduct').textContent=data.productName;
+        document.getElementById('successAmount').textContent=format(data.totalAmount);
+        document.getElementById('successFees').textContent=format(data.protectionFee);
+        show('state-success');
+      },2000);
     }
-
-    function initiateDemo() {
-      const agreeLegal = document.getElementById('agreeLegal').checked;
-      const agreeTransaction = document.getElementById('agreeTransaction').checked;
-      if (!agreeLegal || !agreeTransaction) { alert("Veuillez accepter les conditions pour continuer."); return; }
-      const fullName = document.getElementById('fullName').value.trim();
-      const phone = document.getElementById('phone').value.trim();
-      const city = document.getElementById('city').value.trim();
-      if (!fullName || !phone || !city) { alert("Veuillez remplir tous les champs obligatoires (nom, téléphone, ville)."); return; }
-
-      showState('state-processing');
-      setTimeout(() => {
-        const success = Math.random() < 0.9;
-        if (success) {
-          document.getElementById('successRef').textContent = transactionData.ref;
-          document.getElementById('successMerchant').textContent = transactionData.merchantName;
-          document.getElementById('successAmount').textContent = formatFCFA(transactionData.totalAmount);
-          document.getElementById('successDate').textContent = new Date().toLocaleDateString('fr-FR', { day:'numeric', month:'long', year:'numeric', hour:'2-digit', minute:'2-digit' });
-          showState('state-success');
-        } else {
-          showState('state-failed');
-        }
-      }, 2000);
-    }
-
-    function retryDemo() { showState('state-active'); }
-
-    initCheckout();
+    function retryDemo(){ show('state-active'); }
+    init();
   </script>
 </body>
-  </html>
+        </html>
