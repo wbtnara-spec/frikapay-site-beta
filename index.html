@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>FrikaPay — Plateforme de confiance pour le commerce digital africain</title>
+  <meta name="description" content="FrikaPay aide clients et commerçants à sécuriser leurs transactions en ligne. Paiement suivi, confirmation de réception et libération encadrée des fonds. Phase bêta en préparation.">
+  <meta property="og:title" content="FrikaPay — Sûr • Simple • Fiable">
+  <meta property="og:description" content="Plateforme de confiance pour le commerce digital africain. Achetez en toute sérénité, vendez en toute confiance.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://frikapay.com/logo-og.png">
+  <meta property="og:url" content="https://frikapay.com">
+  <meta name="theme-color" content="#1A73E8">
+  <link rel="canonical" href="https://frikapay.com">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: #FFFFFF; color: #1F2937; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+    h2 { font-size: 1.6rem; color: #0B3D91; margin-bottom: 0.5rem; }
+    .section-title { font-size: 1.8rem; font-weight: 700; color: #0B3D91; margin-bottom: 0.75rem; }
+    .section-subtitle { font-size: 1rem; color: #6B7280; margin-bottom: 1.5rem; max-width: 680px; }
+    .text-secondary { color: #6B7280; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.8rem; border-radius: 40px; font-weight: 600; font-size: 0.95rem; text-decoration: none; transition: all 0.2s ease; border: none; cursor: pointer; white-space: nowrap; gap: 0.5rem; }
+    .btn-primary { background-color: #1A73E8; color: white; box-shadow: 0 4px 12px rgba(26, 115, 232, 0.25); }
+    .btn-primary:hover { background-color: #0B3D91; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(26, 115, 232, 0.3); }
+    .btn-outline { background: transparent; border: 2px solid #1A73E8; color: #1A73E8; }
+    .btn-outline:hover { background-color: #1A73E8; color: white; }
+    .btn-whatsapp { background-color: #25D366; color: white; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25); }
+    .btn-whatsapp:hover { background-color: #1DA851; transform: translateY(-1px); box-shadow: 0 6px 16px rgba(37, 211, 102, 0.3); }
+    .beta-banner { background: linear-gradient(90deg, #FFF7ED, #FFFBEB, #FFF7ED); color: #92400E; text-align: center; padding: 0.6rem 1rem; font-size: 0.85rem; font-weight: 500; border-bottom: 1px solid #FDE68A; position: sticky; top: 0; z-index: 60; }
+    .beta-banner span { color: #D97706; margin-right: 0.3rem; }
+    header { background: white; border-bottom: 1px solid #F0F0F0; position: sticky; top: 0; z-index: 50; background-color: rgba(255,255,255,0.95); backdrop-filter: blur(6px); }
+    .beta-banner ~ header { top: 36px; }
+    .nav-container { display: flex; align-items: center; justify-content: space-between; padding: 0.7rem 1.25rem; max-width: 1100px; margin: 0 auto; }
+    .logo img { height: 38px; width: auto; }
+    .nav-links { display: none; gap: 1.5rem; align-items: center; list-style: none; }
+    .nav-links a { text-decoration: none; color: #374151; font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
+    .nav-links a:hover { color: #1A73E8; }
+    .mobile-menu-btn { background: none; border: none; font-size: 1.8rem; color: #0B3D91; cursor: pointer; display: block; }
+    .hero { padding: 3rem 0 3rem; background: linear-gradient(180deg, #FFFFFF 0%, #F4F9FF 100%); }
+    .hero-content { display: flex; flex-direction: column; gap: 2rem; }
+    .hero-text h1 { font-size: 2.2rem; font-weight: 700; color: #0B3D91; line-height: 1.2; margin-bottom: 1rem; }
+    .hero-text p { font-size: 1rem; color: #4B5563; margin-bottom: 1.8rem; max-width: 560px; }
+    .hero-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-bottom: 2rem; }
+    .trust-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.8rem; background: white; padding: 1.5rem; border-radius: 20px; box-shadow: 0 8px 20px rgba(0,0,0,0.03); border: 1px solid #EDF2F7; }
+    .trust-item { display: flex; align-items: center; gap: 0.5rem; font-weight: 500; color: #1F2937; font-size: 0.88rem; }
+    .trust-icon { color: #1A73E8; font-size: 1.2rem; flex-shrink: 0; }
+    section { padding: 3rem 0; }
+    .bg-light { background-color: #F8FAFF; }
+    .grid-3, .grid-2 { display: grid; gap: 1.5rem; margin-top: 2rem; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .card { background: white; padding: 1.5rem 1.25rem; border-radius: 16px; border: 1px solid #EEF2F6; box-shadow: 0 4px 10px rgba(0,0,0,0.02); transition: all 0.2s; }
+    .card:hover { box-shadow: 0 12px 22px rgba(0,0,0,0.04); border-color: #1A73E8; }
+    .card h3 { font-size: 1.15rem; margin: 0.5rem 0 0.4rem; color: #0B3D91; }
+    .card-icon { background: #EBF3FE; width: 44px; height: 44px; border-radius: 14px; display: flex; align-items: center; justify-content: center; color: #1A73E8; font-size: 1.3rem; flex-shrink: 0; }
+    .quote-block { background: white; border-left: 4px solid #1A73E8; padding: 1.8rem 2rem; border-radius: 0 16px 16px 0; margin: 2.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+    .quote-block p { font-size: 1.1rem; font-style: italic; color: #1F2937; margin-bottom: 0.5rem; }
+    .quote-block cite { font-weight: 600; color: #0B3D91; font-style: normal; }
+    .steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
+    .step { display: flex; gap: 1rem; align-items: flex-start; }
+    .step-num { background: #1A73E8; color: white; font-weight: 700; font-size: 1.2rem; width: 42px; height: 42px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .note-box { background: #FFF8E7; border-left: 4px solid #F59E0B; padding: 1rem 1.2rem; border-radius: 10px; margin-top: 1.5rem; color: #92400E; font-weight: 500; font-size: 0.9rem; }
+    .transparency-note { background: #F0F7FF; border-left: 4px solid #1A73E8; padding: 1rem 1.2rem; border-radius: 10px; margin-top: 2rem; color: #1E40AF; font-weight: 500; font-size: 0.9rem; }
+    .faq-item { border-bottom: 1px solid #E5E7EB; padding: 1.2rem 0; }
+    .faq-question { font-weight: 600; color: #0B3D91; margin-bottom: 0.4rem; font-size: 1rem; }
+    .legal-content { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 20px; border: 1px solid #E5E7EB; font-size: 0.9rem; line-height: 1.7; }
+    .legal-content h2 { margin-top: 1.5rem; margin-bottom: 0.75rem; font-size: 1.3rem; }
+    .legal-content h3 { font-size: 1.05rem; color: #0B3D91; margin-top: 1rem; }
+    .legal-content p, .legal-content li { margin-bottom: 0.5rem; }
+    .legal-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
+    .security-reassurance { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; background: #F0F7FF; padding: 1.5rem; border-radius: 16px; margin: 2rem 0; font-size: 0.88rem; }
+    .security-item { display: flex; align-items: center; gap: 0.5rem; color: #1E40AF; font-weight: 500; }
+    table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
+    th, td { border: 1px solid #E5E7EB; padding: 0.6rem 0.8rem; text-align: left; }
+    th { background: #F3F4F6; font-weight: 600; }
+    footer { background: #0B3D91; color: #E5E7EB; padding: 3rem 0 1.5rem; font-size: 0.9rem; }
+    .footer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+    .footer-links a { display: block; color: #CBD5E1; text-decoration: none; margin-bottom: 0.4rem; font-size: 0.88rem; }
+    .footer-links a:hover { color: white; }
+    .footer-bottom { border-top: 1px solid #1E3A6B; padding-top: 1.5rem; text-align: center; color: #9CA3AF; font-size: 0.85rem; }
+    .footer-contact { margin-top: 0.5rem; font-size: 0.85rem; color: #CBD5E1; }
+    .footer-contact a { color: #93C5FD; text-decoration: none; }
+
+    @media (min-width: 640px) {
+      .grid-2 { grid-template-columns: repeat(2, 1fr); }
+      .grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .security-reassurance { grid-template-columns: repeat(4, 1fr); }
+    }
+    @media (min-width: 768px) {
+      .mobile-menu-btn { display: none; }
+      .nav-links { display: flex; }
+      .hero-text h1 { font-size: 2.8rem; }
+      .grid-3 { grid-template-columns: repeat(3, 1fr); }
+      .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
+    }
+    @media (min-width: 1024px) {
+      .hero-content { flex-direction: row; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <div class="beta-banner"><span>⚡</span> Phase bêta — FrikaPay est en préparation et sera déployé progressivement.</div>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"></a>
+      <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+      <nav class="nav-links" id="navLinks">
+        <a href="#accueil">Accueil</a>
+        <a href="#a-propos">À propos</a>
+        <a href="#fonctionnement">Comment ça marche</a>
+        <a href="#clients">Clients</a>
+        <a href="#commercants">Commerçants</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#securite">Sécurité</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="accueil" class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h1>Achetez en toute sérénité.<br>Vendez en toute confiance.</h1>
+          <p>FrikaPay aide clients et commerçants à sécuriser leurs transactions en ligne grâce à un paiement suivi, une confirmation de réception et une libération encadrée des fonds.</p>
+          <div class="hero-buttons">
+            <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Nous contacter sur WhatsApp</a>
+            <a href="#a-propos" class="btn btn-outline">En savoir plus</a>
+          </div>
+          <div class="trust-grid">
+            <div class="trust-item"><span class="trust-icon">🔒</span> Paiement suivi</div>
+            <div class="trust-item"><span class="trust-icon">✅</span> Confirmation encadrée</div>
+            <div class="trust-item"><span class="trust-icon">👁️</span> Suivi transparent</div>
+            <div class="trust-item"><span class="trust-icon">🛡️</span> Coordination sécurisée</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="a-propos">
+      <div class="container">
+        <h2 class="section-title">À propos de FrikaPay</h2>
+        <p class="section-subtitle">Découvrez qui nous sommes, notre objectif et notre mission pour le commerce digital africain.</p>
+        <div class="grid-3">
+          <div class="card"><div class="card-icon">🏢</div><h3>Qui sommes-nous ?</h3><p class="text-secondary">FrikaPay est une plateforme numérique de confiance conçue pour aider les clients et les commerçants à sécuriser leurs transactions en ligne. Nous accompagnons les échanges commerciaux en ajoutant un cadre clair : paiement suivi, confirmation de réception, gestion des réclamations et libération encadrée des fonds.</p></div>
+          <div class="card"><div class="card-icon">🎯</div><h3>Notre objectif</h3><p class="text-secondary">Notre objectif est de réduire le manque de confiance qui freine le commerce en ligne, notamment sur WhatsApp, Facebook, Instagram et les boutiques digitales. FrikaPay aide les acheteurs à payer avec plus de sérénité et les commerçants sérieux à vendre avec plus de confiance.</p></div>
+          <div class="card"><div class="card-icon">🌍</div><h3>Notre mission</h3><p class="text-secondary">Notre mission est de construire une infrastructure de confiance adaptée au commerce digital africain. Nous voulons rendre les transactions plus simples, plus sûres et plus fiables entre acheteurs et vendeurs.</p></div>
+        </div>
+        <div class="transparency-note">FrikaPay est actuellement en phase bêta de préparation. Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</div>
+      </div>
+    </section>
+
+    <div class="container"><div class="quote-block"><p>« Nous construisons FrikaPay pour résoudre un vrai problème : le manque de confiance qui bloque les ventes en ligne entre acheteurs et vendeurs. »</p><cite>— L'équipe FrikaPay</cite></div></div>
+
+    <section id="fonctionnement" class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Comment ça marche</h2>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div><strong>Création de la transaction</strong><p class="text-secondary">Le client ou le commerçant crée une transaction sécurisée avec le montant, la description et les conditions de livraison.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div><strong>Paiement par le client</strong><p class="text-secondary">Le client paie via FrikaPay. Le paiement est traité par un prestataire de paiement agréé ou habilité.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div><strong>Livraison ou exécution</strong><p class="text-secondary">Le commerçant prépare et livre la commande. Les étapes sont suivies dans FrikaPay.</p></div></div>
+          <div class="step"><div class="step-num">4</div><div><strong>Confirmation et libération</strong><p class="text-secondary">Le client confirme la réception ou signale un problème. Les fonds sont libérés selon les conditions prévues.</p></div></div>
+        </div>
+        <div class="note-box">FrikaPay ne vend pas les produits et ne fournit pas les services. Les produits, prix, descriptions, délais et livraisons restent sous la responsabilité des commerçants.</div>
+      </div>
+    </section>
+
+    <section id="clients">
+      <div class="container">
+        <h2 class="section-title">Payez avec plus de sérénité</h2>
+        <p class="section-subtitle">Avec FrikaPay, vous achetez dans un cadre plus clair. Votre paiement est suivi, la transaction est documentée et les fonds sont libérés selon les conditions prévues.</p>
+        <div class="grid-2">
+          <div class="card"><div class="card-icon">🔐</div><h3>Paiement via prestataire agréé</h3><p class="text-secondary">Votre paiement est traité par un prestataire de paiement agréé ou habilité.</p></div>
+          <div class="card"><div class="card-icon">📋</div><h3>Suivi de la transaction</h3><p class="text-secondary">Chaque étape est visible, de la création à la résolution.</p></div>
+          <div class="card"><div class="card-icon">✅</div><h3>Confirmation de réception</h3><p class="text-secondary">Vous confirmez la réception avant libération des fonds.</p></div>
+          <div class="card"><div class="card-icon">🆘</div><h3>Signalement de problème</h3><p class="text-secondary">Un cadre est prévu pour signaler une difficulté.</p></div>
+          <div class="card"><div class="card-icon">🛡️</div><h3>Buyer Protection</h3><p class="text-secondary">Fonctionnalité préventive en cas de situation suspecte.</p></div>
+          <div class="card"><div class="card-icon">💵</div><h3>Frais affichés avant paiement</h3><p class="text-secondary">Vous voyez le total avant de valider.</p></div>
+        </div>
+        <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top:1.8rem;">💬 Contacter FrikaPay sur WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="commercants" class="bg-light">
+      <div class="container">
+        <h2 class="section-title">Vendez avec plus de confiance</h2>
+        <p class="section-subtitle">FrikaPay aide les commerçants sérieux à rassurer leurs clients, à réduire les clients fantômes et à limiter les déplacements inutiles. Le client paie dans un cadre sécurisé, ce qui montre son engagement réel.</p>
+        <div class="grid-2">
+          <div class="card"><div class="card-icon">🤝</div><h3>Rassurer les clients</h3><p class="text-secondary">Un cadre clair pour les acheteurs qui hésitent.</p></div>
+          <div class="card"><div class="card-icon">🚫</div><h3>Moins de clients fantômes</h3><p class="text-secondary">Le paiement préalable filtre les commandes non sérieuses.</p></div>
+          <div class="card"><div class="card-icon">📍</div><h3>Moins de déplacements inutiles</h3><p class="text-secondary">Vous livrez des commandes confirmées et payées.</p></div>
+          <div class="card"><div class="card-icon">💰</div><h3>Fonds libérés selon les règles</h3><p class="text-secondary">Après confirmation, délai ou résolution de litige.</p></div>
+          <div class="card"><div class="card-icon">⭐</div><h3>Réputation de confiance</h3><p class="text-secondary">Construisez votre crédibilité auprès des acheteurs.</p></div>
+          <div class="card"><div class="card-icon">📦</div><h3>Suivi des commandes</h3><p class="text-secondary">Gardez une trace de chaque transaction.</p></div>
+        </div>
+        <div style="margin-top:2rem;background:white;padding:1.8rem;border-radius:16px;"><h3 style="color:#0B3D91;">Programme Fondateur FrikaPay</h3><p class="text-secondary">Durant la phase bêta, FrikaPay prévoit d'accompagner ses premiers commerçants actifs avec des avantages spécifiques. Les conditions seront communiquées officiellement au lancement.</p></div>
+        <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top:1.5rem;">💬 Rejoindre la bêta sur WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="tarifs">
+      <div class="container">
+        <h2 class="section-title">Tarifs simples et transparents</h2>
+        <p class="section-subtitle">Grille applicable pendant la phase bêta de préparation. Version Bêta 1.0 — 2026.</p>
+        <div class="grid-2">
+          <div class="card"><h3>👤 Client</h3><p>Frais de protection FrikaPay : <strong>3 %</strong> du montant de la transaction.</p><p class="text-secondary" style="font-size:0.9rem;">Affichés avant validation du paiement.</p></div>
+          <div class="card"><h3>🏪 Commerçant</h3><p>Commission vendeur FrikaPay : <strong>0 %</strong></p><p>Frais de décaissement agrégateur : <strong>1 %</strong> vers Mobile Money.</p><p class="text-secondary" style="font-size:0.85rem;">Les frais de retrait cash après réception sur Mobile Money dépendent de l'opérateur, pas de FrikaPay.</p></div>
+        </div>
+        <div style="margin-top:2rem;background:white;padding:1.5rem;border-radius:16px;">
+          <h3 style="color:#0B3D91;margin-bottom:1rem;">Exemples de calcul</h3>
+          <table>
+            <thead><tr><th>Transaction</th><th>Frais client (3%)</th><th>Total payé</th><th>Frais décaissement (1%)</th><th>Montant versé Mobile Money</th></tr></thead>
+            <tbody>
+              <tr><td>10 000 FCFA</td><td>300 FCFA</td><td>10 300 FCFA</td><td>100 FCFA</td><td>9 900 FCFA</td></tr>
+              <tr><td>50 000 FCFA</td><td>1 500 FCFA</td><td>51 500 FCFA</td><td>500 FCFA</td><td>49 500 FCFA</td></tr>
+              <tr><td>100 000 FCFA</td><td>3 000 FCFA</td><td>103 000 
