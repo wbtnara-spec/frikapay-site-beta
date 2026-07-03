@@ -42,7 +42,27 @@
     .state-message { text-align:center; padding:2rem 1rem; }
     footer { text-align:center; padding:1.5rem 0; font-size:0.75rem; color:#9CA3AF; }
     footer a { color:#6B7280; text-decoration:underline; }
-  </style>
+  
+    /* --- Motion system FrikaPay (ajout) --- */
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+    }
+    @keyframes fp-fade-up { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+    .fp-reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s cubic-bezier(.22,.61,.36,1), transform .6s cubic-bezier(.22,.61,.36,1); will-change: opacity, transform; }
+    .fp-reveal.fp-visible { opacity: 1; transform: translateY(0); }
+    .hero-text > * { animation: fp-fade-up .7s cubic-bezier(.22,.61,.36,1) both; }
+    .hero-text h1 { animation-delay: .05s; }
+    .hero-text p { animation-delay: .15s; }
+    .hero-text .hero-buttons { animation-delay: .25s; }
+    .hero-visual, .trust-grid { animation: fp-fade-up .7s cubic-bezier(.22,.61,.36,1) both; animation-delay: .3s; }
+    .card, .faq-item, .quote-block { transition: transform .25s ease, box-shadow .25s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: 0 10px 24px rgba(11,61,145,0.10); }
+    .logo img { transition: transform .2s ease; }
+    .logo:hover img { transform: scale(1.04); }
+    .btn:active { transform: scale(0.97); }
+</style>
 </head>
 <body>
   <div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
@@ -108,6 +128,26 @@
         window.location.href = 'merchant-dashboard.html?transactionId=' + token + '&accountStatus=SELLER_ACCOUNT_CREATED&transactionStatus=SELLER_ACCEPTED';
       }, 2000);
     }
+  </script>
+  <script>
+  (function(){
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var targets = document.querySelectorAll('.card, .faq-item, .quote-block');
+    if (!targets.length || !('IntersectionObserver' in window)) return;
+    targets.forEach(function(el, i){
+      el.classList.add('fp-reveal');
+      el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
+    });
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fp-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+    targets.forEach(function(el){ io.observe(el); });
+  })();
   </script>
 </body>
 </html>
