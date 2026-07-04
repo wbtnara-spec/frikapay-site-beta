@@ -131,12 +131,12 @@
           <h2>👤 Vos informations</h2>
           <p style="font-size:0.8rem;color:#6B7280;margin-bottom:1rem;">Vous n'avez pas besoin de compte pour payer. Vous pourrez le compléter après.</p>
           <div class="form-group"><label>Nom complet <span style="color:#DC2626;">*</span></label><input type="text" id="fullName" placeholder="Votre nom et prénom" required></div>
-          <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 66 62 30 09" required></div>
+          <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 01 66 62 30 09" required></div>
           <div class="form-group"><label>Email <span class="optional">(optionnel)</span></label><input type="email" id="email" placeholder="Votre adresse email"></div>
           <div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input type="text" id="city" placeholder="Ville de livraison" required></div>
           <div class="form-group"><label>Note de livraison <span class="optional">(optionnelle)</span></label><textarea id="deliveryNote" placeholder="Indications utiles..."></textarea></div>
 
-          <div class="checkbox-group"><input type="checkbox" id="agreeLegal"><label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="index.html#legales">CGU Client</a> et de la <a href="index.html#legales">Politique de Confidentialité</a>.</label></div>
+          <div class="checkbox-group"><input type="checkbox" id="agreeLegal"><label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="cgu-client.html">CGU Client</a> et de la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
           <div class="checkbox-group"><input type="checkbox" id="agreeTransaction"><label for="agreeTransaction">Je comprends que les frais de protection (3 %) sont affichés avant paiement et je confirme vouloir payer dans le cadre FrikaPay.</label></div>
 
           <button class="btn btn-demo" onclick="initiateDemo()" style="margin-top:1rem;">🔍 Continuer — démo de parcours</button>
@@ -168,22 +168,22 @@
           <div class="btn-group">
             <a href="buyer-signup.html?transactionId=FP-DEMO-001" class="btn btn-primary">👤 Compléter mon compte FrikaPay</a>
             <a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_GUEST_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-outline">📋 Suivre ma transaction</a>
-            <a href="https://wa.me/22966623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
+            <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
           </div>
         </div>
       </div>
 
       <!-- ÉTATS ALTERNATIFS -->
-      <div id="state-failed" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Paiement échoué</h2><p>Aucun montant n'a été débité.</p><button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer</button><a href="https://wa.me/22966623009" class="btn btn-whatsapp" style="margin-top:0.5rem;">💬 Contacter FrikaPay</a></div></div>
-      <div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Lien expiré</h2><p>Contactez le commerçant.</p><a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
+      <div id="state-failed" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Paiement échoué</h2><p>Aucun montant n'a été débité.</p><button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer</button><a href="https://wa.me/2290166623009" class="btn btn-whatsapp" style="margin-top:0.5rem;">💬 Contacter FrikaPay</a></div></div>
+      <div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Lien expiré</h2><p>Contactez le commerçant.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
       <div id="state-already-paid" style="display:none;"><div class="state-message"><div class="icon-large">ℹ️</div><h2>Déjà payée</h2><p>Cette transaction a déjà été payée.</p><a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_ACCOUNT_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-primary">📋 Voir ma transaction</a></div></div>
-      <div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Annulée</h2><p>Transaction annulée par le commerçant.</p><a href="https://wa.me/22966623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
+      <div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Annulée</h2><p>Transaction annulée par le commerçant.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
     </div>
   </main>
 
   <footer>
     <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
-    <p style="margin-top:0.3rem;"><a href="index.html#legales">CGU Client</a> · <a href="index.html#legales">Confidentialité</a> · <a href="index.html#legales">Mentions légales</a></p>
+    <p style="margin-top:0.3rem;"><a href="cgu-client.html">CGU Client</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
     <p style="margin-top:0.3rem;">Phase bêta de préparation. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
   </footer>
 
