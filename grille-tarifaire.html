@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Grille Tarifaire Publique Bêta — FrikaPay</title>
-<meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<meta content="index,follow" name="robots"/>
+<meta content="Grille Tarifaire Publique Bêta FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#FFFFFF; color:#1F2937; line-height:1.65; -webkit-font-smoothing:antialiased; }
-  .container { max-width:800px; margin:0 auto; padding:0 1.25rem; }
+  .container { max-width:860px; margin:0 auto; padding:0 1.25rem; }
   header { background:white; border-bottom:1px solid #F0F0F0; position:sticky; top:0; z-index:50; background-color:rgba(255,255,255,0.95); backdrop-filter:blur(6px); }
   .nav-container { display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1.25rem; max-width:1100px; margin:0 auto; }
   .logo img { height:34px; width:auto; }
@@ -21,60 +23,80 @@
   .doc-eyebrow { color:#1A73E8; font-weight:700; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem; }
   .doc-title { font-size:1.9rem; font-weight:700; color:#0B3D91; letter-spacing:-0.02em; line-height:1.25; margin-bottom:0.8rem; }
   .doc-meta { color:#6B7280; font-size:0.88rem; line-height:1.8; }
-  .doc-meta b { color:#374151; }
+  .doc-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.2rem; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; padding:.7rem 1.1rem; border-radius:999px; text-decoration:none; font-weight:700; font-size:.9rem; }
+  .btn-primary { background:#1A73E8; color:white; box-shadow:0 6px 16px rgba(26,115,232,.22); }
+  .btn-outline { border:1px solid #BFDBFE; color:#0B3D91; background:white; }
   main { padding:2.5rem 0 4rem; }
-  h2.art { font-size:1.25rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:0.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
-  main > .container > h2.art:first-of-type { border-top:none; padding-top:0; margin-top:0.5rem; }
-  h3.sub { font-size:1.05rem; color:#1A73E8; margin-top:1.4rem; margin-bottom:0.5rem; }
-  h4.subsub { font-size:0.98rem; color:#374151; margin-top:1.1rem; margin-bottom:0.4rem; font-weight:700; }
-  p { margin-bottom:0.85rem; color:#374151; font-size:0.96rem; }
-  ul { margin:0 0 0.9rem 1.3rem; }
-  li { margin-bottom:0.45rem; color:#374151; font-size:0.96rem; }
-  table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:0.9rem; }
-  th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:700; padding:0.6rem 0.7rem; border-bottom:2px solid #1A73E8; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.03em; }
-  td { padding:0.6rem 0.7rem; border-bottom:1px solid #EEF2F6; color:#374151; }
-  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:0.88rem; text-align:center; }
-  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:0.85rem; text-align:center; }
+  .official-note { background:#F8FAFF; border:1px solid #E5E7EB; border-left:4px solid #1A73E8; border-radius:14px; padding:1rem 1.1rem; color:#374151; font-size:.92rem; margin-bottom:1.6rem; }
+  .doc-content h1 { font-size:1.32rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
+  .doc-content h1:first-child { margin-top:.5rem; padding-top:0; border-top:none; }
+  .doc-content h2 { font-size:1.08rem; color:#1A73E8; margin-top:1.45rem; margin-bottom:.55rem; letter-spacing:-0.01em; }
+  .doc-content h3, .doc-content h4 { font-size:1rem; color:#374151; margin-top:1.15rem; margin-bottom:.45rem; font-weight:700; }
+  .doc-content p { margin-bottom:.85rem; color:#374151; font-size:.96rem; }
+  .doc-content ul, .doc-content ol { margin:0 0 .9rem 1.3rem; }
+  .doc-content li { margin-bottom:.45rem; color:#374151; font-size:.96rem; }
+  .doc-content table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.88rem; overflow:hidden; border-radius:12px; }
+  .doc-content th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:800; padding:.65rem .75rem; border-bottom:2px solid #1A73E8; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; }
+  .doc-content td { padding:.65rem .75rem; border-bottom:1px solid #EEF2F6; color:#374151; vertical-align:top; }
+  .doc-content tr:nth-child(even) td { background:#FCFDFF; }
+  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:.88rem; text-align:center; }
+  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:.85rem; text-align:center; }
   footer a { color:#9DC1FA; text-decoration:none; }
+  @media (max-width:640px){ .doc-title{font-size:1.55rem;} .doc-content table{display:block; overflow-x:auto; white-space:normal;} .nav-container{padding:.65rem 1rem;} }
+  html, body { max-width:100%; overflow-x:hidden; }
+  .doc-content { max-width:100%; overflow-wrap:anywhere; }
+  .doc-content table { max-width:100%; }
 </style>
-</head>
+<link href="https://frikapay.com/grille-tarifaire.html" rel="canonical"/><meta content="Grille Tarifaire Publique Bêta — FrikaPay" property="og:title"/><meta content="Grille Tarifaire Publique Bêta FrikaPay — document harmonisé, entrée en vigueur juillet 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://frikapay.com/grille-tarifaire.html" property="og:url"/><meta content="https://frikapay.com/logo-og.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Grille Tarifaire Publique Bêta — FrikaPay" name="twitter:title"/><meta content="Grille Tarifaire Publique Bêta FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FrikaPay",
+  "legalName": "FrikaPay Technologies SARL",
+  "url": "https://frikapay.com",
+  "logo": "https://frikapay.com/logo-og.png",
+  "email": "contact@frikapay.com",
+  "telephone": "+2290166623009",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Natitingou",
+    "addressRegion": "Atacora",
+    "addressCountry": "BJ"
+  },
+  "identifier": [
+    "RCCM RB/NAT/26 B 994",
+    "IFU 3202682983357"
+  ]
+}</script></head>
 <body>
-
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"></a>
-    <a href="index.html" class="back-link">← Retour au site</a>
-  </div>
-</header>
-
-<div class="doc-header">
-  <div class="container">
-    <div class="doc-eyebrow">Document officiel FrikaPay</div>
-    <div class="doc-title">Grille Tarifaire Publique Bêta</div>
-    <div class="doc-meta">Version Bêta 1.3 — 2026 &middot; Document public applicable pendant la phase bêta</div>
-  </div>
-</div>
-
-<main>
-  <div class="container">
-<h2 class="art">GRILLE TARIFAIRE PUBLIQUE BÊTA — FRIKAPAY</h2>
-<p>Version : Bêta 1.3 — 2026
-Statut : document public — applicable pendant la phase bêta FrikaPay
-Entrée en vigueur : [à compléter]
-Éditeur : FrikaPay
-Contact officiel : contact@frikapay.com</p>
-<h3 class="sub">1. OBJET DU DOCUMENT</h3>
+<header><div class="nav-container"><a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/></a><a class="back-link" href="documents.html">Documents officiels</a></div></header>
+<div class="doc-header"><div class="container">
+<div class="doc-eyebrow">Document officiel FrikaPay</div>
+<div class="doc-title">Grille Tarifaire Publique Bêta</div>
+<div class="doc-meta">Version harmonisée — Entrée en vigueur : juillet 2026<br/>Éditeur : FrikaPay Technologies SARL · RCCM : RB/NAT/26 B 994 · IFU : 3202682983357</div>
+<div class="doc-actions"><a class="btn btn-outline" href="documents.html">Retour aux documents</a><a class="btn btn-outline" href="index.html">Retour au site</a></div>
+</div></div>
+<main><div class="container">
+<div class="official-note">Cette page reprend la version harmonisée du document FrikaPay publiée pour consultation en ligne.</div>
+<div class="doc-content">
+<h1 id="grille-tarifaire-publique-bêta-frikapay">GRILLE TARIFAIRE PUBLIQUE BÊTA — FRIKAPAY</h1>
+<p>Version : Bêta 1.3 — juillet 2026<br>
+Statut : document public — applicable pendant la phase bêta FrikaPay<br/>
+Entrée en vigueur : juillet 2026<br/>
+Éditeur : FrikaPay Technologies SARL (nom commercial : FrikaPay)<br/>
+Contact officiel : contact@frikapay.com</br></p>
+<h2 id="objet-du-document">1. OBJET DU DOCUMENT</h2>
 <p>La présente Grille Tarifaire Publique Bêta présente les frais applicables aux transactions réalisées via FrikaPay pendant la phase bêta.</p>
 <p>Elle peut être publiée sur le site internet, partagée avec les clients et communiquée aux commerçants.</p>
 <p>Elle complète les Conditions Générales d’Utilisation Client, les Conditions Générales d’Utilisation Commerçant, la Politique de Confidentialité et tout autre document officiel publié par FrikaPay.</p>
 <p>FrikaPay peut modifier la présente grille afin de tenir compte de l’évolution du service, des coûts des prestataires, des exigences réglementaires, des conditions commerciales ou de la fin de la phase bêta.</p>
-<h3 class="sub">2. PRINCIPES TARIFAIRES DE LA PHASE BÊTA</h3>
+<h2 id="principes-tarifaires-de-la-phase-bêta">2. PRINCIPES TARIFAIRES DE LA PHASE BÊTA</h2>
 <p>Pendant la phase bêta, FrikaPay applique une tarification volontairement simple et compétitive afin de faciliter l’adoption du service, collecter des retours utilisateurs et valider les usages réels.</p>
 <p>La phase bêta n’a pas vocation à représenter la grille tarifaire définitive de FrikaPay.</p>
 <p>Les tarifs définitifs pourront évoluer lors du lancement officiel ou à toute autre étape communiquée par FrikaPay.</p>
 <p>Les frais applicables à chaque transaction sont affichés avant validation du paiement.</p>
-<h3 class="sub">3. FRAIS CLIENT</h3>
-<h4 class="subsub">3.1 Frais de protection FrikaPay</h4>
+<h2 id="frais-client">3. FRAIS CLIENT</h2>
+<h3 id="frais-de-protection-frikapay">3.1 Frais de protection FrikaPay</h3>
 <p>Le client paie des frais de protection FrikaPay calculés selon le statut de vérification du commerçant au moment de la transaction :</p>
 <p>• Commerçant vérifié FrikaPay : 3 % du montant de la transaction + 100 FCFA, avec un minimum total de 200 FCFA ;</p>
 <p>• Commerçant en cours de vérification ou commerçant invité à rejoindre FrikaPay : 3 % du montant de la transaction + 200 FCFA, avec un minimum total de 300 FCFA.</p>
@@ -87,74 +109,159 @@ Contact officiel : contact@frikapay.com</p>
 <p>• l’instruction éventuelle d’un problème ou d’un litige ;</p>
 <p>• l’application des règles de libération conditionnelle des fonds ;</p>
 <p>• les frais opérationnels liés au service.</p>
-<h4 class="subsub">3.2 Exemples de calcul</h4>
+<h3 id="exemples-de-calcul">3.2 Exemples de calcul</h3>
 <table>
-<tr><th>Montant transaction</th><th>Commerçant vérifié FrikaPay</th><th>Commerçant en cours de vérification / invité</th></tr>
-<tr><td>5 000 FCFA</td><td>250 FCFA — total 5 250 FCFA</td><td>350 FCFA — total 5 350 FCFA</td></tr>
-<tr><td>10 000 FCFA</td><td>400 FCFA — total 10 400 FCFA</td><td>500 FCFA — total 10 500 FCFA</td></tr>
-<tr><td>50 000 FCFA</td><td>1 600 FCFA — total 51 600 FCFA</td><td>1 700 FCFA — total 51 700 FCFA</td></tr>
-<tr><td>100 000 FCFA</td><td>3 100 FCFA — total 103 100 FCFA</td><td>3 200 FCFA — total 103 200 FCFA</td></tr>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Montant transaction</strong></th>
+<th><strong>Commerçant vérifié FrikaPay</strong></th>
+<th><strong>Commerçant en cours de vérification / invité</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5 000 FCFA</td>
+<td>250 FCFA — total 5 250 FCFA</td>
+<td>350 FCFA — total 5 350 FCFA</td>
+</tr>
+<tr class="even">
+<td>10 000 FCFA</td>
+<td>400 FCFA — total 10 400 FCFA</td>
+<td>500 FCFA — total 10 500 FCFA</td>
+</tr>
+<tr class="odd">
+<td>50 000 FCFA</td>
+<td>1 600 FCFA — total 51 600 FCFA</td>
+<td>1 700 FCFA — total 51 700 FCFA</td>
+</tr>
+<tr class="even">
+<td>100 000 FCFA</td>
+<td>3 100 FCFA — total 103 100 FCFA</td>
+<td>3 200 FCFA — total 103 200 FCFA</td>
+</tr>
+</tbody>
 </table>
-<h3 class="sub">4. REMBOURSEMENT DES FRAIS CLIENT</h3>
+<h2 id="remboursement-des-frais-client">4. REMBOURSEMENT DES FRAIS CLIENT</h2>
 <p>Sauf erreur imputable à FrikaPay, obligation légale contraire ou décision exceptionnelle de FrikaPay, les frais de protection client ne sont pas automatiquement remboursables.</p>
 <p>En cas d’annulation ou de remboursement du montant principal, les frais de protection peuvent rester acquis à FrikaPay lorsqu’ils ont permis de couvrir le traitement, la sécurisation, le suivi, l’analyse ou la coordination de la transaction.</p>
 <p>Exemple : si un client initie une transaction de 10 000 FCFA et paie 500 FCFA de frais de protection, puis que le commerçant n’accepte pas la transaction dans le délai prévu, le montant principal de 10 000 FCFA peut être remboursé au client et les frais de protection de 500 FCFA peuvent rester acquis à FrikaPay.</p>
-<h3 class="sub">5. FRAIS COMMERÇANT</h3>
-<h4 class="subsub">5.1 Commission commerciale FrikaPay</h4>
+<h2 id="frais-commerçant">5. FRAIS COMMERÇANT</h2>
+<h3 id="commission-commerciale-frikapay">5.1 Commission commerciale FrikaPay</h3>
 <p>Pendant la phase bêta, FrikaPay applique 0 % de commission commerciale FrikaPay au commerçant.</p>
 <p>Cela signifie que FrikaPay ne prélève pas de commission commerciale sur les ventes réalisées par le commerçant pendant la phase bêta, sous réserve des conditions applicables.</p>
-<h4 class="subsub">5.2 Frais de décaissement agrégateur</h4>
+<h3 id="frais-de-décaissement-agrégateur">5.2 Frais de décaissement agrégateur</h3>
 <p>Lorsqu’un commerçant demande le versement de ses fonds vers son compte Mobile Money, des frais de décaissement de 1 % peuvent être appliqués par l’agrégateur ou le prestataire de paiement.</p>
 <p>Ces frais correspondent au coût technique du transfert des fonds disponibles vers le compte Mobile Money du commerçant.</p>
 <table>
-<tr><th>Montant disponible</th><th>Frais de décaissement agrégateur</th><th>Montant envoyé vers Mobile Money</th></tr>
-<tr><td>10 000 FCFA</td><td>100 FCFA</td><td>9 900 FCFA</td></tr>
-<tr><td>50 000 FCFA</td><td>500 FCFA</td><td>49 500 FCFA</td></tr>
-<tr><td>100 000 FCFA</td><td>1 000 FCFA</td><td>99 000 FCFA</td></tr>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Montant disponible</strong></th>
+<th><strong>Frais de décaissement agrégateur</strong></th>
+<th><strong>Montant envoyé vers Mobile Money</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>10 000 FCFA</td>
+<td>100 FCFA</td>
+<td>9 900 FCFA</td>
+</tr>
+<tr class="even">
+<td>50 000 FCFA</td>
+<td>500 FCFA</td>
+<td>49 500 FCFA</td>
+</tr>
+<tr class="odd">
+<td>100 000 FCFA</td>
+<td>1 000 FCFA</td>
+<td>99 000 FCFA</td>
+</tr>
+</tbody>
 </table>
-<h3 class="sub">6. FRAIS MOBILE MONEY APRÈS RÉCEPTION</h3>
+<h2 id="frais-mobile-money-après-réception">6. FRAIS MOBILE MONEY APRÈS RÉCEPTION</h2>
 <p>Les frais de décaissement agrégateur de 1 % concernent uniquement le transfert des fonds vers le compte Mobile Money du commerçant.</p>
 <p>Une fois les fonds reçus sur le compte Mobile Money du commerçant, les éventuels frais de retrait cash, de transfert ou d’utilisation appliqués par l’opérateur Mobile Money ne dépendent pas de FrikaPay.</p>
 <p>Ces frais sont fixés par les opérateurs concernés selon leurs propres conditions.</p>
-<h3 class="sub">7. FRAIS DES PRESTATAIRES DE PAIEMENT</h3>
+<h2 id="frais-des-prestataires-de-paiement">7. FRAIS DES PRESTATAIRES DE PAIEMENT</h2>
 <p>Les opérations de paiement, remboursement ou décaissement peuvent impliquer des frais techniques ou opérateurs appliqués par des prestataires de paiement, agrégateurs, opérateurs Mobile Money, banques ou autres partenaires techniques.</p>
 <p>Lorsque ces frais sont directement répercutés au client ou au commerçant, ils sont affichés dans la mesure du possible avant validation de l’opération.</p>
 <p>Certains frais peuvent varier selon le moyen de paiement utilisé, l’opérateur Mobile Money, le montant, le profil du commerçant, les conditions du prestataire de paiement et les règles applicables au moment de l’opération.</p>
-<h3 class="sub">8. TRANSACTIONS ANNULÉES OU REMBOURSÉES</h3>
+<h2 id="transactions-annulées-ou-remboursées">8. TRANSACTIONS ANNULÉES OU REMBOURSÉES</h2>
 <p>Une transaction peut être annulée ou remboursée notamment lorsque le commerçant ne peut pas honorer la commande, n’accepte pas la transaction, ne répond pas dans le délai prévu, lorsqu’un litige est tranché en faveur du client, lorsqu’une fraude ou anomalie importante est détectée, ou lorsqu’une obligation légale ou réglementaire l’exige.</p>
 <p>Le remboursement porte en principe sur le montant principal de la transaction. Les frais de protection client ne sont pas automatiquement remboursés.</p>
 <p>Les délais de remboursement peuvent dépendre du prestataire de paiement, de l’opérateur Mobile Money, du canal de paiement, des contrôles de sécurité, du statut de la transaction et de délais techniques externes à FrikaPay.</p>
-<h3 class="sub">9. LIMITES DE LA PHASE BÊTA</h3>
+<h2 id="limites-de-la-phase-bêta">9. LIMITES DE LA PHASE BÊTA</h2>
 <p>Pendant la phase bêta, FrikaPay peut limiter ou modifier le nombre de clients, le nombre de commerçants, les montants minimums ou maximums de transaction, les catégories de produits ou services acceptées, les zones de livraison, les moyens de paiement disponibles, les conditions de remboursement, les conditions de décaissement, les délais de traitement et les conditions tarifaires.</p>
 <p>FrikaPay peut également suspendre temporairement certaines fonctionnalités si cela est nécessaire pour la sécurité, la conformité, la stabilité du service ou la protection des utilisateurs.</p>
-<h3 class="sub">10. TABLEAU RÉCAPITULATIF</h3>
+<h2 id="tableau-récapitulatif">10. TABLEAU RÉCAPITULATIF</h2>
 <table>
-<tr><th>Acteur</th><th>Frais bêta</th><th>Description</th></tr>
-<tr><td>Client</td><td>3 % + 100 FCFA, min. 200 FCFA</td><td>Frais de protection pour commerçant vérifié FrikaPay.</td></tr>
-<tr><td>Client</td><td>3 % + 200 FCFA, min. 300 FCFA</td><td>Frais de protection pour commerçant en cours de vérification ou invité à rejoindre FrikaPay.</td></tr>
-<tr><td>Commerçant</td><td>0 %</td><td>Commission commerciale FrikaPay pendant la phase bêta.</td></tr>
-<tr><td>Commerçant</td><td>1 %</td><td>Frais de décaissement agrégateur vers Mobile Money.</td></tr>
-<tr><td>Opérateur Mobile Money</td><td>Variable</td><td>Frais éventuels après réception des fonds sur le compte Mobile Money du commerçant.</td></tr>
-<tr><td>Prestataire de paiement</td><td>Variable</td><td>Frais techniques éventuels selon les moyens de paiement et conditions applicables.</td></tr>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Acteur</strong></th>
+<th><strong>Frais bêta</strong></th>
+<th><strong>Description</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Client</td>
+<td>3 % + 100 FCFA, min. 200 FCFA</td>
+<td>Frais de protection pour commerçant vérifié FrikaPay.</td>
+</tr>
+<tr class="even">
+<td>Client</td>
+<td>3 % + 200 FCFA, min. 300 FCFA</td>
+<td>Frais de protection pour commerçant en cours de vérification ou invité à rejoindre FrikaPay.</td>
+</tr>
+<tr class="odd">
+<td>Commerçant</td>
+<td>0 %</td>
+<td>Commission commerciale FrikaPay pendant la phase bêta.</td>
+</tr>
+<tr class="even">
+<td>Commerçant</td>
+<td>1 %</td>
+<td>Frais de décaissement agrégateur vers Mobile Money.</td>
+</tr>
+<tr class="odd">
+<td>Opérateur Mobile Money</td>
+<td>Variable</td>
+<td>Frais éventuels après réception des fonds sur le compte Mobile Money du commerçant.</td>
+</tr>
+<tr class="even">
+<td>Prestataire de paiement</td>
+<td>Variable</td>
+<td>Frais techniques éventuels selon les moyens de paiement et conditions applicables.</td>
+</tr>
+</tbody>
 </table>
-<h3 class="sub">11. MODIFICATION DE LA GRILLE TARIFAIRE</h3>
+<h2 id="modification-de-la-grille-tarifaire">11. MODIFICATION DE LA GRILLE TARIFAIRE</h2>
 <p>FrikaPay peut modifier la présente Grille Tarifaire Publique Bêta à tout moment, notamment pour tenir compte des coûts réels des prestataires, des conditions des agrégateurs de paiement, des contraintes réglementaires, des retours de la phase bêta, de l’évolution du modèle économique ou du passage au lancement officiel.</p>
 <p>Les utilisateurs peuvent être informés par e-mail, notification, affichage dans l’application, publication sur le site ou tout autre canal officiel.</p>
 <p>Chaque transaction reste en principe soumise aux frais affichés au moment de sa validation, sauf disposition impérative contraire.</p>
-<h3 class="sub">12. CONTACT</h3>
+<h2 id="contact">12. CONTACT</h2>
 <p>Pour toute question concernant la présente Grille Tarifaire :</p>
-<p>Email officiel : contact@frikapay.com
-Site : https://frikapay.com
-Siège social : Ilot NA, Quartier Yetapo, Parcelle SB, Maison Imana Nara, Natitingou 3, Natitingou, Atacora, Bénin
-RCCM / IFU : RB/NAT/26 B 994 du 30/06/2026 / 3202682983357</p>  </div>
-</main>
-
-<footer>
-  <div class="container">
-    FrikaPay Technologies — SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br>
-    <a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a>
-  </div>
-</footer>
-
-</body>
-</html>
+<p>Email officiel : contact@frikapay.com<br/>
+Site officiel : https://frikapay.com<br/>
+Siège social : Ilot : NA, Quartier : Yetapo, Parcelle : SB, Maison : IMANA NARA, Natitingou, Atacora, Bénin<br/>
+RCCM : RB/NAT/26 B 994 | IFU : 3202682983357</p>
+</div>
+<div class="doc-footer-note">FrikaPay Technologies SARL — Ilot NA, Quartier Yetapo, Natitingou, Atacora, Bénin — contact@frikapay.com — +229 01 66 62 30 09</div>
+</div></main>
+<footer><div class="container">FrikaPay Technologies SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br/><a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a></div></footer>
+</body></html>

@@ -1,0 +1,5 @@
+Contact: mailto:contact@frikapay.com
+Preferred-Languages: fr, en
+Canonical: https://frikapay.com/.well-known/security.txt
+Policy: https://frikapay.com/confiance-conformite.html
+Expires: 2027-07-31T23:59:59Z

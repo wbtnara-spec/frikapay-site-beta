@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Politique de Confidentialité — FrikaPay</title>
-<meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<meta content="index,follow" name="robots"/>
+<meta content="Politique de Confidentialité FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#FFFFFF; color:#1F2937; line-height:1.65; -webkit-font-smoothing:antialiased; }
-  .container { max-width:800px; margin:0 auto; padding:0 1.25rem; }
+  .container { max-width:860px; margin:0 auto; padding:0 1.25rem; }
   header { background:white; border-bottom:1px solid #F0F0F0; position:sticky; top:0; z-index:50; background-color:rgba(255,255,255,0.95); backdrop-filter:blur(6px); }
   .nav-container { display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1.25rem; max-width:1100px; margin:0 auto; }
   .logo img { height:34px; width:auto; }
@@ -21,247 +23,264 @@
   .doc-eyebrow { color:#1A73E8; font-weight:700; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem; }
   .doc-title { font-size:1.9rem; font-weight:700; color:#0B3D91; letter-spacing:-0.02em; line-height:1.25; margin-bottom:0.8rem; }
   .doc-meta { color:#6B7280; font-size:0.88rem; line-height:1.8; }
-  .doc-meta b { color:#374151; }
+  .doc-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.2rem; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; padding:.7rem 1.1rem; border-radius:999px; text-decoration:none; font-weight:700; font-size:.9rem; }
+  .btn-primary { background:#1A73E8; color:white; box-shadow:0 6px 16px rgba(26,115,232,.22); }
+  .btn-outline { border:1px solid #BFDBFE; color:#0B3D91; background:white; }
   main { padding:2.5rem 0 4rem; }
-  h2.art { font-size:1.25rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:0.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
-  main > .container > h2.art:first-of-type { border-top:none; padding-top:0; margin-top:0.5rem; }
-  h3.sub { font-size:1.05rem; color:#1A73E8; margin-top:1.4rem; margin-bottom:0.5rem; }
-  h4.subsub { font-size:0.98rem; color:#374151; margin-top:1.1rem; margin-bottom:0.4rem; font-weight:700; }
-  p { margin-bottom:0.85rem; color:#374151; font-size:0.96rem; }
-  ul { margin:0 0 0.9rem 1.3rem; }
-  li { margin-bottom:0.45rem; color:#374151; font-size:0.96rem; }
-  table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:0.9rem; }
-  th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:700; padding:0.6rem 0.7rem; border-bottom:2px solid #1A73E8; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.03em; }
-  td { padding:0.6rem 0.7rem; border-bottom:1px solid #EEF2F6; color:#374151; }
-  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:0.88rem; text-align:center; }
-  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:0.85rem; text-align:center; }
+  .official-note { background:#F8FAFF; border:1px solid #E5E7EB; border-left:4px solid #1A73E8; border-radius:14px; padding:1rem 1.1rem; color:#374151; font-size:.92rem; margin-bottom:1.6rem; }
+  .doc-content h1 { font-size:1.32rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
+  .doc-content h1:first-child { margin-top:.5rem; padding-top:0; border-top:none; }
+  .doc-content h2 { font-size:1.08rem; color:#1A73E8; margin-top:1.45rem; margin-bottom:.55rem; letter-spacing:-0.01em; }
+  .doc-content h3, .doc-content h4 { font-size:1rem; color:#374151; margin-top:1.15rem; margin-bottom:.45rem; font-weight:700; }
+  .doc-content p { margin-bottom:.85rem; color:#374151; font-size:.96rem; }
+  .doc-content ul, .doc-content ol { margin:0 0 .9rem 1.3rem; }
+  .doc-content li { margin-bottom:.45rem; color:#374151; font-size:.96rem; }
+  .doc-content table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.88rem; overflow:hidden; border-radius:12px; }
+  .doc-content th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:800; padding:.65rem .75rem; border-bottom:2px solid #1A73E8; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; }
+  .doc-content td { padding:.65rem .75rem; border-bottom:1px solid #EEF2F6; color:#374151; vertical-align:top; }
+  .doc-content tr:nth-child(even) td { background:#FCFDFF; }
+  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:.88rem; text-align:center; }
+  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:.85rem; text-align:center; }
   footer a { color:#9DC1FA; text-decoration:none; }
+  @media (max-width:640px){ .doc-title{font-size:1.55rem;} .doc-content table{display:block; overflow-x:auto; white-space:normal;} .nav-container{padding:.65rem 1rem;} }
+  html, body { max-width:100%; overflow-x:hidden; }
+  .doc-content { max-width:100%; overflow-wrap:anywhere; }
+  .doc-content table { max-width:100%; }
 </style>
-</head>
+<link href="https://frikapay.com/politique-confidentialite.html" rel="canonical"/><meta content="Politique de Confidentialité — FrikaPay" property="og:title"/><meta content="Politique de Confidentialité FrikaPay — document harmonisé, entrée en vigueur juillet 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://frikapay.com/politique-confidentialite.html" property="og:url"/><meta content="https://frikapay.com/logo-og.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="Politique de Confidentialité — FrikaPay" name="twitter:title"/><meta content="Politique de Confidentialité FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FrikaPay",
+  "legalName": "FrikaPay Technologies SARL",
+  "url": "https://frikapay.com",
+  "logo": "https://frikapay.com/logo-og.png",
+  "email": "contact@frikapay.com",
+  "telephone": "+2290166623009",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Natitingou",
+    "addressRegion": "Atacora",
+    "addressCountry": "BJ"
+  },
+  "identifier": [
+    "RCCM RB/NAT/26 B 994",
+    "IFU 3202682983357"
+  ]
+}</script></head>
 <body>
-
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"></a>
-    <a href="index.html" class="back-link">← Retour au site</a>
-  </div>
-</header>
-
-<div class="doc-header">
-  <div class="container">
-    <div class="doc-eyebrow">Document officiel FrikaPay</div>
-    <div class="doc-title">Politique de Confidentialité</div>
-    <div class="doc-meta">Version Bêta 1.1 — 2026 &middot; Éditeur : FrikaPay Technologies &middot; Contact : contact@frikapay.com</div>
-  </div>
-</div>
-
-<main>
-  <div class="container">
-<h2 class="art">PRÉAMBULE</h2>
+<header><div class="nav-container"><a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/></a><a class="back-link" href="documents.html">Documents officiels</a></div></header>
+<div class="doc-header"><div class="container">
+<div class="doc-eyebrow">Document officiel FrikaPay</div>
+<div class="doc-title">Politique de Confidentialité</div>
+<div class="doc-meta">Version harmonisée — Entrée en vigueur : juillet 2026<br/>Éditeur : FrikaPay Technologies SARL · RCCM : RB/NAT/26 B 994 · IFU : 3202682983357</div>
+<div class="doc-actions"><a class="btn btn-outline" href="documents.html">Retour aux documents</a><a class="btn btn-outline" href="index.html">Retour au site</a></div>
+</div></div>
+<main><div class="container">
+<div class="official-note">Cette page reprend la version harmonisée du document FrikaPay publiée pour consultation en ligne.</div>
+<div class="doc-content">
+<p><strong>POLITIQUE DE CONFIDENTIALITÉ FRIKAPAY</strong></p>
+<p>Version : Bêta 1.2 — 2026 | Statut : version alignée terminologie paiement sécurisé et documents publics V1.3</p>
+<p>Entrée en vigueur : juillet 2026 | Éditeur : FrikaPay Technologies SARL (nom commercial : FrikaPay) | Contact officiel : contact@frikapay.com</p>
+<h1 id="préambule">PRÉAMBULE</h1>
 <p>FrikaPay attache une importance essentielle à la protection des données personnelles et à la transparence sur les traitements réalisés dans le cadre de ses services.</p>
-<p>La présente Politique de Confidentialité informe les utilisateurs sur la manière dont FrikaPay collecte, utilise, conserve, protège et partage leurs données personnelles dans le cadre du site web, de l’application, des comptes, des transactions, des paiements sécurisés, des remboursements, des décaissements, du support, de la Protection acheteur, des litiges, du KYC, de la sécurité, des documents officiels versionnés et de la comptabilité interne.</p>
+<p>La présente Politique de Confidentialité informe les utilisateurs sur la manière dont FrikaPay collecte, utilise, conserve, protège et partage leurs données personnelles dans le cadre du site web, de l’application, des comptes, des transactions, des paiements sécurisés, des remboursements, des décaissements, du support, de la Protection Client, des litiges, du KYC, de la sécurité, des documents officiels versionnés et de la comptabilité interne.</p>
 <p>Elle s’applique aux clients, commerçants, utilisateurs disposant des deux rôles, utilisateurs invités et visiteurs interagissant avec un lien, un formulaire ou un service FrikaPay.</p>
 <p>La présente Politique complète les CGU Client, les CGU Commerçant, la Grille Tarifaire active et tout autre document officiel publié par FrikaPay.</p>
-<h2 class="art">ARTICLE 1 — RESPONSABLE DU TRAITEMENT</h2>
+<h1 id="article-1-responsable-du-traitement">ARTICLE 1 — RESPONSABLE DU TRAITEMENT</h1>
 <p>Le responsable du traitement des données personnelles est :</p>
 <ul>
-<li>FrikaPay, plateforme numérique en phase bêta, en cours de formalisation juridique ;</li>
-<li>Représentant provisoire : WIBO Daniel NARA (Gérant) ;</li>
-<li>Email de contact : contact@frikapay.com ;</li>
-<li>Contact confidentialité : contact@frikapay.com ;</li>
-<li>Pays d’activité initiale : Bénin ;</li>
-<li>Site officiel : https://frikapay.com ;</li>
-<li>Siège social, RCCM, IFU et forme juridique : Ilot NA, Quartier Yetapo, Parcelle SB, Maison Imana Nara, Natitingou 3, Natitingou, Atacora, Bénin — RCCM RB/NAT/26 B 994 du 30/06/2026 — IFU 3202682983357 — Société à Responsabilité Limitée (SARL).</li>
+<li><p>FrikaPay Technologies SARL (nom commercial : FrikaPay), plateforme numérique en phase bêta exploitée par une SARL de droit béninois ;</p></li>
+<li><p>Représentant légal : Daniel Wibo NARA, Fondateur &amp; Gérant ;</p></li>
+<li><p>Email de contact : contact@frikapay.com ;</p></li>
+<li><p>Contact confidentialité : contact@frikapay.com ;</p></li>
+<li><p>Pays d’activité initiale : Bénin ;</p></li>
+<li><p>Site officiel : https://frikapay.com ;</p></li>
+<li><p>Siège social : Ilot : NA, Quartier : Yetapo, Parcelle : SB, Maison : IMANA NARA, Natitingou, Atacora, Bénin ; RCCM : RB/NAT/26 B 994 ; IFU : 3202682983357 ; Forme juridique : Société à Responsabilité Limitée (SARL).</p></li>
 </ul>
-<p>Les informations légales complètes relatives à l’entité éditrice seront mises à jour dès finalisation de l’immatriculation juridique.</p>
-<h2 class="art">ARTICLE 2 — DÉFINITIONS</h2>
-<p>Donnée personnelle : toute information se rapportant à une personne physique identifiée ou identifiable.</p>
-<p>Utilisateur : toute personne utilisant FrikaPay, qu’elle agisse comme client, commerçant, utilisateur invité ou visiteur.</p>
-<p>Client : personne utilisant FrikaPay pour effectuer ou suivre un paiement sécurisé, créer une demande, confirmer une réception ou signaler un problème.</p>
-<p>Commerçant : personne utilisant FrikaPay pour vendre un produit ou service, créer ou recevoir une transaction, accepter une demande client ou recevoir un paiement.</p>
-<p>Compte unique : compte FrikaPay rattaché à un UID et pouvant être utilisé en mode client, mode commerçant ou les deux.</p>
-<p>Transaction : opération créée, suivie ou traitée via FrikaPay entre un client et un commerçant.</p>
-<p>Lien d’invitation commerçant : lien généré lorsqu’un client initie une transaction afin de permettre au commerçant d’accepter, négocier ou refuser la demande.</p>
-<p>Protection acheteur : fonctionnalité préventive permettant d’alerter FrikaPay sur une situation suspecte, incohérente, silencieuse ou risquée avant l’ouverture éventuelle d’un litige.</p>
-<p>Litige : contestation formelle liée à une transaction.</p>
-<p>KYC ou vérification : opérations de vérification d’identité ou d’activité exigées par FrikaPay, par un prestataire ou par la réglementation applicable.</p>
-<p>Prestataire de paiement : partenaire technique agréé ou habilité intervenant dans l’encaissement, le remboursement ou le décaissement des fonds.</p>
-<p>Document officiel : document publié par FrikaPay et intégré à son système de versionnement, notamment les CGU Client, CGU Commerçant, la présente Politique et la Grille Tarifaire.</p>
-<p>Historique d’acceptation : preuves techniques et fonctionnelles démontrant l’acceptation d’un document officiel par un utilisateur.</p>
-<h2 class="art">ARTICLE 3 — DONNÉES COLLECTÉES</h2>
+<p>Les informations légales complètes relatives à l’entité éditrice sont précisées dans les présentes mentions et documents officiels FrikaPay.</p>
+<h1 id="article-2-définitions">ARTICLE 2 — DÉFINITIONS</h1>
+<p><strong>Donnée personnelle :</strong> toute information se rapportant à une personne physique identifiée ou identifiable.</p>
+<p><strong>Utilisateur :</strong> toute personne utilisant FrikaPay, qu’elle agisse comme client, commerçant, utilisateur invité ou visiteur.</p>
+<p><strong>Client :</strong> personne utilisant FrikaPay pour effectuer ou suivre un paiement sécurisé, créer une demande, confirmer une réception ou signaler un problème.</p>
+<p><strong>Commerçant :</strong> personne utilisant FrikaPay pour vendre un produit ou service, créer ou recevoir une transaction, accepter une demande client ou recevoir un paiement.</p>
+<p><strong>Compte unique :</strong> compte FrikaPay rattaché à un UID et pouvant être utilisé en mode client, mode commerçant ou les deux.</p>
+<p><strong>Transaction :</strong> opération créée, suivie ou traitée via FrikaPay entre un client et un commerçant.</p>
+<p><strong>Lien d’invitation commerçant :</strong> lien généré lorsqu’un client initie une transaction afin de permettre au commerçant d’accepter, négocier ou refuser la demande.</p>
+<p><strong>Protection Client : fonctionnalité préventive permettant d’alerter FrikaPay sur une situation suspecte, incohérente, silencieuse ou risquée avant l’ouverture éventuelle d’un litige.</strong></p>
+<p><strong>Litige :</strong> contestation formelle liée à une transaction.</p>
+<p><strong>KYC ou vérification :</strong> opérations de vérification d’identité ou d’activité exigées par FrikaPay, par un prestataire ou par la réglementation applicable.</p>
+<p><strong>Prestataire de paiement :</strong> partenaire technique agréé ou habilité intervenant dans l’encaissement, le remboursement ou le décaissement des fonds.</p>
+<p><strong>Document officiel :</strong> document publié par FrikaPay et intégré à son système de versionnement, notamment les CGU Client, CGU Commerçant, la présente Politique et la Grille Tarifaire.</p>
+<p><strong>Historique d’acceptation :</strong> preuves techniques et fonctionnelles démontrant l’acceptation d’un document officiel par un utilisateur.</p>
+<h1 id="article-3-données-collectées">ARTICLE 3 — DONNÉES COLLECTÉES</h1>
 <p>FrikaPay collecte uniquement les données pertinentes, adéquates et limitées à ce qui est nécessaire au regard des finalités poursuivies.</p>
-<h3 class="sub">3.1 Données d’identité et de compte</h3>
+<h2 id="données-didentité-et-de-compte">3.1 Données d’identité et de compte</h2>
 <ul>
-<li>nom et prénom ;</li>
-<li>UID ;</li>
-<li>numéro de téléphone ;</li>
-<li>numéro Mobile Money ;</li>
-<li>adresse e-mail ;</li>
-<li>pays, ville, quartier ou zone de livraison ;</li>
-<li>nom de boutique ou nom commercial pour les commerçants ;</li>
-<li>informations de rôle : client, commerçant ou les deux.</li>
+<li><p>nom et prénom ;</p></li>
+<li><p>UID ;</p></li>
+<li><p>numéro de téléphone ;</p></li>
+<li><p>numéro Mobile Money ;</p></li>
+<li><p>adresse e-mail ;</p></li>
+<li><p>pays, ville, quartier ou zone de livraison ;</p></li>
+<li><p>nom de boutique ou nom commercial pour les commerçants ;</p></li>
+<li><p>informations de rôle : client, commerçant ou les deux.</p></li>
 </ul>
-<h3 class="sub">3.2 Données de localisation et de livraison</h3>
+<h2 id="données-de-localisation-et-de-livraison">3.2 Données de localisation et de livraison</h2>
 <ul>
-<li>pays, ville, quartier ;</li>
-<li>adresse de livraison ou de retrait ;</li>
-<li>zone d’activité ;</li>
-<li>indications géographiques utiles à l’exécution d’une transaction ou à la prévention de la fraude.</li>
+<li><p>pays, ville, quartier ;</p></li>
+<li><p>adresse de livraison ou de retrait ;</p></li>
+<li><p>zone d’activité ;</p></li>
+<li><p>indications géographiques utiles à l’exécution d’une transaction ou à la prévention de la fraude.</p></li>
 </ul>
-<h3 class="sub">3.3 Données financières et transactionnelles</h3>
+<h2 id="données-financières-et-transactionnelles">3.3 Données financières et transactionnelles</h2>
 <ul>
-<li>demandes de paiement et liens de paiement ;</li>
-<li>demandes initiées par un client et liens d’invitation commerçant ;</li>
-<li>références de paiement ;</li>
-<li>historiques de transactions ;</li>
-<li>montants de commande ;</li>
-<li>frais applicables, notamment frais de protection FrikaPay, frais de décaissement agrégateur et frais techniques éventuels ;</li>
-<li>remboursements et décaissements ;</li>
-<li>statuts de transaction ;</li>
-<li>données nécessaires au rapprochement avec les prestataires de paiement.</li>
+<li><p>demandes de paiement et liens de paiement ;</p></li>
+<li><p>demandes initiées par un client et liens d’invitation commerçant ;</p></li>
+<li><p>références de paiement ;</p></li>
+<li><p>historiques de transactions ;</p></li>
+<li><p>montants de commande ;</p></li>
+<li><p>frais applicables, notamment frais de protection FrikaPay, frais de décaissement agrégateur et frais techniques éventuels ;</p></li>
+<li><p>remboursements et décaissements ;</p></li>
+<li><p>statuts de transaction ;</p></li>
+<li><p>données nécessaires au rapprochement avec les prestataires de paiement.</p></li>
 </ul>
 <p>FrikaPay ne traite pas directement les paiements comme établissement de paiement. Les opérations financières sont exécutées par des prestataires de paiement agréés ou habilités.</p>
-<h3 class="sub">3.4 Données techniques et de sécurité</h3>
+<h2 id="données-techniques-et-de-sécurité">3.4 Données techniques et de sécurité</h2>
 <ul>
-<li>adresse IP ;</li>
-<li>informations sur l’appareil, le navigateur, le système d’exploitation et la version de l’application ;</li>
-<li>identifiants de session ;</li>
-<li>journaux techniques ;</li>
-<li>OTP et événements d’authentification ;</li>
-<li>tentatives de connexion ;</li>
-<li>journaux d’activité ;</li>
-<li>indicateurs de risque ou de fraude ;</li>
-<li>informations liées aux suspensions, vérifications ou alertes de sécurité.</li>
+<li><p>adresse IP ;</p></li>
+<li><p>informations sur l’appareil, le navigateur, le système d’exploitation et la version de l’application ;</p></li>
+<li><p>identifiants de session ;</p></li>
+<li><p>journaux techniques ;</p></li>
+<li><p>OTP et événements d’authentification ;</p></li>
+<li><p>tentatives de connexion ;</p></li>
+<li><p>journaux d’activité ;</p></li>
+<li><p>indicateurs de risque ou de fraude ;</p></li>
+<li><p>informations liées aux suspensions, vérifications ou alertes de sécurité.</p></li>
 </ul>
-<h3 class="sub">3.5 Données KYC</h3>
+<h2 id="données-kyc">3.5 Données KYC</h2>
 <ul>
-<li>pièce d’identité ;</li>
-<li>selfie ou image de vérification ;</li>
-<li>informations de correspondance d’identité ;</li>
-<li>résultats de contrôle ou de vérification ;</li>
-<li>statut de vérification ;</li>
-<li>RCCM, IFU ou justificatif d’activité lorsque disponible ou requis.</li>
+<li><p>pièce d’identité ;</p></li>
+<li><p>selfie ou image de vérification ;</p></li>
+<li><p>informations de correspondance d’identité ;</p></li>
+<li><p>résultats de contrôle ou de vérification ;</p></li>
+<li><p>statut de vérification ;</p></li>
+<li><p>RCCM, IFU ou justificatif d’activité lorsque disponible ou requis.</p></li>
 </ul>
-<h3 class="sub">3.6 Données de support, de preuve, de Protection acheteur et de litige</h3>
+<h2 id="données-de-support-de-preuve-de-protection-client-et-de-litige">3.6 Données de support, de preuve, de Protection Client et de litige</h2>
 <ul>
-<li>demandes d’assistance ;</li>
-<li>tickets support ;</li>
-<li>messages échangés via les canaux officiels ;</li>
-<li>captures d’écran ;</li>
-<li>preuves d’expédition ou de livraison ;</li>
-<li>preuves de paiement ;</li>
-<li>photos, vidéos ou documents justificatifs ;</li>
-<li>informations transmises dans le cadre d’une Protection acheteur, d’une médiation ou d’un litige.</li>
+<li><p>demandes d’assistance ;</p></li>
+<li><p>tickets support ;</p></li>
+<li><p>messages échangés via les canaux officiels ;</p></li>
+<li><p>captures d’écran ;</p></li>
+<li><p>preuves d’expédition ou de livraison ;</p></li>
+<li><p>preuves de paiement ;</p></li>
+<li><p>photos, vidéos ou documents justificatifs ;</p></li>
+<li><p>informations transmises dans le cadre d’une Protection Client, d’une médiation ou d’un litige.</p></li>
 </ul>
-<h3 class="sub">3.7 Données comptables et administratives internes</h3>
+<h2 id="données-comptables-et-administratives-internes">3.7 Données comptables et administratives internes</h2>
 <ul>
-<li>écritures automatiques liées aux transactions ;</li>
-<li>écritures manuelles internes ;</li>
-<li>apports, subventions, dons, prêts, charges, frais, investissements ou autres flux liés à la tenue comptable ;</li>
-<li>journaux internes, rapports simplifiés, justificatifs et références de pièces comptables ;</li>
-<li>données nécessaires aux obligations comptables, fiscales, financières, d’audit ou de conformité.</li>
+<li><p>écritures automatiques liées aux transactions ;</p></li>
+<li><p>écritures manuelles internes ;</p></li>
+<li><p>apports, subventions, dons, prêts, charges, frais, investissements ou autres flux liés à la tenue comptable ;</p></li>
+<li><p>journaux internes, rapports simplifiés, justificatifs et références de pièces comptables ;</p></li>
+<li><p>données nécessaires aux obligations comptables, fiscales, financières, d’audit ou de conformité.</p></li>
 </ul>
 <p>FrikaPay n’a pas vocation à collecter des données sensibles telles que opinions politiques, convictions religieuses, état de santé ou vie sexuelle. Si de telles données sont transmises par erreur, elles peuvent être supprimées, masquées ou isolées, sauf obligation légale contraire.</p>
-<h2 class="art">ARTICLE 4 — SOURCES DES DONNÉES</h2>
-<p>Les données peuvent être collectées directement auprès de l’utilisateur lors de l’inscription, du paiement, du support, du KYC, d’une transaction, d’une Protection acheteur, d’un litige ou d’une écriture interne.</p>
+<h1 id="article-4-sources-des-données">ARTICLE 4 — SOURCES DES DONNÉES</h1>
+<p>Les données peuvent être collectées directement auprès de l’utilisateur lors de l’inscription, du paiement, du support, du KYC, d’une transaction, d’une Protection Client, d’un litige ou d’une écriture interne.</p>
 <p>Elles peuvent également être collectées indirectement auprès d’un autre utilisateur impliqué dans la transaction, automatiquement via les terminaux et journaux techniques, auprès des prestataires de paiement, agrégateurs, banques, opérateurs Mobile Money, prestataires KYC ou via les documents, preuves et justificatifs déposés.</p>
-<h2 class="art">ARTICLE 5 — FINALITÉS DU TRAITEMENT</h2>
+<h1 id="article-5-finalités-du-traitement">ARTICLE 5 — FINALITÉS DU TRAITEMENT</h1>
 <p>Les données personnelles sont traitées pour les finalités suivantes :</p>
 <ul>
-<li>créer, administrer et sécuriser un compte FrikaPay ;</li>
-<li>gérer le compte unique et les rôles client/commerçant ;</li>
-<li>authentifier les utilisateurs ;</li>
-<li>créer et suivre les transactions ;</li>
-<li>permettre les paiements sécurisés via prestataire agréé ou habilité ;</li>
-<li>gérer les transactions initiées par le client et les liens d’invitation commerçant ;</li>
-<li>calculer et afficher les frais applicables ;</li>
-<li>gérer les remboursements et décaissements ;</li>
-<li>fournir le support client et commerçant ;</li>
-<li>gérer la Protection acheteur ;</li>
-<li>instruire les litiges et médiations ;</li>
-<li>vérifier l’identité ou l’activité lorsque cela est nécessaire ;</li>
-<li>prévenir, détecter et documenter la fraude, les abus et contournements ;</li>
-<li>assurer la sécurité de la plateforme ;</li>
-<li>tenir une comptabilité interne, produire des journaux internes, rapports simplifiés et éléments de justification ;</li>
-<li>respecter les obligations comptables, fiscales, légales, réglementaires ou prudentielles applicables ;</li>
-<li>historiser l’acceptation des documents officiels ;</li>
-<li>envoyer des notifications opérationnelles, de sécurité ou de conformité ;</li>
-<li>produire des statistiques et indicateurs d’usage sous forme agrégée ou anonymisée lorsque cela est possible ;</li>
-<li>améliorer la qualité, l’ergonomie et la sécurité des services FrikaPay.</li>
+<li><p>créer, administrer et sécuriser un compte FrikaPay ;</p></li>
+<li><p>gérer le compte unique et les rôles client/commerçant ;</p></li>
+<li><p>authentifier les utilisateurs ;</p></li>
+<li><p>créer et suivre les transactions ;</p></li>
+<li><p>permettre les paiements sécurisés via prestataire agréé ou habilité ;</p></li>
+<li><p>gérer les transactions initiées par le client et les liens d’invitation commerçant ;</p></li>
+<li><p>calculer et afficher les frais applicables ;</p></li>
+<li><p>gérer les remboursements et décaissements ;</p></li>
+<li><p>fournir le support client et commerçant ;</p></li>
+<li><p>gérer la Protection Client ;</p></li>
+<li><p>instruire les litiges et médiations ;</p></li>
+<li><p>vérifier l’identité ou l’activité lorsque cela est nécessaire ;</p></li>
+<li><p>prévenir, détecter et documenter la fraude, les abus et contournements ;</p></li>
+<li><p>assurer la sécurité de la plateforme ;</p></li>
+<li><p>tenir une comptabilité interne, produire des journaux internes, rapports simplifiés et éléments de justification ;</p></li>
+<li><p>respecter les obligations comptables, fiscales, légales, réglementaires ou prudentielles applicables ;</p></li>
+<li><p>historiser l’acceptation des documents officiels ;</p></li>
+<li><p>envoyer des notifications opérationnelles, de sécurité ou de conformité ;</p></li>
+<li><p>produire des statistiques et indicateurs d’usage sous forme agrégée ou anonymisée lorsque cela est possible ;</p></li>
+<li><p>améliorer la qualité, l’ergonomie et la sécurité des services FrikaPay.</p></li>
 </ul>
-<h2 class="art">ARTICLE 6 — BASES LÉGALES DES TRAITEMENTS</h2>
+<h1 id="article-6-bases-légales-des-traitements">ARTICLE 6 — BASES LÉGALES DES TRAITEMENTS</h1>
 <p>Selon les traitements concernés, FrikaPay peut s’appuyer sur l’exécution du contrat, le consentement, une obligation légale ou l’intérêt légitime.</p>
-<h3 class="sub">6.1 Exécution du contrat</h3>
+<h2 id="exécution-du-contrat">6.1 Exécution du contrat</h2>
 <p>Cette base peut couvrir la création du compte, l’exécution d’une transaction, le suivi, le paiement via prestataire, le remboursement, le décaissement ou le support lié au service.</p>
-<h3 class="sub">6.2 Consentement</h3>
+<h2 id="consentement">6.2 Consentement</h2>
 <p>Le consentement peut être utilisé pour certains cookies, communications optionnelles, fonctionnalités facultatives ou opérations pour lesquelles la réglementation l’exige.</p>
-<h3 class="sub">6.3 Obligation légale</h3>
+<h2 id="obligation-légale">6.3 Obligation légale</h2>
 <p>L’obligation légale peut couvrir certaines obligations comptables, fiscales, de conservation, de coopération avec les autorités ou de contrôle d’identité lorsque la réglementation l’exige.</p>
-<h3 class="sub">6.4 Intérêt légitime</h3>
+<h2 id="intérêt-légitime">6.4 Intérêt légitime</h2>
 <p>L’intérêt légitime peut couvrir la sécurité de la plateforme, la prévention de la fraude, la conservation de preuves, la journalisation des actions sensibles, l’amélioration du service et la défense des droits de FrikaPay ou des utilisateurs.</p>
-<h2 class="art">ARTICLE 7 — COMPTE UNIQUE, RÔLES ET CHANGEMENT DE MODE</h2>
+<h1 id="article-7-compte-unique-rôles-et-changement-de-mode">ARTICLE 7 — COMPTE UNIQUE, RÔLES ET CHANGEMENT DE MODE</h1>
 <p>FrikaPay repose sur un compte utilisateur unique. Un même utilisateur peut utiliser le mode client, le mode commerçant ou les deux. Le changement de mode ne crée pas un nouveau compte.</p>
 <p>Les données, notifications, historiques, paramètres, preuves, documents et éléments de sécurité restent associés au même UID. L’activation d’un nouveau rôle peut nécessiter la collecte d’informations complémentaires, l’acceptation de nouveaux documents officiels, la réalisation d’un KYC ou l’application de règles spécifiques au rôle concerné.</p>
-<h2 class="art">ARTICLE 8 — DOCUMENTS OFFICIELS, ACCEPTATIONS ET PREUVE</h2>
+<h1 id="article-8-documents-officiels-acceptations-et-preuve">ARTICLE 8 — DOCUMENTS OFFICIELS, ACCEPTATIONS ET PREUVE</h1>
 <p>FrikaPay exploite un système de documents officiels versionnés. FrikaPay peut demander l’acceptation explicite des CGU Client, CGU Commerçant, de la présente Politique de Confidentialité, de la Grille Tarifaire active ou de tout autre document officiel rendu nécessaire par un nouveau service, un nouveau rôle ou une exigence réglementaire.</p>
 <p>Afin de démontrer l’acceptation d’un document officiel, FrikaPay peut enregistrer l’UID, le type de document, l’identifiant du document, la version, la langue affichée, la date et l’heure d’acceptation, l’adresse IP, le navigateur, l’appareil, la version de l’application, le contexte d’acceptation et, le cas échéant, une empreinte technique ou un hash de preuve.</p>
-<h2 class="art">ARTICLE 9 — COOKIES, TRACEURS ET TECHNOLOGIES SIMILAIRES</h2>
+<h1 id="article-9-cookies-traceurs-et-technologies-similaires">ARTICLE 9 — COOKIES, TRACEURS ET TECHNOLOGIES SIMILAIRES</h1>
 <p>FrikaPay peut utiliser des cookies, traceurs, SDK ou technologies similaires pour assurer le fonctionnement technique du service, maintenir une session sécurisée, mémoriser certaines préférences, mesurer l’audience, détecter les anomalies techniques, améliorer l’expérience utilisateur ou prévenir la fraude.</p>
 <p>Lorsque des traceurs soumis au consentement sont utilisés, le choix de l’utilisateur est libre, spécifique et éclairé, le refus doit être aussi simple que l’acceptation et le retrait du consentement doit pouvoir être exercé lorsque le canal le permet.</p>
-<h2 class="art">ARTICLE 10 — DESTINATAIRES ET PARTAGE DES DONNÉES</h2>
+<h1 id="article-10-destinataires-et-partage-des-données">ARTICLE 10 — DESTINATAIRES ET PARTAGE DES DONNÉES</h1>
 <p>Les données personnelles peuvent être communiquées, dans la limite du besoin d’en connaître, aux équipes internes habilitées de FrikaPay, prestataires techniques, hébergeurs, prestataires de paiement, agrégateurs, opérateurs Mobile Money, banques, prestataires KYC, fournisseurs SMS, e-mail ou push, prestataires cloud, conseils, auditeurs, partenaires contractuels sécurisés et autorités légalement habilitées.</p>
 <p>FrikaPay ne vend pas et ne loue pas les données personnelles de ses utilisateurs. Lorsque FrikaPay recourt à un sous-traitant, celui-ci agit uniquement dans le cadre prévu avec des mesures de sécurité adaptées.</p>
-<h2 class="art">ARTICLE 11 — DURÉES DE CONSERVATION</h2>
+<h1 id="article-11-durées-de-conservation">ARTICLE 11 — DURÉES DE CONSERVATION</h1>
 <p>FrikaPay applique un principe de conservation limitée : les données ne sont pas conservées au-delà de ce qui est nécessaire aux finalités poursuivies, sauf obligation légale, nécessité probatoire ou défense de droits.</p>
 <ul>
-<li>les données de compte sont conservées pendant la durée d’utilisation du service puis supprimées, anonymisées ou archivées selon leur nature et les obligations applicables ;</li>
-<li>les données relatives aux transactions, paiements, remboursements, décaissements, litiges, documents officiels et écritures comptables peuvent être conservées pendant la durée d’exécution du service puis archivées pendant au moins cinq ans, sauf durée légale plus longue ;</li>
-<li>les données KYC sont conservées pendant la durée imposée par la réglementation applicable ou, à défaut, pendant la durée nécessaire à la vérification, à la sécurité et à la défense des droits ;</li>
-<li>les journaux de connexion, de sécurité et d’activité sont conservés pendant une durée proportionnée aux finalités de sécurité, sauf incident, fraude présumée, demande d’autorité ou contentieux en cours ;</li>
-<li>les preuves, tickets support et pièces de médiation sont conservés le temps nécessaire au traitement puis archivés tant que cela demeure utile à la preuve ou à la défense des droits.</li>
+<li><p>les données de compte sont conservées pendant la durée d’utilisation du service puis supprimées, anonymisées ou archivées selon leur nature et les obligations applicables ;</p></li>
+<li><p>les données relatives aux transactions, paiements, remboursements, décaissements, litiges, documents officiels et écritures comptables peuvent être conservées pendant la durée d’exécution du service puis archivées pendant au moins cinq ans, sauf durée légale plus longue ;</p></li>
+<li><p>les données KYC sont conservées pendant la durée imposée par la réglementation applicable ou, à défaut, pendant la durée nécessaire à la vérification, à la sécurité et à la défense des droits ;</p></li>
+<li><p>les journaux de connexion, de sécurité et d’activité sont conservés pendant une durée proportionnée aux finalités de sécurité, sauf incident, fraude présumée, demande d’autorité ou contentieux en cours ;</p></li>
+<li><p>les preuves, tickets support et pièces de médiation sont conservés le temps nécessaire au traitement puis archivés tant que cela demeure utile à la preuve ou à la défense des droits.</p></li>
 </ul>
-<h2 class="art">ARTICLE 12 — SÉCURITÉ DES DONNÉES</h2>
+<h1 id="article-12-sécurité-des-données">ARTICLE 12 — SÉCURITÉ DES DONNÉES</h1>
 <p>FrikaPay met en œuvre des mesures techniques et organisationnelles adaptées aux risques, notamment chiffrement des flux lorsque cela est techniquement applicable, protection renforcée des données sensibles, contrôle d’accès fondé sur l’habilitation, principe du moindre privilège, OTP, journalisation des actions sensibles, sauvegardes, surveillance des événements de sécurité, détection d’anomalies, cloisonnement logique des environnements et encadrement contractuel des prestataires.</p>
 <p>Aucune mesure de sécurité n’offrant un risque nul, les utilisateurs doivent protéger leurs accès, ne pas partager leurs codes OTP, ne pas transmettre de fausses informations et signaler rapidement toute activité suspecte.</p>
-<h2 class="art">ARTICLE 13 — DROITS DES PERSONNES CONCERNÉES</h2>
+<h1 id="article-13-droits-des-personnes-concernées">ARTICLE 13 — DROITS DES PERSONNES CONCERNÉES</h1>
 <p>Sous réserve des conditions et limites prévues par la réglementation applicable, toute personne concernée peut disposer des droits suivants : accès, rectification, effacement, opposition, limitation du traitement, portabilité lorsque cela est applicable, retrait du consentement lorsque le traitement repose sur le consentement et réclamation auprès de l’autorité compétente.</p>
 <p>Les demandes peuvent être adressées à : contact@frikapay.com. Pour des raisons de sécurité, FrikaPay peut demander des informations raisonnables permettant de vérifier l’identité du demandeur. FrikaPay répond en principe dans un délai maximal de trente jours à compter de la réception d’une demande complète, sauf complexité particulière ou délai légal différent.</p>
-<h2 class="art">ARTICLE 14 — PROTECTION ACHETEUR, LITIGES ET PREUVE</h2>
-<p>La Protection acheteur est une fonctionnalité préventive propre à FrikaPay. Elle peut être activée lorsqu’un comportement suspect, une absence de réponse du commerçant, une incohérence importante, un risque de fraude ou tout autre signal d’alerte est constaté par l’utilisateur ou par FrikaPay.</p>
+<h1 id="article-14-protection-client-litiges-et-preuve">ARTICLE 14 — PROTECTION CLIENT, LITIGES ET PREUVE</h1>
+<p>La Protection Client est une fonctionnalité préventive propre à FrikaPay. Elle peut être activée lorsqu’un comportement suspect, une absence de réponse du commerçant, une incohérence importante, un risque de fraude ou tout autre signal d’alerte est constaté par l’utilisateur ou par FrikaPay.</p>
 <p>Dans ce cadre, FrikaPay peut traiter les données nécessaires pour analyser la situation, demander des informations complémentaires, comparer les preuves fournies, sécuriser la transaction, documenter les événements et préparer, le cas échéant, une médiation ou un litige.</p>
-<p>La Protection acheteur n’équivaut pas automatiquement à une décision de remboursement, une reconnaissance de faute, une ouverture automatique de litige ou une garantie absolue de résultat. Seules les informations transmises par les canaux officiels de FrikaPay peuvent être retenues comme preuve opposable dans le cadre d’une médiation, d’un litige ou d’une vérification de sécurité.</p>
-<h2 class="art">ARTICLE 15 — MINEURS</h2>
+<p>La Protection Client n’équivaut pas automatiquement à une décision de remboursement, une reconnaissance de faute, une ouverture automatique de litige ou une garantie absolue de résultat. Seules les informations transmises par les canaux officiels de FrikaPay peuvent être retenues comme preuve opposable dans le cadre d’une médiation, d’un litige ou d’une vérification de sécurité.</p>
+<h1 id="article-15-mineurs">ARTICLE 15 — MINEURS</h1>
 <p>FrikaPay est réservé aux personnes âgées d’au moins 18 ans conformément à ses conditions d’utilisation. FrikaPay ne cherche pas à collecter sciemment des données personnelles concernant des mineurs. Lorsqu’un compte ou une inscription irrégulière d’un mineur est détecté, FrikaPay peut restreindre, suspendre ou supprimer le compte concerné, sous réserve des obligations légales de conservation applicables.</p>
-<h2 class="art">ARTICLE 16 — NOTIFICATIONS ET COMMUNICATIONS</h2>
-<p>FrikaPay peut utiliser les coordonnées fournies pour envoyer des notifications de transaction, confirmations de paiement, alertes de sécurité, informations liées aux litiges, informations liées à la Protection acheteur, demandes de vérification, informations relatives aux CGU, à la Politique de Confidentialité ou à la Grille Tarifaire, ainsi que des messages opérationnels liés au service.</p>
-<h2 class="art">ARTICLE 17 — PRESTATAIRES DE PAIEMENT ET OPÉRATEURS TIERS</h2>
+<h1 id="article-16-notifications-et-communications">ARTICLE 16 — NOTIFICATIONS ET COMMUNICATIONS</h1>
+<p>FrikaPay peut utiliser les coordonnées fournies pour envoyer des notifications de transaction, confirmations de paiement, alertes de sécurité, informations liées aux litiges, informations liées à la Protection Client, demandes de vérification, informations relatives aux CGU, à la Politique de Confidentialité ou à la Grille Tarifaire, ainsi que des messages opérationnels liés au service.</p>
+<h1 id="article-17-prestataires-de-paiement-et-opérateurs-tiers">ARTICLE 17 — PRESTATAIRES DE PAIEMENT ET OPÉRATEURS TIERS</h1>
 <p>Les paiements, remboursements et décaissements sont exécutés par des prestataires de paiement, agrégateurs, banques ou opérateurs Mobile Money agréés ou habilités. Certaines données peuvent leur être transmises ou rendues accessibles, notamment identité ou informations de compte nécessaires, numéro de téléphone ou Mobile Money, montant de la transaction, référence de paiement, statut de paiement, informations nécessaires au remboursement ou au décaissement, informations de sécurité ou de vérification.</p>
 <p>Ces prestataires peuvent également traiter certaines données selon leurs propres obligations légales, techniques ou réglementaires. FrikaPay invite les utilisateurs à consulter, lorsque nécessaire, les conditions et politiques de confidentialité des prestataires concernés.</p>
-<h2 class="art">ARTICLE 18 — MODIFICATIONS DE LA POLITIQUE</h2>
+<h1 id="article-18-modifications-de-la-politique">ARTICLE 18 — MODIFICATIONS DE LA POLITIQUE</h1>
 <p>La présente Politique fait partie des documents officiels versionnés de FrikaPay. Chaque version comporte notamment un numéro de version, une date de publication, une date d’entrée en vigueur et un statut.</p>
 <p>FrikaPay peut modifier la présente Politique afin de tenir compte d’une évolution du service, d’une nouvelle fonctionnalité, d’une évolution légale, réglementaire ou technique, d’une clarification de ses pratiques, d’une exigence prestataire ou d’une amélioration de la protection des utilisateurs.</p>
 <p>En cas de modification substantielle, FrikaPay peut notifier les utilisateurs, publier une nouvelle version ou exiger, lorsque cela est nécessaire, une nouvelle acceptation explicite.</p>
-<h2 class="art">ARTICLE 19 — CONTACT, RÉCLAMATIONS ET AUTORITÉ DE CONTRÔLE</h2>
+<h1 id="article-19-contact-réclamations-et-autorité-de-contrôle">ARTICLE 19 — CONTACT, RÉCLAMATIONS ET AUTORITÉ DE CONTRÔLE</h1>
 <p>Toute question, demande d’exercice de droits ou réclamation relative aux données personnelles peut être adressée à : contact@frikapay.com.</p>
 <p>Pour un traitement plus rapide, l’utilisateur est invité à préciser son UID si disponible, le rôle concerné, l’objet précis de la demande et tout élément permettant de l’identifier raisonnablement.</p>
-<p>Autorité de contrôle compétente : Autorité de Protection des Données Personnelles (APDP), République du Bénin. Coordonnées de l’autorité : https://apdp.bj.</p>
-<h2 class="art">ARTICLE 20 — MENTIONS LÉGALES</h2>
-<p>FrikaPay Technologies est une Société à Responsabilité Limitée (SARL) immatriculée au Bénin sous le RCCM RB/NAT/26 B 994 et l’IFU 3202682983357, dont le siège social est situé Ilot NA, Quartier Yetapo, Parcelle SB, Maison Imana Nara, Natitingou 3, Natitingou, Atacora, Bénin. Le représentant légal est WIBO Daniel NARA, Gérant.</p>
-<p>FrikaPay est exploitée par FrikaPay Technologies (SARL), plateforme numérique actuellement en phase bêta.</p>
-<h2 class="art">ARTICLE 21 — CLAUSE FINALE</h2>
+<p>Autorité de contrôle compétente : Autorité de Protection des Données Personnelles (APDP) - Bénin. Coordonnées : à consulter via les canaux officiels de l’APDP.</p>
+<h1 id="article-20-mentions-légales-de-léditeur">ARTICLE 20 — MENTIONS LÉGALES DE L’ÉDITEUR</h1>
+<p>Informations légales de l’entité éditrice :</p>
+<p>FrikaPay est exploitée par FrikaPay Technologies SARL pendant sa phase bêta, avec un déploiement progressif et contrôlé.</p>
+<h1 id="article-21-clause-finale">ARTICLE 21 — CLAUSE FINALE</h1>
 <p>En utilisant FrikaPay, l’utilisateur reconnaît avoir pris connaissance de la présente Politique de Confidentialité et comprendre les règles essentielles applicables au traitement de ses données personnelles.</p>
 <p>La présente Politique doit être lue conjointement avec les CGU Client, les CGU Commerçant, la Grille Tarifaire active et les autres documents officiels FrikaPay publiés dans leur version en vigueur.</p>
 <p>FrikaPay — Achetez en toute sérénité. Vendez en toute confiance.</p>
 <p>Sûr · Simple · Fiable</p>
-<p>Version Bêta 1.1 — 2026</p>  </div>
-</main>
-
-<footer>
-  <div class="container">
-    FrikaPay Technologies — SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br>
-    <a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a>
-  </div>
-</footer>
-
-</body>
-</html>
+<p>Version Bêta 1.2 — 2026</p>
+</div>
+<div class="doc-footer-note">FrikaPay Technologies SARL — Ilot NA, Quartier Yetapo, Natitingou, Atacora, Bénin — contact@frikapay.com — +229 01 66 62 30 09</div>
+</div></main>
+<footer><div class="container">FrikaPay Technologies SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br/><a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a></div></footer>
+</body></html>

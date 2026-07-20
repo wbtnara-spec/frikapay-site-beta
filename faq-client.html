@@ -1,18 +1,20 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FAQ — Client — FrikaPay</title>
-<meta name="robots" content="index,follow">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FAQ Client — FrikaPay</title>
+<meta content="index,follow" name="robots"/>
+<meta content="FAQ Client FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="description"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
 <style>
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#FFFFFF; color:#1F2937; line-height:1.65; -webkit-font-smoothing:antialiased; }
-  .container { max-width:800px; margin:0 auto; padding:0 1.25rem; }
+  .container { max-width:860px; margin:0 auto; padding:0 1.25rem; }
   header { background:white; border-bottom:1px solid #F0F0F0; position:sticky; top:0; z-index:50; background-color:rgba(255,255,255,0.95); backdrop-filter:blur(6px); }
   .nav-container { display:flex; align-items:center; justify-content:space-between; padding:0.7rem 1.25rem; max-width:1100px; margin:0 auto; }
   .logo img { height:34px; width:auto; }
@@ -21,124 +23,231 @@
   .doc-eyebrow { color:#1A73E8; font-weight:700; font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.5rem; }
   .doc-title { font-size:1.9rem; font-weight:700; color:#0B3D91; letter-spacing:-0.02em; line-height:1.25; margin-bottom:0.8rem; }
   .doc-meta { color:#6B7280; font-size:0.88rem; line-height:1.8; }
-  .doc-meta b { color:#374151; }
+  .doc-actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:1.2rem; }
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:.45rem; padding:.7rem 1.1rem; border-radius:999px; text-decoration:none; font-weight:700; font-size:.9rem; }
+  .btn-primary { background:#1A73E8; color:white; box-shadow:0 6px 16px rgba(26,115,232,.22); }
+  .btn-outline { border:1px solid #BFDBFE; color:#0B3D91; background:white; }
   main { padding:2.5rem 0 4rem; }
-  h2.art { font-size:1.25rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:0.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
-  main > .container > h2.art:first-of-type { border-top:none; padding-top:0; margin-top:0.5rem; }
-  h3.sub { font-size:1.05rem; color:#1A73E8; margin-top:1.4rem; margin-bottom:0.5rem; }
-  h4.subsub { font-size:0.98rem; color:#374151; margin-top:1.1rem; margin-bottom:0.4rem; font-weight:700; }
-  p { margin-bottom:0.85rem; color:#374151; font-size:0.96rem; }
-  ul { margin:0 0 0.9rem 1.3rem; }
-  li { margin-bottom:0.45rem; color:#374151; font-size:0.96rem; }
-  table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:0.9rem; }
-  th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:700; padding:0.6rem 0.7rem; border-bottom:2px solid #1A73E8; font-size:0.82rem; text-transform:uppercase; letter-spacing:0.03em; }
-  td { padding:0.6rem 0.7rem; border-bottom:1px solid #EEF2F6; color:#374151; }
-  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:0.88rem; text-align:center; }
-  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:0.85rem; text-align:center; }
+  .official-note { background:#F8FAFF; border:1px solid #E5E7EB; border-left:4px solid #1A73E8; border-radius:14px; padding:1rem 1.1rem; color:#374151; font-size:.92rem; margin-bottom:1.6rem; }
+  .doc-content h1 { font-size:1.32rem; color:#0B3D91; margin-top:2.4rem; margin-bottom:.8rem; padding-top:1.2rem; border-top:1px solid #EEF2F6; letter-spacing:-0.01em; }
+  .doc-content h1:first-child { margin-top:.5rem; padding-top:0; border-top:none; }
+  .doc-content h2 { font-size:1.08rem; color:#1A73E8; margin-top:1.45rem; margin-bottom:.55rem; letter-spacing:-0.01em; }
+  .doc-content h3, .doc-content h4 { font-size:1rem; color:#374151; margin-top:1.15rem; margin-bottom:.45rem; font-weight:700; }
+  .doc-content p { margin-bottom:.85rem; color:#374151; font-size:.96rem; }
+  .doc-content ul, .doc-content ol { margin:0 0 .9rem 1.3rem; }
+  .doc-content li { margin-bottom:.45rem; color:#374151; font-size:.96rem; }
+  .doc-content table { width:100%; border-collapse:collapse; margin:1rem 0 1.5rem; font-size:.88rem; overflow:hidden; border-radius:12px; }
+  .doc-content th { text-align:left; background:#F4F9FF; color:#0B3D91; font-weight:800; padding:.65rem .75rem; border-bottom:2px solid #1A73E8; font-size:.8rem; text-transform:uppercase; letter-spacing:.03em; }
+  .doc-content td { padding:.65rem .75rem; border-bottom:1px solid #EEF2F6; color:#374151; vertical-align:top; }
+  .doc-content tr:nth-child(even) td { background:#FCFDFF; }
+  .doc-footer-note { margin-top:3rem; padding:1.5rem; background:#F8FAFF; border:1px solid #EEF2F6; border-radius:14px; color:#6B7280; font-size:.88rem; text-align:center; }
+  footer { background:#0B3D91; color:#CBD5E1; padding:2.2rem 0; font-size:.85rem; text-align:center; }
   footer a { color:#9DC1FA; text-decoration:none; }
+  @media (max-width:640px){ .doc-title{font-size:1.55rem;} .doc-content table{display:block; overflow-x:auto; white-space:normal;} .nav-container{padding:.65rem 1rem;} }
+  html, body { max-width:100%; overflow-x:hidden; }
+  .doc-content { max-width:100%; overflow-wrap:anywhere; }
+  .doc-content table { max-width:100%; }
 </style>
-</head>
+<link href="https://frikapay.com/faq-client.html" rel="canonical"/><meta content="FAQ Client — FrikaPay" property="og:title"/><meta content="FAQ Client FrikaPay — document harmonisé, entrée en vigueur juillet 2026." property="og:description"/><meta content="website" property="og:type"/><meta content="https://frikapay.com/faq-client.html" property="og:url"/><meta content="https://frikapay.com/logo-og.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="FAQ Client — FrikaPay" name="twitter:title"/><meta content="FAQ Client FrikaPay — document harmonisé, entrée en vigueur juillet 2026." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FrikaPay",
+  "legalName": "FrikaPay Technologies SARL",
+  "url": "https://frikapay.com",
+  "logo": "https://frikapay.com/logo-og.png",
+  "email": "contact@frikapay.com",
+  "telephone": "+2290166623009",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Natitingou",
+    "addressRegion": "Atacora",
+    "addressCountry": "BJ"
+  },
+  "identifier": [
+    "RCCM RB/NAT/26 B 994",
+    "IFU 3202682983357"
+  ]
+}</script></head>
 <body>
-
-<header>
-  <div class="nav-container">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"></a>
-    <a href="index.html" class="back-link">← Retour au site</a>
-  </div>
-</header>
-
-<div class="doc-header">
-  <div class="container">
-    <div class="doc-eyebrow">Document officiel FrikaPay</div>
-    <div class="doc-title">FAQ — Client</div>
-    <div class="doc-meta">Version Bêta — 2026 &middot; Foire aux questions pour les clients FrikaPay</div>
-  </div>
+<header><div class="nav-container"><a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/></a><a class="back-link" href="documents.html">Documents officiels</a></div></header>
+<div class="doc-header"><div class="container">
+<div class="doc-eyebrow">Document officiel FrikaPay</div>
+<div class="doc-title">FAQ Client</div>
+<div class="doc-meta">Version harmonisée — Entrée en vigueur : juillet 2026<br/>Éditeur : FrikaPay Technologies SARL · RCCM : RB/NAT/26 B 994 · IFU : 3202682983357</div>
+<div class="doc-actions"><a class="btn btn-outline" href="documents.html">Retour aux documents</a><a class="btn btn-outline" href="index.html">Retour au site</a></div>
+</div></div>
+<main><div class="container">
+<div class="official-note">Cette page reprend la version harmonisée du document FrikaPay publiée pour consultation en ligne.</div>
+<div class="doc-content">
+<p><strong>FAQ CLIENT — FRIKAPAY</strong></p>
+<p>Version : Bêta 1.2 — 2026 | Statut : FAQ alignée terminologie paiement sécurisé et Grille Tarifaire Publique V1.3</p>
+<p>Contact officiel : contact@frikapay.com</p>
+<h2 id="quest-ce-que-frikapay">1. Qu’est-ce que FrikaPay ?</h2>
+<p>FrikaPay est une plateforme de confiance qui aide les clients et les commerçants à sécuriser leurs transactions en ligne.</p>
+<p>FrikaPay permet de créer ou suivre une transaction, payer via un prestataire de paiement, confirmer la réception, signaler un problème et appliquer des règles prévues pour libérer ou rembourser les fonds selon le cas.</p>
+<p>FrikaPay n’est pas une banque, ni un établissement de paiement, ni un opérateur Mobile Money. Les paiements, remboursements et décaissements sont exécutés par des prestataires de paiement agréés ou habilités.</p>
+<h2 id="pourquoi-utiliser-frikapay-comme-client">2. Pourquoi utiliser FrikaPay comme client ?</h2>
+<p>FrikaPay vous aide à acheter avec plus de sérénité. Au lieu de payer directement un commerçant sans cadre clair, vous utilisez une transaction suivie avec des règles de confirmation, de signalement, de litige et de transmission du paiement au commerçant après confirmation de réception ou validation FrikaPay.</p>
+<h2 id="frikapay-vend-elle-les-produits">3. FrikaPay vend-elle les produits ?</h2>
+<p>Non. FrikaPay ne vend pas les produits et ne fournit pas les services proposés par les commerçants. Le commerçant reste responsable du produit, du prix, de la disponibilité, de la livraison, de la qualité et du service après-vente.</p>
+<h2 id="frikapay-est-elle-une-banque-ou-un-opérateur-mobile-money">4. FrikaPay est-elle une banque ou un opérateur Mobile Money ?</h2>
+<p>Non. FrikaPay n’est pas une banque, ni un établissement de paiement, ni un opérateur Mobile Money. Les opérations financières sont traitées par des prestataires de paiement agréés ou habilités.</p>
+<h2 id="comment-fonctionne-une-transaction-frikapay">5. Comment fonctionne une transaction FrikaPay ?</h2>
+<p>Le fonctionnement général est le suivant :</p>
+<ul>
+<li><p>une transaction est créée par le client ou par le commerçant ;</p></li>
+<li><p>le client vérifie les informations : produit, montant, commerçant, livraison et frais ;</p></li>
+<li><p>le client paie via FrikaPay ;</p></li>
+<li><p>le paiement est traité par un prestataire de paiement ;</p></li>
+<li><p>le commerçant accepte la transaction lorsqu’une acceptation est requise, prépare puis livre la commande ;</p></li>
+<li><p>le client confirme la réception ou signale un problème dans le délai prévu ;</p></li>
+<li><p>les fonds sont libérés au commerçant ou remboursés selon les conditions prévues.</p></li>
+</ul>
+<h2 id="puis-je-initier-moi-même-une-transaction-vers-un-commerçant">6. Puis-je initier moi-même une transaction vers un commerçant ?</h2>
+<p>Oui. FrikaPay peut permettre à un client d’initier une transaction sécurisée vers un commerçant, même lorsque le commerçant n’a pas lui-même créé le lien de paiement au départ.</p>
+<p>Dans ce cas, FrikaPay peut générer une demande client et un lien d’invitation commerçant.</p>
+<h2 id="à-quoi-sert-le-lien-dinvitation-commerçant">7. À quoi sert le lien d’invitation commerçant ?</h2>
+<p>Le lien d’invitation commerçant permet au commerçant de consulter la demande créée par le client, puis d’accepter, négocier ou refuser la transaction.</p>
+<p>Pendant la phase bêta, le délai standard de réponse du commerçant est de 48 heures, sauf règle différente affichée dans l’application.</p>
+<p>Si le commerçant refuse ou ne répond pas dans le délai prévu, la transaction peut être annulée et le montant principal peut être remboursé selon les règles applicables. Les frais de protection FrikaPay ne sont pas automatiquement remboursables.</p>
+<h2 id="quand-les-fonds-sont-ils-libérés-au-commerçant">8. Quand les fonds sont-ils libérés au commerçant ?</h2>
+<p>Les fonds sont libérés au commerçant selon les conditions prévues, notamment :</p>
+<ul>
+<li><p>confirmation de réception par le client ;</p></li>
+<li><p>expiration du délai de confirmation ou de signalement sans problème déclaré ;</p></li>
+<li><p>décision après traitement d’un litige ;</p></li>
+<li><p>accord validé entre les parties.</p></li>
+</ul>
+<h2 id="est-ce-que-frikapay-garantit-toujours-le-remboursement">9. Est-ce que FrikaPay garantit toujours le remboursement ?</h2>
+<p>Non. FrikaPay ne garantit pas automatiquement tous les remboursements. Un remboursement dépend des règles applicables, du statut de la transaction, des preuves disponibles, du délai de signalement, de la décision après litige et des possibilités techniques du prestataire de paiement.</p>
+<h2 id="quels-sont-les-frais-pour-le-client">10. Quels sont les frais pour le client ?</h2>
+<p>Pendant la phase bêta, le client paie des frais de protection FrikaPay calculés selon le statut du commerçant au moment de la transaction :</p>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Statut du commerçant</strong></th>
+<th><strong>Frais de protection FrikaPay</strong></th>
+<th><strong>Minimum total des frais</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Commerçant vérifié FrikaPay</td>
+<td>3 % du montant + 100 FCFA</td>
+<td>200 FCFA</td>
+</tr>
+<tr class="even">
+<td>Commerçant en cours de vérification</td>
+<td>3 % du montant + 200 FCFA</td>
+<td>300 FCFA</td>
+</tr>
+<tr class="odd">
+<td>Commerçant invité à rejoindre FrikaPay</td>
+<td>3 % du montant + 200 FCFA</td>
+<td>300 FCFA</td>
+</tr>
+</tbody>
+</table>
+<p>Ces frais sont affichés avant validation du paiement.</p>
+<h2 id="pouvez-vous-donner-des-exemples-de-calcul">11. Pouvez-vous donner des exemples de calcul ?</h2>
+<table>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th><strong>Montant transaction</strong></th>
+<th><strong>Commerçant vérifié FrikaPay</strong></th>
+<th><strong>Commerçant en cours de vérification / invité</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>5 000 FCFA</td>
+<td>250 FCFA — total 5 250 FCFA</td>
+<td>350 FCFA — total 5 350 FCFA</td>
+</tr>
+<tr class="even">
+<td>10 000 FCFA</td>
+<td>400 FCFA — total 10 400 FCFA</td>
+<td>500 FCFA — total 10 500 FCFA</td>
+</tr>
+<tr class="odd">
+<td>25 000 FCFA</td>
+<td>850 FCFA — total 25 850 FCFA</td>
+<td>950 FCFA — total 25 950 FCFA</td>
+</tr>
+<tr class="even">
+<td>50 000 FCFA</td>
+<td>1 600 FCFA — total 51 600 FCFA</td>
+<td>1 700 FCFA — total 51 700 FCFA</td>
+</tr>
+</tbody>
+</table>
+<h2 id="les-frais-de-protection-client-sont-ils-remboursables">12. Les frais de protection client sont-ils remboursables ?</h2>
+<p>Sauf erreur imputable à FrikaPay, obligation légale contraire ou décision exceptionnelle, les frais de protection FrikaPay ne sont pas automatiquement remboursables.</p>
+<p>Si une transaction est annulée parce que le commerçant refuse, ne répond pas ou ne peut pas honorer la commande, le montant principal peut être remboursé, mais les frais de protection peuvent rester acquis à FrikaPay.</p>
+<h2 id="que-couvrent-les-frais-de-protection">13. Que couvrent les frais de protection ?</h2>
+<p>Les frais de protection couvrent notamment :</p>
+<ul>
+<li><p>le cadre de transaction FrikaPay ;</p></li>
+<li><p>le suivi de la transaction ;</p></li>
+<li><p>la coordination entre client et commerçant ;</p></li>
+<li><p>l’invitation éventuelle d’un commerçant à rejoindre FrikaPay ;</p></li>
+<li><p>l’accès au signalement d’un problème ;</p></li>
+<li><p>l’analyse éventuelle d’un litige ;</p></li>
+<li><p>l’application des règles de libération ou de remboursement ;</p></li>
+<li><p>les frais opérationnels liés au service.</p></li>
+</ul>
+<p>Ces frais ne constituent pas une garantie absolue de remboursement.</p>
+<h2 id="que-dois-je-vérifier-avant-de-payer">14. Que dois-je vérifier avant de payer ?</h2>
+<p>Avant de payer, vous devez vérifier :</p>
+<ul>
+<li><p>le nom ou les informations du commerçant ;</p></li>
+<li><p>le statut du commerçant affiché lorsque disponible ;</p></li>
+<li><p>la description du produit ou service ;</p></li>
+<li><p>le montant de la commande ;</p></li>
+<li><p>les frais de protection FrikaPay ;</p></li>
+<li><p>les conditions et délais de livraison ;</p></li>
+<li><p>les conditions de confirmation ou de signalement.</p></li>
+</ul>
+<p>Ne validez pas le paiement si les informations sont incomplètes, contradictoires ou douteuses.</p>
+<h2 id="que-faire-si-je-ne-reçois-pas-ma-commande">15. Que faire si je ne reçois pas ma commande ?</h2>
+<p>Vous devez signaler le problème dans le délai prévu via les canaux officiels FrikaPay. FrikaPay peut vous demander des preuves, par exemple captures d’écran, messages échangés avec le commerçant, preuve de paiement, détails de commande ou toute information utile à l’analyse.</p>
+<h2 id="que-faire-si-le-produit-reçu-nest-pas-conforme">16. Que faire si le produit reçu n’est pas conforme ?</h2>
+<p>Vous devez signaler le problème rapidement via l’application ou le canal officiel indiqué. Vous devrez fournir des preuves utiles : photos ou vidéos du produit reçu, captures d’écran de la commande, conversations avec le commerçant, preuve de livraison ou toute autre preuve pertinente.</p>
+<h2 id="quel-est-le-délai-pour-confirmer-ou-signaler-un-problème">17. Quel est le délai pour confirmer ou signaler un problème ?</h2>
+<p>Pendant la phase bêta, le délai standard pour confirmer la réception ou signaler un problème est de 48 heures après livraison déclarée ou réception du colis, sauf règle différente affichée dans l’application pour une transaction spécifique.</p>
+<h2 id="que-se-passe-t-il-si-je-ne-fais-rien-après-livraison">18. Que se passe-t-il si je ne fais rien après livraison ?</h2>
+<p>Si vous ne confirmez pas la réception et ne signalez aucun problème dans le délai prévu, FrikaPay peut considérer la transaction comme validée automatiquement. Les fonds peuvent ensuite être libérés au commerçant selon les règles prévues.</p>
+<h2 id="quest-ce-que-la-protection-client">19. Qu’est-ce que la Protection Client ?</h2>
+<p>La Protection Client est une fonctionnalité préventive qui permet d’alerter FrikaPay lorsqu’une transaction semble présenter un risque.</p>
+<p>Elle peut être utilisée en cas d’absence de réponse du commerçant, retard inhabituel, incohérence importante, comportement suspect, tentative de contournement de FrikaPay ou risque de non-livraison.</p>
+<p>La Protection Client ne déclenche pas automatiquement un remboursement et ne remplace pas l’analyse de FrikaPay.</p>
+<h2 id="puis-je-utiliser-frikapay-sans-compte-complet">20. Puis-je utiliser FrikaPay sans compte complet ?</h2>
+<p>Pendant la phase bêta, FrikaPay peut permettre certaines transactions avec un compte invité ou un profil incomplet. Certaines actions peuvent toutefois nécessiter la complétion du profil, notamment le suivi détaillé, le support, le remboursement, le litige ou la sécurité du compte.</p>
+<h2 id="est-ce-que-mes-données-sont-protégées">21. Est-ce que mes données sont protégées ?</h2>
+<p>FrikaPay traite les données personnelles conformément à sa Politique de Confidentialité. Les données peuvent être utilisées pour créer le compte, suivre les transactions, gérer les paiements, traiter les litiges, prévenir la fraude et assurer la sécurité. FrikaPay ne vend pas les données personnelles des utilisateurs.</p>
+<h2 id="comment-contacter-frikapay">22. Comment contacter FrikaPay ?</h2>
+<p>Pour toute question, réclamation ou demande liée à une transaction, utilisez les canaux officiels FrikaPay.</p>
+<ul>
+<li><p>Email officiel : contact@frikapay.com</p></li>
+<li><p>Site officiel : https://frikapay.com</p></li>
+</ul>
+<h2 id="frikapay-est-elle-déjà-officiellement-lancée">23. FrikaPay est-elle déjà officiellement lancée ?</h2>
+<p>FrikaPay est en phase bêta ou en préparation de bêta. Certaines fonctionnalités, zones, catégories de produits, montants ou moyens de paiement peuvent être limités pendant cette période.</p>
+<p>FrikaPay — Achetez en toute sérénité. Vendez en toute confiance.</p>
+<p>Sûr · Simple · Fiable</p>
+<p>Version Bêta 1.2 — 2026</p>
 </div>
-
-<main>
-  <div class="container">
-<h3 class="sub">1. Qu’est-ce que FrikaPay ?</h3>
-<h3 class="sub">2. Pourquoi utiliser FrikaPay comme client ?</h3>
-<h3 class="sub">3. FrikaPay vend-elle les produits ?</h3>
-<h3 class="sub">4. FrikaPay est-elle une banque ou un opérateur Mobile Money ?</h3>
-<h3 class="sub">5. Comment fonctionne une transaction FrikaPay ?</h3>
-<ul>
-<li>une transaction est créée par le client ou par le commerçant ;</li>
-<li>le client vérifie les informations : produit, montant, commerçant, livraison et frais ;</li>
-<li>le client paie via FrikaPay ;</li>
-<li>le paiement est traité par un prestataire de paiement ;</li>
-<li>le commerçant accepte la transaction lorsqu’une acceptation est requise, prépare puis livre la commande ;</li>
-<li>le client confirme la réception ou signale un problème dans le délai prévu ;</li>
-<li>les fonds sont libérés au commerçant ou remboursés selon les conditions prévues.</li>
-</ul>
-<h3 class="sub">6. Puis-je initier moi-même une transaction vers un commerçant ?</h3>
-<h3 class="sub">7. À quoi sert le lien d’invitation commerçant ?</h3>
-<h3 class="sub">8. Quand les fonds sont-ils libérés au commerçant ?</h3>
-<ul>
-<li>confirmation de réception par le client ;</li>
-<li>expiration du délai de confirmation ou de signalement sans problème déclaré ;</li>
-<li>décision après traitement d’un litige ;</li>
-<li>accord validé entre les parties.</li>
-</ul>
-<h3 class="sub">9. Est-ce que FrikaPay garantit toujours le remboursement ?</h3>
-<h3 class="sub">10. Quels sont les frais pour le client ?</h3>
-<table>
-<tr><th>Statut du commerçant</th><th>Frais de protection FrikaPay</th><th>Minimum total des frais</th></tr>
-<tr><td>Commerçant vérifié FrikaPay</td><td>3 % du montant + 100 FCFA</td><td>200 FCFA</td></tr>
-<tr><td>Commerçant en cours de vérification</td><td>3 % du montant + 200 FCFA</td><td>300 FCFA</td></tr>
-<tr><td>Commerçant invité à rejoindre FrikaPay</td><td>3 % du montant + 200 FCFA</td><td>300 FCFA</td></tr>
-</table>
-<h3 class="sub">11. Pouvez-vous donner des exemples de calcul ?</h3>
-<table>
-<tr><th>Montant transaction</th><th>Commerçant vérifié FrikaPay</th><th>Commerçant en cours de vérification / invité</th></tr>
-<tr><td>5 000 FCFA</td><td>250 FCFA — total 5 250 FCFA</td><td>350 FCFA — total 5 350 FCFA</td></tr>
-<tr><td>10 000 FCFA</td><td>400 FCFA — total 10 400 FCFA</td><td>500 FCFA — total 10 500 FCFA</td></tr>
-<tr><td>25 000 FCFA</td><td>850 FCFA — total 25 850 FCFA</td><td>950 FCFA — total 25 950 FCFA</td></tr>
-<tr><td>50 000 FCFA</td><td>1 600 FCFA — total 51 600 FCFA</td><td>1 700 FCFA — total 51 700 FCFA</td></tr>
-</table>
-<h3 class="sub">12. Les frais de protection client sont-ils remboursables ?</h3>
-<h3 class="sub">13. Que couvrent les frais de protection ?</h3>
-<ul>
-<li>le cadre de transaction FrikaPay ;</li>
-<li>le suivi de la transaction ;</li>
-<li>la coordination entre client et commerçant ;</li>
-<li>l’invitation éventuelle d’un commerçant à rejoindre FrikaPay ;</li>
-<li>l’accès au signalement d’un problème ;</li>
-<li>l’analyse éventuelle d’un litige ;</li>
-<li>l’application des règles de libération ou de remboursement ;</li>
-<li>les frais opérationnels liés au service.</li>
-</ul>
-<h3 class="sub">14. Que dois-je vérifier avant de payer ?</h3>
-<ul>
-<li>le nom ou les informations du commerçant ;</li>
-<li>le statut du commerçant affiché lorsque disponible ;</li>
-<li>la description du produit ou service ;</li>
-<li>le montant de la commande ;</li>
-<li>les frais de protection FrikaPay ;</li>
-<li>les conditions et délais de livraison ;</li>
-<li>les conditions de confirmation ou de signalement.</li>
-</ul>
-<h3 class="sub">15. Que faire si je ne reçois pas ma commande ?</h3>
-<h3 class="sub">16. Que faire si le produit reçu n’est pas conforme ?</h3>
-<h3 class="sub">17. Quel est le délai pour confirmer ou signaler un problème ?</h3>
-<h3 class="sub">18. Que se passe-t-il si je ne fais rien après livraison ?</h3>
-<h3 class="sub">19. Qu’est-ce que la Protection acheteur ?</h3>
-<h3 class="sub">20. Puis-je utiliser FrikaPay sans compte complet ?</h3>
-<h3 class="sub">21. Est-ce que mes données sont protégées ?</h3>
-<h3 class="sub">22. Comment contacter FrikaPay ?</h3>
-<ul>
-<li>Email officiel : contact@frikapay.com</li>
-<li>Site : https://frikapay.com</li>
-</ul>
-<h3 class="sub">23. FrikaPay est-elle déjà officiellement lancée ?</h3>  </div>
-</main>
-
-<footer>
-  <div class="container">
-    FrikaPay Technologies — SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br>
-    <a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a>
-  </div>
-</footer>
-
-</body>
-</html>
+<div class="doc-footer-note">FrikaPay Technologies SARL — Ilot NA, Quartier Yetapo, Natitingou, Atacora, Bénin — contact@frikapay.com — +229 01 66 62 30 09</div>
+</div></main>
+<footer><div class="container">FrikaPay Technologies SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357<br/><a href="mailto:contact@frikapay.com">contact@frikapay.com</a> · <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a> · <a href="index.html">frikapay.com</a></div></footer>
+</body></html>
