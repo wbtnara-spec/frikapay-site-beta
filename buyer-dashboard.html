@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Dashboard client — FrikaPay</title>
-  <meta name="description" content="Dashboard client FrikaPay. Suivez vos transactions sécurisées.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1A73E8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>Dashboard client — FrikaPay</title>
+<meta content="Dashboard client FrikaPay. Suivez vos transactions sécurisées." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="#1A73E8" name="theme-color"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#F8FAFF; color:#1F2937; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh; }
     .container { max-width:700px; margin:0 auto; padding:0 1rem; }
@@ -75,68 +76,64 @@
 </style>
 </head>
 <body>
-  <header class="header">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
-    <span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">👤 Dashboard client</span>
-  </header>
-  <main>
-    <div class="container">
-      <div class="alert-banner"><span class="icon">📋</span><span><strong>Transaction en cours :</strong> suivez votre commande.</span></div>
-
-      <!-- Carte transaction -->
-      <div class="card">
-        <h2>📋 Ma transaction</h2>
-        <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;" id="txRef">FP-DEMO-001</span></div>
-        <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="txMerchant">Boutique Exemple</span></div>
-        <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="txProduct">Chaussures urbaines</span></div>
-        <div class="tx-row"><span class="label">Montant payé</span><span class="value" id="txAmount">10 300 FCFA</span></div>
-        <div class="tx-row"><span class="label">Frais protection</span><span class="value" id="txFees">300 FCFA</span></div>
-        <div class="tx-row"><span class="label">Statut transaction</span><span class="value"><span class="status-badge status-confirmed" id="txStatus">PAYMENT_CONFIRMED</span></span></div>
-        <div class="tx-row"><span class="label">Statut compte</span><span class="value"><span class="status-badge status-created" id="accountStatus">BUYER_ACCOUNT_CREATED</span></span></div>
-        <div class="tx-row"><span class="label">Prochaine étape</span><span class="value">Attente de traitement par le commerçant</span></div>
-        <div class="btn-group" style="margin-top:1rem;">
-          <a href="#" class="btn btn-primary">📋 Suivre ma transaction</a>
-          <a href="#" class="btn btn-outline">✅ Confirmer la réception</a>
-        </div>
-        <a href="#" class="btn btn-outline" style="margin-top:0.3rem;">⚠️ Signaler un problème</a>
-      </div>
-
-      <!-- Timeline -->
-      <div class="card">
-        <h2>📅 Suivi de la transaction</h2>
-        <div class="timeline">
-          <div class="timeline-step"><span class="dot dot-done"></span><span>1. Paiement confirmé</span></div>
-          <div class="timeline-step"><span class="dot dot-done"></span><span>2. Commerçant notifié</span></div>
-          <div class="timeline-step"><span class="dot dot-current"></span><span>3. Commande en attente de traitement</span></div>
-          <div class="timeline-step"><span class="dot dot-pending"></span><span>4. Livraison / exécution</span></div>
-          <div class="timeline-step"><span class="dot dot-pending"></span><span>5. Confirmation de réception</span></div>
-          <div class="timeline-step"><span class="dot dot-pending"></span><span>6. Libération encadrée des fonds</span></div>
-        </div>
-        <p class="info-box" style="font-size:0.78rem;">Les fonds seront libérés au commerçant selon les conditions prévues : confirmation de réception, expiration du délai ou décision après litige.</p>
-      </div>
-
-      <!-- Modules -->
-      <div class="card">
-        <h2>📊 Mon espace client</h2>
-        <div class="module-grid">
-          <a href="#" class="module-item"><span class="icon">📋</span>Transactions</a>
-          <a href="#" class="module-item"><span class="icon">📦</span>Commandes</a>
-          <a href="#" class="module-item"><span class="icon">📜</span>Historique</a>
-          <a href="#" class="module-item"><span class="icon">⚠️</span>Signalements</a>
-          <a href="#" class="module-item"><span class="icon">👤</span>Profil</a>
-          <a href="https://wa.me/2290166623009" class="module-item"><span class="icon">💬</span>Support</a>
-        </div>
-        <a href="#" class="btn btn-outline" style="margin-top:1rem;">👤 Compléter mon profil</a>
-        <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" style="margin-top:0.3rem;" target="_blank" rel="noopener">💬 Contacter FrikaPay sur WhatsApp</a>
-      </div>
-
-      <div class="prototype-note">⚡ Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
-    </div>
-  </main>
-  <footer>
-    <p>© 2026 FrikaPay. Sûr • Simple • Fiable. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
-  </footer>
-  <script>
+<header class="header">
+<a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
+<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">👤 Dashboard client</span>
+</header>
+<main>
+<div class="container">
+<div class="alert-banner"><span class="icon">📋</span><span><strong>Transaction en cours :</strong> suivez votre commande.</span></div>
+<!-- Carte transaction -->
+<div class="card">
+<h2>📋 Ma transaction</h2>
+<div class="tx-row"><span class="label">Référence</span><span class="value" id="txRef" style="font-family:monospace;">FP-DEMO-001</span></div>
+<div class="tx-row"><span class="label">Commerçant</span><span class="value" id="txMerchant">Boutique Exemple</span></div>
+<div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="txProduct">Chaussures urbaines</span></div>
+<div class="tx-row"><span class="label">Montant payé</span><span class="value" id="txAmount">10 300 FCFA</span></div>
+<div class="tx-row"><span class="label">Frais protection</span><span class="value" id="txFees">300 FCFA</span></div>
+<div class="tx-row"><span class="label">Statut transaction</span><span class="value"><span class="status-badge status-confirmed" id="txStatus">PAYMENT_CONFIRMED</span></span></div>
+<div class="tx-row"><span class="label">Statut compte</span><span class="value"><span class="status-badge status-created" id="accountStatus">BUYER_ACCOUNT_CREATED</span></span></div>
+<div class="tx-row"><span class="label">Prochaine étape</span><span class="value">Attente de traitement par le commerçant</span></div>
+<div class="btn-group" style="margin-top:1rem;">
+<a class="btn btn-primary" href="#">📋 Suivre ma transaction</a>
+<a class="btn btn-outline" href="#">✅ Confirmer la réception</a>
+</div>
+<a class="btn btn-outline" href="#" style="margin-top:0.3rem;">⚠️ Signaler un problème</a>
+</div>
+<!-- Timeline -->
+<div class="card">
+<h2>📅 Suivi de la transaction</h2>
+<div class="timeline">
+<div class="timeline-step"><span class="dot dot-done"></span><span>1. Paiement confirmé</span></div>
+<div class="timeline-step"><span class="dot dot-done"></span><span>2. Commerçant notifié</span></div>
+<div class="timeline-step"><span class="dot dot-current"></span><span>3. Commande en attente de traitement</span></div>
+<div class="timeline-step"><span class="dot dot-pending"></span><span>4. Livraison / exécution</span></div>
+<div class="timeline-step"><span class="dot dot-pending"></span><span>5. Confirmation de réception</span></div>
+<div class="timeline-step"><span class="dot dot-pending"></span><span>6. Libération encadrée des fonds</span></div>
+</div>
+<p class="info-box" style="font-size:0.78rem;">Les fonds seront libérés au commerçant selon les conditions prévues : confirmation de réception, expiration du délai ou décision après litige.</p>
+</div>
+<!-- Modules -->
+<div class="card">
+<h2>📊 Mon espace client</h2>
+<div class="module-grid">
+<a class="module-item" href="#"><span class="icon">📋</span>Transactions</a>
+<a class="module-item" href="#"><span class="icon">📦</span>Commandes</a>
+<a class="module-item" href="#"><span class="icon">📜</span>Historique</a>
+<a class="module-item" href="#"><span class="icon">⚠️</span>Signalements</a>
+<a class="module-item" href="#"><span class="icon">👤</span>Profil</a>
+<a class="module-item" href="https://wa.me/2290166623009"><span class="icon">💬</span>Support</a>
+</div>
+<a class="btn btn-outline" href="#" style="margin-top:1rem;">👤 Compléter mon profil</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:0.3rem;" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+</div>
+<div class="prototype-note">⚡ Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
+</div>
+</main>
+<footer>
+<p>© 2026 FrikaPay. Sûr • Simple • Fiable. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
+</footer>
+<script>
     const params = new URLSearchParams(window.location.search);
     const txId = params.get('transactionId') || 'FP-DEMO-001';
     const accountStatus = params.get('accountStatus') || 'BUYER_ACCOUNT_CREATED';
@@ -148,7 +145,7 @@
       document.getElementById('accountStatus').className = 'status-badge status-created';
     }
   </script>
-  <script>
+<script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var targets = document.querySelectorAll('.card, .faq-item, .quote-block');

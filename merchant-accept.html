@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Invitation commerçant — FrikaPay</title>
-  <meta name="description" content="Un client souhaite sécuriser une transaction avec vous via FrikaPay.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1A73E8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>Invitation commerçant — FrikaPay</title>
+<meta content="Un client souhaite sécuriser une transaction avec vous via FrikaPay." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="#1A73E8" name="theme-color"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F8FAFF; color: #1F2937; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
     .container { max-width: 560px; margin: 0 auto; padding: 0 1rem; }
@@ -78,71 +79,69 @@
 </style>
 </head>
 <body>
-  <div class="prep-banner">⚡ FrikaPay est en phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
-  <header class="header">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
-    <div class="badge">📨 Invitation commerçant</div>
-  </header>
-  <main>
-    <div class="container" id="container">
-
-      <!-- ÉTAT : VALIDE -->
-      <div id="state-valid">
-        <div class="card">
-          <h2>🤝 Un client souhaite sécuriser une transaction avec vous</h2>
-          <p style="font-size:0.9rem;color:#6B7280;">Vous avez reçu cette invitation parce qu'un client souhaite effectuer une transaction encadrée avec vous via FrikaPay.</p>
-        </div>
-        <div class="card">
-          <h2>📋 Détail de la transaction</h2>
-          <div class="tx-row"><span class="label">Client</span><span class="value" id="clientName">Client Exemple</span></div>
-          <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="productName">Produit démo</span></div>
-          <div class="tx-row"><span class="label">Description</span><span class="value" id="productDesc" style="font-weight:400;font-size:0.83rem;">—</span></div>
-          <div class="tx-row"><span class="label">Montant</span><span class="value" id="productAmount">10 000 FCFA</span></div>
-          <div class="tx-row"><span class="label">Frais commerçant FrikaPay</span><span class="value" style="color:#059669;">0 % (bêta)</span></div>
-          <div class="tx-row"><span class="label">Frais décaissement agrégateur</span><span class="value">1 %</span></div>
-          <div class="highlight-row"><span>Délai d'acceptation</span><span>48h</span></div>
-          <div class="tx-row" style="margin-top:0.5rem;"><span class="label">Référence</span><span class="value" style="font-family:monospace;font-size:0.8rem;" id="txRef">FP-DEMO-001</span></div>
-          <span class="status-badge status-pending">⏳ En attente d'acceptation</span>
-        </div>
-        <div class="card">
-          <h2>🛡️ Pourquoi accepter cette transaction ?</h2>
-          <div class="trust-grid">
-            <div class="trust-item"><span class="icon">🚫</span> Moins de clients fantômes</div>
-            <div class="trust-item"><span class="icon">📍</span> Moins de livraisons inutiles</div>
-            <div class="trust-item"><span class="icon">👁️</span> Transaction suivie</div>
-            <div class="trust-item"><span class="icon">💬</span> Communication encadrée</div>
-            <div class="trust-item"><span class="icon">💰</span> Décaissement selon règles</div>
-            <div class="trust-item"><span class="icon">⭐</span> Réputation de confiance</div>
-          </div>
-          <p class="trust-note">Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</p>
-        </div>
-        <div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
-        <div class="card">
-          <h2>✅ Acceptez et créez votre compte</h2>
-          <p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Pour accepter cette transaction, vous devez créer un compte commerçant FrikaPay.</p>
-          <a href="merchant-signup.html?inviteToken=FP-DEMO-001" class="btn btn-primary">📝 Accepter et créer mon compte commerçant</a>
-          <div style="text-align:center;margin:1.2rem 0;color:#9CA3AF;font-size:0.85rem;">— ou —</div>
-          <a href="merchant-signup.html?inviteToken=FP-DEMO-001&hasAccount=1" class="btn btn-outline">🔑 J'ai déjà un compte commerçant FrikaPay</a>
-          <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid #F3F4F6;">
-            <button class="btn btn-refuse" onclick="refuseTransaction()">❌ Refuser la transaction</button>
-            <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay sur WhatsApp</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ÉTATS ALTERNATIFS -->
-      <div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Invitation expirée</h2><p>Le délai d'acceptation de 48h est dépassé.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
-      <div id="state-already-accepted" style="display:none;"><div class="state-message"><div class="icon-large">✅</div><h2>Transaction déjà acceptée</h2><p>Vous avez déjà répondu à cette invitation.</p><a href="merchant-dashboard.html?transactionId=FP-DEMO-001&accountStatus=SELLER_ACCOUNT_CREATED&transactionStatus=SELLER_ACCEPTED" class="btn btn-primary">👤 Accéder au dashboard</a></div></div>
-      <div id="state-refused" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Transaction refusée</h2><p>Le client sera informé selon les règles prévues.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
-      <div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Transaction annulée par le client</h2><p>Aucune action requise.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
-    </div>
-  </main>
-  <footer>
-    <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
-    <p style="margin-top:0.3rem;"><a href="cgu-commercant.html">CGU Commerçant</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
-    <p style="margin-top:0.3rem;"><a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
-  </footer>
-  <script>
+<div class="prep-banner">⚡ FrikaPay est en phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+<header class="header">
+<a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
+<div class="badge">📨 Invitation commerçant</div>
+</header>
+<main>
+<div class="container" id="container">
+<!-- ÉTAT : VALIDE -->
+<div id="state-valid">
+<div class="card">
+<h2>🤝 Un client souhaite sécuriser une transaction avec vous</h2>
+<p style="font-size:0.9rem;color:#6B7280;">Vous avez reçu cette invitation parce qu'un client souhaite effectuer une transaction encadrée avec vous via FrikaPay.</p>
+</div>
+<div class="card">
+<h2>📋 Détail de la transaction</h2>
+<div class="tx-row"><span class="label">Client</span><span class="value" id="clientName">Client Exemple</span></div>
+<div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="productName">Produit démo</span></div>
+<div class="tx-row"><span class="label">Description</span><span class="value" id="productDesc" style="font-weight:400;font-size:0.83rem;">—</span></div>
+<div class="tx-row"><span class="label">Montant</span><span class="value" id="productAmount">10 000 FCFA</span></div>
+<div class="tx-row"><span class="label">Frais commerçant FrikaPay</span><span class="value" style="color:#059669;">0 % (bêta)</span></div>
+<div class="tx-row"><span class="label">Frais décaissement agrégateur</span><span class="value">1 % · pilote Bénin</span></div>
+<div class="highlight-row"><span>Délai d'acceptation</span><span>48h</span></div>
+<div class="tx-row" style="margin-top:0.5rem;"><span class="label">Référence</span><span class="value" id="txRef" style="font-family:monospace;font-size:0.8rem;">FP-DEMO-001</span></div>
+<span class="status-badge status-pending">⏳ En attente d'acceptation</span>
+</div>
+<div class="card">
+<h2>🛡️ Pourquoi accepter cette transaction ?</h2>
+<div class="trust-grid">
+<div class="trust-item"><span class="icon">🚫</span> Moins de clients fantômes</div>
+<div class="trust-item"><span class="icon">📍</span> Moins de livraisons inutiles</div>
+<div class="trust-item"><span class="icon">👁️</span> Transaction suivie</div>
+<div class="trust-item"><span class="icon">💬</span> Communication encadrée</div>
+<div class="trust-item"><span class="icon">💰</span> Décaissement selon règles</div>
+<div class="trust-item"><span class="icon">⭐</span> Réputation de confiance</div>
+</div>
+<p class="trust-note">Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</p>
+</div>
+<div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
+<div class="card">
+<h2>✅ Acceptez et créez votre compte</h2>
+<p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Pour accepter cette transaction, vous devez créer un compte commerçant FrikaPay.</p>
+<a class="btn btn-primary" href="merchant-signup.html?inviteToken=FP-DEMO-001">📝 Accepter et créer mon compte commerçant</a>
+<div style="text-align:center;margin:1.2rem 0;color:#9CA3AF;font-size:0.85rem;">— ou —</div>
+<a class="btn btn-outline" href="merchant-signup.html?inviteToken=FP-DEMO-001&amp;hasAccount=1">🔑 J'ai déjà un compte commerçant FrikaPay</a>
+<div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid #F3F4F6;">
+<button class="btn btn-refuse" onclick="refuseTransaction()">❌ Refuser la transaction</button>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+</div>
+</div>
+</div>
+<!-- ÉTATS ALTERNATIFS -->
+<div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Invitation expirée</h2><p>Le délai d'acceptation de 48h est dépassé.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+<div id="state-already-accepted" style="display:none;"><div class="state-message"><div class="icon-large">✅</div><h2>Transaction déjà acceptée</h2><p>Vous avez déjà répondu à cette invitation.</p><a class="btn btn-primary" href="merchant-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=SELLER_ACCOUNT_CREATED&amp;transactionStatus=SELLER_ACCEPTED">👤 Accéder au dashboard</a></div></div>
+<div id="state-refused" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Transaction refusée</h2><p>Le client sera informé selon les règles prévues.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+<div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Transaction annulée par le client</h2><p>Aucune action requise.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+</div>
+</main>
+<footer>
+<p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
+<p style="margin-top:0.3rem;"><a href="cgu-commercant.html">CGU Commerçant</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+<p style="margin-top:0.3rem;"><a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
+</footer>
+<script>
     const data = { ref:"FP-DEMO-001", clientName:"Client Exemple", productName:"Chaussures urbaines", productDesc:"Pointure 42, couleur noire", productAmount:10000, status:"valid" };
     function format(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+" FCFA"; }
     document.getElementById('clientName').textContent=data.clientName;
@@ -158,7 +157,7 @@
     else show('state-valid');
     function refuseTransaction(){ if(confirm("Voulez-vous vraiment refuser cette transaction ?")) show('state-refused'); }
   </script>
-  <script>
+<script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var targets = document.querySelectorAll('.card, .faq-item, .quote-block');

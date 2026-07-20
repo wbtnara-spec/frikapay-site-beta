@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://frikapay.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://frikapay.com/etude-beta.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://frikapay.com/diaspora.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/confiance-conformite.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/documents.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/cgu-client.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/cgu-commercant.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/faq-client.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/faq-commercant.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/faq-diaspora.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/grille-tarifaire.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/mentions-legales.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://frikapay.com/politique-confidentialite.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+
+<url><loc>https://frikapay.com/guide-anti-arnaques.html</loc><changefreq>monthly</changefreq><priority>0.3</priority></url>
+</urlset>

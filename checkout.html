@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Paiement invité — FrikaPay</title>
-  <meta name="description" content="Parcours de paiement invité FrikaPay. Payez rapidement sans compte. Phase bêta de préparation.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1A73E8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>Paiement invité — FrikaPay</title>
+<meta content="Parcours de paiement invité FrikaPay. Payez rapidement sans compte. Phase bêta de préparation." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="#1A73E8" name="theme-color"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: #F8FAFF; color: #1F2937; line-height: 1.6; -webkit-font-smoothing: antialiased; min-height: 100vh; }
     .container { max-width: 520px; margin: 0 auto; padding: 0 1rem; }
@@ -91,104 +92,88 @@
 </style>
 </head>
 <body>
-
-  <div class="prep-banner">⚡ Cette page illustre le futur parcours de paiement invité FrikaPay. Le paiement réel sera activé lors du déploiement avec un prestataire de paiement agréé ou habilité.</div>
-
-  <header class="header">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
-    <div class="secure-badge">🔒 Paiement sécurisé</div>
-  </header>
-
-  <main>
-    <div class="container" id="container">
-
-      <!-- ÉTAT : LIEN ACTIF -->
-      <div id="state-active">
-        <div class="card">
-          <h2>📋 Détail de la transaction</h2>
-          <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="merchantName">Boutique Exemple</span></div>
-          <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="productName">Produit démo</span></div>
-          <div class="tx-row"><span class="label">Description</span><span class="value" id="productDesc" style="font-weight:400;font-size:0.83rem;">—</span></div>
-          <div class="tx-row"><span class="label">Montant produit</span><span class="value" id="productAmount">10 000 FCFA</span></div>
-          <div class="tx-row"><span class="label">Frais protection FrikaPay (3%)</span><span class="value" id="protectionFee">300 FCFA</span></div>
-          <div class="total-row"><span>Total à payer</span><span id="totalAmount">10 300 FCFA</span></div>
-          <div class="tx-row" style="margin-top:0.5rem;"><span class="label">Livraison</span><span class="value" id="deliveryInfo" style="font-weight:400;">—</span></div>
-          <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;font-size:0.8rem;" id="txRef">FP-DEMO-001</span></div>
-          <span class="status-badge status-active" id="linkStatus">● Lien actif</span>
-        </div>
-
-        <div class="card">
-          <h2>🛡️ Paiement encadré</h2>
-          <div class="trust-block">
-            <div class="trust-item"><span class="icon">🔒</span> Paiement suivi</div>
-            <div class="trust-item"><span class="icon">✅</span> Confirmation de réception</div>
-            <div class="trust-item"><span class="icon">🛡️</span> Libération encadrée des fonds</div>
-          </div>
-          <p class="trust-note">Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</p>
-        </div>
-
-        <div class="card">
-          <h2>👤 Vos informations</h2>
-          <p style="font-size:0.8rem;color:#6B7280;margin-bottom:1rem;">Vous n'avez pas besoin de compte pour payer. Vous pourrez le compléter après.</p>
-          <div class="form-group"><label>Nom complet <span style="color:#DC2626;">*</span></label><input type="text" id="fullName" placeholder="Votre nom et prénom" required></div>
-          <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 01 66 62 30 09" required></div>
-          <div class="form-group"><label>Email <span class="optional">(optionnel)</span></label><input type="email" id="email" placeholder="Votre adresse email"></div>
-          <div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input type="text" id="city" placeholder="Ville de livraison" required></div>
-          <div class="form-group"><label>Note de livraison <span class="optional">(optionnelle)</span></label><textarea id="deliveryNote" placeholder="Indications utiles..."></textarea></div>
-
-          <div class="checkbox-group"><input type="checkbox" id="agreeLegal"><label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="cgu-client.html">CGU Client</a> et de la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreeTransaction"><label for="agreeTransaction">Je comprends que les frais de protection (3 %) sont affichés avant paiement et je confirme vouloir payer dans le cadre FrikaPay.</label></div>
-
-          <button class="btn btn-demo" onclick="initiateDemo()" style="margin-top:1rem;">🔍 Continuer — démo de parcours</button>
-          <p style="text-align:center;font-size:0.72rem;color:#9CA3AF;margin-top:0.6rem;">Paiement bientôt disponible</p>
-        </div>
-      </div>
-
-      <!-- ÉTAT : TRAITEMENT -->
-      <div id="state-processing" style="display:none;"><div class="state-message"><div class="icon-large">⏳</div><h2>Simulation de traitement</h2><p><span class="spinner"></span> Aucun montant réel n'est débité.</p></div></div>
-
-      <!-- ÉTAT : SUCCÈS -->
-      <div id="state-success" style="display:none;">
-        <div class="state-message">
-          <div class="icon-large">✅</div>
-          <h2>Paiement confirmé</h2>
-          <p>Votre transaction sécurisée a été créée. Vous pouvez maintenant suivre votre commande ou compléter votre compte FrikaPay.</p>
-
-          <div class="card" style="text-align:left;">
-            <div class="tx-row"><span class="label">Référence</span><span class="value" style="font-family:monospace;" id="successRef">FP-DEMO-001</span></div>
-            <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="successMerchant">Boutique Exemple</span></div>
-            <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="successProduct">Produit démo</span></div>
-            <div class="tx-row"><span class="label">Montant payé</span><span class="value" id="successAmount">10 300 FCFA</span></div>
-            <div class="tx-row"><span class="label">Frais protection FrikaPay</span><span class="value" id="successFees">300 FCFA</span></div>
-            <div class="tx-row"><span class="label">Statut transaction</span><span class="value"><span class="status-badge status-paid">PAYMENT_CONFIRMED</span></span></div>
-          </div>
-
-          <div class="info-box">Vous pouvez compléter votre compte maintenant ou plus tard. Vos informations de paiement invité sont déjà enregistrées.</div>
-
-          <div class="btn-group">
-            <a href="buyer-signup.html?transactionId=FP-DEMO-001" class="btn btn-primary">👤 Compléter mon compte FrikaPay</a>
-            <a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_GUEST_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-outline">📋 Suivre ma transaction</a>
-            <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Contacter FrikaPay</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- ÉTATS ALTERNATIFS -->
-      <div id="state-failed" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Paiement échoué</h2><p>Aucun montant n'a été débité.</p><button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer</button><a href="https://wa.me/2290166623009" class="btn btn-whatsapp" style="margin-top:0.5rem;">💬 Contacter FrikaPay</a></div></div>
-      <div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Lien expiré</h2><p>Contactez le commerçant.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
-      <div id="state-already-paid" style="display:none;"><div class="state-message"><div class="icon-large">ℹ️</div><h2>Déjà payée</h2><p>Cette transaction a déjà été payée.</p><a href="buyer-dashboard.html?transactionId=FP-DEMO-001&accountStatus=BUYER_ACCOUNT_CREATED&transactionStatus=PAYMENT_CONFIRMED" class="btn btn-primary">📋 Voir ma transaction</a></div></div>
-      <div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Annulée</h2><p>Transaction annulée par le commerçant.</p><a href="https://wa.me/2290166623009" class="btn btn-whatsapp">💬 Contacter FrikaPay</a></div></div>
-    </div>
-  </main>
-
-  <footer>
-    <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
-    <p style="margin-top:0.3rem;"><a href="cgu-client.html">CGU Client</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
-    <p style="margin-top:0.3rem;">Phase bêta de préparation. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
-  </footer>
-
-  <script>
-    const data = { ref:"FP-DEMO-001", merchantName:"Boutique Exemple", productName:"Chaussures urbaines", productDesc:"Pointure 42, couleur noire", productAmount:10000, protectionFee:300, totalAmount:10300, deliveryInfo:"Livraison à Cotonou sous 48h", status:"active" };
+<div class="prep-banner">⚡ Cette page illustre le parcours de paiement invité FrikaPay en phase pilote. Tout paiement réel devra être confirmé avec le moyen disponible, le montant et les frais avant validation.</div>
+<header class="header">
+<a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
+<div class="secure-badge">🔒 Paiement sécurisé</div>
+</header>
+<main>
+<div class="container" id="container">
+<!-- ÉTAT : LIEN ACTIF -->
+<div id="state-active">
+<div class="card">
+<h2>📋 Détail de la transaction</h2>
+<div class="tx-row"><span class="label">Commerçant</span><span class="value" id="merchantName">Boutique Exemple</span></div>
+<div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="productName">Produit démo</span></div>
+<div class="tx-row"><span class="label">Description</span><span class="value" id="productDesc" style="font-weight:400;font-size:0.83rem;">—</span></div>
+<div class="tx-row"><span class="label">Montant produit</span><span class="value" id="productAmount">10 000 FCFA</span></div>
+<div class="tx-row"><span class="label">Frais protection FrikaPay</span><span class="value" id="protectionFee">400 FCFA</span></div>
+<div class="total-row"><span>Total à payer</span><span id="totalAmount">10 400 FCFA</span></div>
+<div class="tx-row" style="margin-top:0.5rem;"><span class="label">Livraison</span><span class="value" id="deliveryInfo" style="font-weight:400;">—</span></div>
+<div class="tx-row"><span class="label">Référence</span><span class="value" id="txRef" style="font-family:monospace;font-size:0.8rem;">FP-DEMO-001</span></div>
+<span class="status-badge status-active" id="linkStatus">● Lien actif</span>
+</div>
+<div class="card">
+<h2>🛡️ Paiement encadré</h2>
+<div class="trust-block">
+<div class="trust-item"><span class="icon">🔒</span> Paiement suivi</div>
+<div class="trust-item"><span class="icon">✅</span> Confirmation de réception</div>
+<div class="trust-item"><span class="icon">🛡️</span> Libération encadrée des fonds</div>
+</div>
+<p class="trust-note">Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</p>
+</div>
+<div class="card">
+<h2>👤 Vos informations</h2>
+<p style="font-size:0.8rem;color:#6B7280;margin-bottom:1rem;">Vous n'avez pas besoin de compte pour payer. Vous pourrez le compléter après.</p>
+<div class="form-group"><label>Nom complet <span style="color:#DC2626;">*</span></label><input id="fullName" placeholder="Votre nom et prénom" required="" type="text"/></div>
+<div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input id="phone" placeholder="Ex : +229 01 66 62 30 09" required="" type="tel"/></div>
+<div class="form-group"><label>Email <span class="optional">(optionnel)</span></label><input id="email" placeholder="Votre adresse email" type="email"/></div>
+<div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input id="city" placeholder="Ville de livraison" required="" type="text"/></div>
+<div class="form-group"><label>Note de livraison <span class="optional">(optionnelle)</span></label><textarea id="deliveryNote" placeholder="Indications utiles..."></textarea></div>
+<div class="checkbox-group"><input id="agreeLegal" type="checkbox"/><label for="agreeLegal">Je reconnais avoir pris connaissance des <a href="cgu-client.html">CGU Client</a> et de la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
+<div class="checkbox-group"><input id="agreeTransaction" type="checkbox"/><label for="agreeTransaction">Je comprends que les frais de protection FrikaPay sont affichés avant paiement selon la grille tarifaire officielle et je confirme vouloir payer dans le cadre FrikaPay.</label></div>
+<button class="btn btn-demo" onclick="initiateDemo()" style="margin-top:1rem;">🔍 Continuer — démo de parcours</button>
+<p style="text-align:center;font-size:0.72rem;color:#9CA3AF;margin-top:0.6rem;">Paiement bientôt disponible</p>
+</div>
+</div>
+<!-- ÉTAT : TRAITEMENT -->
+<div id="state-processing" style="display:none;"><div class="state-message"><div class="icon-large">⏳</div><h2>Simulation de traitement</h2><p><span class="spinner"></span> Aucun montant réel n'est débité.</p></div></div>
+<!-- ÉTAT : SUCCÈS -->
+<div id="state-success" style="display:none;">
+<div class="state-message">
+<div class="icon-large">✅</div>
+<h2>Paiement confirmé</h2>
+<p>Votre transaction sécurisée a été créée. Vous pouvez maintenant suivre votre commande ou compléter votre compte FrikaPay.</p>
+<div class="card" style="text-align:left;">
+<div class="tx-row"><span class="label">Référence</span><span class="value" id="successRef" style="font-family:monospace;">FP-DEMO-001</span></div>
+<div class="tx-row"><span class="label">Commerçant</span><span class="value" id="successMerchant">Boutique Exemple</span></div>
+<div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="successProduct">Produit démo</span></div>
+<div class="tx-row"><span class="label">Montant payé</span><span class="value" id="successAmount">10 400 FCFA</span></div>
+<div class="tx-row"><span class="label">Frais protection FrikaPay</span><span class="value" id="successFees">400 FCFA</span></div>
+<div class="tx-row"><span class="label">Statut transaction</span><span class="value"><span class="status-badge status-paid">PAYMENT_CONFIRMED</span></span></div>
+</div>
+<div class="info-box">Vous pouvez compléter votre compte maintenant ou plus tard. Vos informations de paiement invité sont déjà enregistrées.</div>
+<div class="btn-group">
+<a class="btn btn-primary" href="buyer-signup.html?transactionId=FP-DEMO-001">👤 Compléter mon compte FrikaPay</a>
+<a class="btn btn-outline" href="buyer-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=BUYER_GUEST_CREATED&amp;transactionStatus=PAYMENT_CONFIRMED">📋 Suivre ma transaction</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" target="_blank">💬 Contacter FrikaPay</a>
+</div>
+</div>
+</div>
+<!-- ÉTATS ALTERNATIFS -->
+<div id="state-failed" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Paiement échoué</h2><p>Aucun montant n'a été débité.</p><button class="btn btn-outline" onclick="retryDemo()">🔄 Réessayer</button><a class="btn btn-whatsapp" href="https://wa.me/2290166623009" style="margin-top:0.5rem;">💬 Contacter FrikaPay</a></div></div>
+<div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Lien expiré</h2><p>Contactez le commerçant.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+<div id="state-already-paid" style="display:none;"><div class="state-message"><div class="icon-large">ℹ️</div><h2>Déjà payée</h2><p>Cette transaction a déjà été payée.</p><a class="btn btn-primary" href="buyer-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=BUYER_ACCOUNT_CREATED&amp;transactionStatus=PAYMENT_CONFIRMED">📋 Voir ma transaction</a></div></div>
+<div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Annulée</h2><p>Transaction annulée par le commerçant.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+</div>
+</main>
+<footer>
+<p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
+<p style="margin-top:0.3rem;"><a href="cgu-client.html">CGU Client</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+<p style="margin-top:0.3rem;">Phase bêta de préparation. <a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
+</footer>
+<script>
+    const data = { ref:"FP-DEMO-001", merchantName:"Boutique Exemple", productName:"Chaussures urbaines", productDesc:"Pointure 42, couleur noire", productAmount:10000, protectionFee:400, totalAmount:10400, deliveryInfo:"Livraison à Cotonou sous 48h", status:"active" };
     function format(n){ return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g," ")+" FCFA"; }
     function populate(){
       document.getElementById('merchantName').textContent=data.merchantName;
@@ -227,7 +212,7 @@
     function retryDemo(){ show('state-active'); }
     init();
   </script>
-  <script>
+<script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var targets = document.querySelectorAll('.card, .faq-item, .quote-block');

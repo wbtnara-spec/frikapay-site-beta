@@ -1,24 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>FrikaPay — Plateforme de confiance pour le commerce digital africain</title>
-  <meta name="description" content="FrikaPay aide clients et commerçants à sécuriser leurs transactions en ligne. Paiement suivi, confirmation de réception et libération encadrée des fonds. Phase bêta en préparation.">
-  <meta property="og:title" content="FrikaPay — Sûr • Simple • Fiable">
-  <meta property="og:description" content="Plateforme de confiance pour le commerce digital africain. Achetez en toute sérénité, vendez en toute confiance.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://frikapay.com/logo-og.png">
-  <meta property="og:url" content="https://frikapay.com">
-  <meta name="theme-color" content="#1A73E8">
-  <link rel="canonical" href="https://frikapay.com">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>FrikaPay — Pilote Bénin Mobile Money pour achats sécurisés</title>
+<meta content="FrikaPay aide les clients et commerçants à sécuriser les achats à distance pendant un pilote initial au Bénin Mobile Money : paiement suivi, confirmation, litiges et règles claires." name="description"/>
+<meta content="FrikaPay — Pilote Bénin Mobile Money pour achats sécurisés" property="og:title"/>
+<meta content="FrikaPay aide les clients et commerçants à sécuriser les achats à distance pendant un pilote initial au Bénin Mobile Money : paiement suivi, confirmation, litiges et règles claires." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://frikapay.com/logo-og.png" property="og:image"/>
+<meta content="https://frikapay.com/" property="og:url"/>
+<meta content="#1A73E8" name="theme-color"/>
+<link href="https://frikapay.com/" rel="canonical"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background-color: #FFFFFF; color: #1F2937; line-height: 1.6; -webkit-font-smoothing: antialiased; }
     .container { max-width: 1100px; margin: 0 auto; padding: 0 1.25rem; }
@@ -64,11 +65,36 @@
     .quote-block { background: white; border-left: 4px solid #1A73E8; padding: 1.8rem 2rem; border-radius: 0 16px 16px 0; margin: 2.5rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
     .quote-block p { font-size: 1.1rem; font-style: italic; color: #1F2937; margin-bottom: 0.5rem; }
     .quote-block cite { font-weight: 600; color: #0B3D91; font-style: normal; }
+    .founder-section { padding: 3rem 0; background: linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%); }
+    .founder-card { display: grid; grid-template-columns: 1fr; gap: 1.5rem; align-items: center; background: white; border: 1px solid #E8EEF7; border-radius: 24px; padding: 1.2rem; box-shadow: 0 16px 40px rgba(11,61,145,0.08); overflow: hidden; }
+    .founder-photo { width: 100%; aspect-ratio: 1 / 1; border-radius: 20px; background-image: url('assets/images/founder-daniel-wibo-nara.webp'); background-size: cover; background-position: center; box-shadow: inset 0 0 0 1px rgba(255,255,255,0.35); -webkit-user-select: none; user-select: none; }
+    .founder-copy { padding: 0.4rem 0.2rem; }
+    .founder-eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; background: #EBF3FE; color: #0B3D91; padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 1rem; }
+    .founder-copy h2 { font-size: 1.75rem; color: #0B3D91; line-height: 1.15; margin-bottom: 1rem; }
+    .founder-quote { position: relative; color: #1F2937; font-size: 1.02rem; line-height: 1.75; border-left: 4px solid #1A73E8; padding-left: 1rem; margin: 1rem 0 1.4rem; }
+    .founder-quote::before { content: '“'; position: absolute; left: -0.05rem; top: -1.05rem; color: rgba(26,115,232,0.18); font-size: 4rem; font-weight: 700; line-height: 1; }
+    .founder-signature { border-top: 1px solid #E5E7EB; padding-top: 1rem; }
+    .founder-name { font-weight: 800; color: #0B3D91; font-size: 1.05rem; }
+    .founder-title { color: #6B7280; font-size: 0.92rem; }
+    .founder-company { color: #1A73E8; font-weight: 600; font-size: 0.92rem; }
     .steps { display: flex; flex-direction: column; gap: 1.5rem; margin: 2rem 0; }
     .step { display: flex; gap: 1rem; align-items: flex-start; }
     .step-num { background: #1A73E8; color: white; font-weight: 700; font-size: 1.2rem; width: 42px; height: 42px; border-radius: 14px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
     .note-box { background: #FFF8E7; border-left: 4px solid #F59E0B; padding: 1rem 1.2rem; border-radius: 10px; margin-top: 1.5rem; color: #92400E; font-weight: 500; font-size: 0.9rem; }
     .transparency-note { background: #F0F7FF; border-left: 4px solid #1A73E8; padding: 1rem 1.2rem; border-radius: 10px; margin-top: 2rem; color: #1E40AF; font-weight: 500; font-size: 0.9rem; }
+
+    .partner-ecosystem { background: #FFFFFF; }
+    .partner-ecosystem .section-subtitle { max-width: 760px; }
+    .partner-logo-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .partner-logo-card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 20px; padding: 1.25rem; min-height: 190px; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 12px 28px rgba(11,61,145,0.06); transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease; }
+    .partner-logo-card:hover { transform: translateY(-2px); border-color: #BFDBFE; box-shadow: 0 18px 38px rgba(11,61,145,0.10); }
+    .partner-logo-frame { height: 86px; display: flex; align-items: center; justify-content: center; background: #F8FAFF; border: 1px solid #EEF2F6; border-radius: 16px; padding: 0.9rem; margin-bottom: 1rem; }
+    .partner-logo-frame img { max-width: 100%; max-height: 66px; object-fit: contain; filter: saturate(0.96); }
+    .partner-logo-frame.apiex img { max-height: 76px; }
+    .partner-logo-card h3 { color: #0B3D91; font-size: 1.08rem; margin-bottom: 0.25rem; }
+    .partner-role { color: #4B5563; font-size: 0.9rem; line-height: 1.45; }
+    .partner-disclaimer { margin-top: 1.25rem; color: #6B7280; font-size: 0.84rem; line-height: 1.55; }
+
     .faq-item { border-bottom: 1px solid #E5E7EB; padding: 1.2rem 0; }
     .faq-question { font-weight: 600; color: #0B3D91; margin-bottom: 0.4rem; font-size: 1rem; }
     .legal-content { max-width: 800px; margin: 0 auto; background: white; padding: 2rem; border-radius: 20px; border: 1px solid #E5E7EB; font-size: 0.9rem; line-height: 1.7; }
@@ -78,6 +104,94 @@
     .legal-content ul { padding-left: 1.5rem; margin-bottom: 1rem; }
     .security-reassurance { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; background: #F0F7FF; padding: 1.5rem; border-radius: 16px; margin: 2rem 0; font-size: 0.88rem; }
     .security-item { display: flex; align-items: center; gap: 0.5rem; color: #1E40AF; font-weight: 500; }
+
+    .process-showcase { margin: 2rem 0 1.5rem; }
+    .process-copy { max-width: 900px; margin: 0 auto; }
+    .process-copy .steps { margin: 0; }
+    .transaction-visual-section { margin-top: 2.8rem; background: linear-gradient(180deg, #FFFFFF 0%, #F7FAFF 100%); border: 1px solid #E5E7EB; border-radius: 28px; padding: 1.25rem; box-shadow: 0 20px 50px rgba(11,61,145,0.08); overflow: hidden; }
+    .transaction-visual-header { text-align: center; max-width: 760px; margin: 0 auto 1.4rem; }
+    .transaction-visual-header h3 { color: #0B3D91; font-size: 1.45rem; margin-bottom: 0.45rem; }
+    .transaction-visual-header p { color: #6B7280; font-size: 0.95rem; line-height: 1.6; }
+    .device-desktop-demo { display: none; }
+    .device-mobile-demo { display: block; }
+    .desktop-workstation { max-width: 900px; margin: 0 auto; }
+    .desktop-monitor { background: #0B1220; border-radius: 24px; padding: 0.75rem; box-shadow: 0 25px 65px rgba(11,61,145,0.18); border: 1px solid rgba(11,61,145,0.22); }
+    .desktop-browser-bar { height: 38px; display: flex; align-items: center; gap: 0.5rem; padding: 0 0.35rem; }
+    .browser-dot { width: 11px; height: 11px; border-radius: 999px; background: #CBD5E1; }
+    .browser-dot:nth-child(1) { background: #F87171; }
+    .browser-dot:nth-child(2) { background: #FBBF24; }
+    .browser-dot:nth-child(3) { background: #34D399; }
+    .browser-address { margin-left: 0.55rem; flex: 1; height: 24px; border-radius: 999px; background: rgba(255,255,255,0.12); color: #CBD5E1; display: flex; align-items: center; padding: 0 0.8rem; font-size: 0.72rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .desktop-screen-real { min-height: 420px; background: linear-gradient(135deg, #F8FAFF 0%, #FFFFFF 64%, #EDF6FF 100%); border-radius: 17px; border: 1px solid rgba(255,255,255,0.72); overflow: hidden; position: relative; }
+    .monitor-stand { width: 125px; height: 34px; background: linear-gradient(180deg, #CBD5E1, #94A3B8); margin: 0 auto; border-radius: 0 0 18px 18px; }
+    .monitor-base { width: 260px; height: 18px; background: linear-gradient(180deg, #E2E8F0, #CBD5E1); margin: 0 auto; border-radius: 999px; box-shadow: 0 14px 24px rgba(15,23,42,0.12); }
+    .demo-app-top { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem 1.25rem; background: rgba(255,255,255,0.96); border-bottom: 1px solid #E5E7EB; }
+    .demo-logo-brand { display: flex; align-items: center; gap: 0.65rem; color: #0B3D91; font-weight: 900; }
+    .demo-logo-brand img { width: 34px; height: 34px; object-fit: contain; }
+    .demo-status-pill { color: #047857; background: #ECFDF5; border: 1px solid #A7F3D0; border-radius: 999px; padding: 0.35rem 0.7rem; font-weight: 800; font-size: 0.76rem; white-space: nowrap; }
+    .desktop-slide-stage { position: relative; min-height: 350px; padding: 1.2rem; overflow: hidden; }
+    .transaction-slide { position: absolute; inset: 1.2rem; opacity: 0; transform: translateX(110%); animation: fp-transaction-slides 15s infinite; display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1rem; align-items: stretch; }
+    .transaction-slide:nth-child(1) { animation-delay: 0s; }
+    .transaction-slide:nth-child(2) { animation-delay: 3s; }
+    .transaction-slide:nth-child(3) { animation-delay: 6s; }
+    .transaction-slide:nth-child(4) { animation-delay: 9s; }
+    .transaction-slide:nth-child(5) { animation-delay: 12s; }
+    .transaction-summary-card, .transaction-step-card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 18px; padding: 1rem; box-shadow: 0 12px 30px rgba(11,61,145,0.08); }
+    .transaction-summary-card { display: flex; flex-direction: column; justify-content: space-between; gap: 1rem; }
+    .demo-label { color: #6B7280; font-size: 0.8rem; font-weight: 600; }
+    .demo-product { font-size: 1.2rem; line-height: 1.25; font-weight: 900; color: #111827; margin-top: 0.25rem; }
+    .demo-amount { color: #0B3D91; font-weight: 900; font-size: 1.75rem; line-height: 1.05; margin-top: 0.25rem; }
+    .safe-mini-card { display: flex; gap: 0.65rem; align-items: flex-start; background: #F0F7FF; border: 1px solid #BFDBFE; border-radius: 14px; padding: 0.85rem; color: #1E40AF; font-weight: 700; font-size: 0.82rem; line-height: 1.4; }
+    .transaction-step-card { display: grid; grid-template-columns: 70px 1fr; gap: 1rem; align-items: center; }
+    .step-big-icon { width: 70px; height: 70px; border-radius: 22px; display: grid; place-items: center; font-size: 1.9rem; background: #EBF3FE; color: #1A73E8; }
+    .step-content h4 { font-size: 1.45rem; color: #0B3D91; margin-bottom: 0.4rem; }
+    .step-content p { color: #4B5563; line-height: 1.55; margin-bottom: 0.8rem; }
+    .step-tag { display: inline-flex; align-items: center; gap: 0.35rem; border-radius: 999px; background: #ECFDF5; color: #047857; font-weight: 800; font-size: 0.78rem; padding: 0.32rem 0.65rem; }
+    .slide-progress { position: absolute; left: 1.2rem; right: 1.2rem; bottom: 1rem; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.45rem; }
+    .slide-progress span { height: 5px; border-radius: 999px; background: #D7E6FA; overflow: hidden; position: relative; }
+    .slide-progress span::after { content: ''; position: absolute; inset: 0; transform-origin: left center; transform: scaleX(0); background: #1A73E8; animation: fp-progress 15s infinite; }
+    .slide-progress span:nth-child(1)::after { animation-delay: 0s; }
+    .slide-progress span:nth-child(2)::after { animation-delay: 3s; }
+    .slide-progress span:nth-child(3)::after { animation-delay: 6s; }
+    .slide-progress span:nth-child(4)::after { animation-delay: 9s; }
+    .slide-progress span:nth-child(5)::after { animation-delay: 12s; }
+    .iphone-demo { width: min(310px, 86vw); margin: 0 auto; background: #0B1220; border-radius: 44px; padding: 0.75rem; border: 8px solid #0B1220; box-shadow: 0 25px 65px rgba(11,61,145,0.20); position: relative; }
+    .iphone-notch { width: 96px; height: 22px; background: #0B1220; border-radius: 0 0 16px 16px; position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 5; }
+    .iphone-screen-real { min-height: 560px; background: linear-gradient(180deg, #F8FAFF 0%, #FFFFFF 100%); border-radius: 32px; overflow: hidden; position: relative; }
+    .mobile-app-top { padding: 1.45rem 1rem 0.85rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #E5E7EB; background: rgba(255,255,255,0.96); }
+    .mobile-app-top img { width: 30px; height: 30px; object-fit: contain; }
+    .mobile-brand-text { color: #0B3D91; font-weight: 900; font-size: 0.92rem; }
+    .mobile-slide-stage { position: relative; min-height: 450px; padding: 1rem; overflow: hidden; }
+    .mobile-transaction-slide { position: absolute; inset: 1rem; opacity: 0; transform: translateX(110%); animation: fp-mobile-slides 15s infinite; display: flex; flex-direction: column; justify-content: center; }
+    .mobile-transaction-slide:nth-child(1) { animation-delay: 0s; }
+    .mobile-transaction-slide:nth-child(2) { animation-delay: 3s; }
+    .mobile-transaction-slide:nth-child(3) { animation-delay: 6s; }
+    .mobile-transaction-slide:nth-child(4) { animation-delay: 9s; }
+    .mobile-transaction-slide:nth-child(5) { animation-delay: 12s; }
+    .mobile-step-card { background: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 24px; padding: 1.1rem; box-shadow: 0 12px 28px rgba(11,61,145,0.09); text-align: left; }
+    .mobile-step-icon { width: 56px; height: 56px; border-radius: 18px; display: grid; place-items: center; background: #EBF3FE; color: #1A73E8; font-size: 1.45rem; margin-bottom: 0.9rem; }
+    .mobile-step-card h4 { color: #0B3D91; font-size: 1.15rem; margin-bottom: 0.45rem; }
+    .mobile-step-card p { color: #4B5563; line-height: 1.5; font-size: 0.88rem; }
+    .mobile-amount-card { margin-top: 0.9rem; border-radius: 18px; background: #F0F7FF; border: 1px solid #BFDBFE; padding: 0.85rem; color: #1E40AF; font-weight: 800; font-size: 0.82rem; }
+    .device-caption { text-align: center; color: #6B7280; font-size: 0.82rem; margin-top: 0.85rem; }
+    @keyframes fp-transaction-slides { 0% { opacity: 0; transform: translateX(110%); } 5%, 17% { opacity: 1; transform: translateX(0); } 20% { opacity: 1; transform: translateX(-110%); } 21%, 100% { opacity: 0; transform: translateX(-110%); } }
+    @keyframes fp-mobile-slides { 0% { opacity: 0; transform: translateX(110%); } 5%, 17% { opacity: 1; transform: translateX(0); } 20% { opacity: 1; transform: translateX(-110%); } 21%, 100% { opacity: 0; transform: translateX(-110%); } }
+    @keyframes fp-progress { 0% { transform: scaleX(0); } 5%, 18% { transform: scaleX(1); } 21%, 100% { transform: scaleX(0); } }
+
+    html, body { max-width: 100%; overflow-x: hidden; }
+    .partner-proof { color:#1A73E8; font-weight:700; text-decoration:none; }
+    .partner-proof:hover { text-decoration:underline; }
+    .card table, .pricing-table, .responsive-table { display:block; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    .table-scroll { max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+    @media (max-width: 640px) {
+      .container { padding-left: 1rem; padding-right: 1rem; }
+      .card { padding: 1.2rem 1rem; }
+      table { display:block; max-width:100%; overflow-x:auto; -webkit-overflow-scrolling:touch; font-size:0.82rem; }
+      th, td { padding:0.55rem 0.55rem; }
+      .transaction-slide, .mobile-transaction-slide { max-width:100%; }
+      .slide-progress { left:0.9rem; right:0.9rem; }
+    }
+
     table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.9rem; }
     th, td { border: 1px solid #E5E7EB; padding: 0.6rem 0.8rem; text-align: left; }
     th { background: #F3F4F6; font-weight: 600; }
@@ -89,11 +203,22 @@
     .footer-contact { margin-top: 0.5rem; font-size: 0.85rem; color: #CBD5E1; }
     .footer-contact a { color: #93C5FD; text-decoration: none; }
 
+
+    @media (max-width: 639px) {
+      .desktop-content { grid-template-columns: 1fr; }
+      .desktop-screen { height: 430px; }
+      .timeline-window { height: 250px; }
+      .timeline-item { grid-template-columns: 34px 1fr; }
+      .timeline-status { grid-column: 2; justify-self: start; }
+      .phone-device { width: min(235px, 90vw); }
+    }
+
     @media (min-width: 640px) {
       .grid-2 { grid-template-columns: repeat(2, 1fr); }
       .grid-3 { grid-template-columns: repeat(2, 1fr); }
       .trust-grid { grid-template-columns: repeat(4, 1fr); }
       .security-reassurance { grid-template-columns: repeat(4, 1fr); }
+      .partner-logo-grid { grid-template-columns: repeat(3, 1fr); }
     }
     @media (min-width: 768px) {
       .mobile-menu-btn { display: none; }
@@ -102,9 +227,35 @@
       .grid-3 { grid-template-columns: repeat(3, 1fr); }
       .footer-grid { grid-template-columns: 2fr 1fr 1fr 1.5fr; }
     }
+
+    @media (min-width: 768px) {
+      .device-desktop-demo { display: block; }
+      .device-mobile-demo { display: none; }
+      .transaction-visual-section { padding: 2rem; }
+      .transaction-visual-header h3 { font-size: 1.85rem; }
+    }
+    @media (max-width: 480px) {
+      .transaction-visual-section { padding: 1rem 0.65rem; border-radius: 22px; }
+      .iphone-demo { width: min(292px, 94vw); }
+      .iphone-screen-real { min-height: 520px; }
+      .mobile-slide-stage { min-height: 420px; }
+      .demo-status-pill { font-size: 0.68rem; padding: 0.28rem 0.52rem; }
+    }
+
     .hero-visual { display:flex; justify-content:center; position:relative; }
     .hero-visual::before { content:""; position:absolute; width:300px; height:300px; background:radial-gradient(circle, rgba(26,115,232,0.16) 0%, rgba(26,115,232,0) 70%); border-radius:50%; z-index:0; }
     .hero-visual img { width:100%; max-width:260px; height:auto; position:relative; z-index:1; filter: drop-shadow(0 20px 35px rgba(11,61,145,0.18)); border-radius:18px; }
+
+    @media (min-width: 900px) {
+      .founder-card { grid-template-columns: minmax(280px, 0.85fr) minmax(0, 1.15fr); gap: 2.6rem; padding: 1.5rem; }
+      .founder-copy { padding: 1rem 1.2rem 1rem 0; }
+      .founder-copy h2 { font-size: 2.2rem; }
+      .founder-quote { font-size: 1.08rem; padding-left: 1.25rem; }
+      .process-showcase { grid-template-columns: 0.9fr 1.35fr; gap: 2rem; }
+      .process-demo { grid-template-columns: minmax(0, 1fr) 245px; align-items: center; }
+      .desktop-device { transform: translateY(8px); }
+      .phone-device { margin-left: -1.4rem; transform: translateY(-12px); }
+    }
     @media (min-width: 1024px) {
       .hero-content { flex-direction: row; align-items: center; }
       .hero-text { flex:1 1 55%; }
@@ -132,238 +283,922 @@
     .logo img { transition: transform .2s ease; }
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
-</style>
-</head>
+
+
+    /* V16 — démo transaction plus réaliste dans vrais appareils */
+    .transaction-visual-section.v16-realistic-demo { position: relative; overflow: hidden; background: radial-gradient(circle at top left, rgba(26,115,232,0.12), transparent 32%), linear-gradient(180deg, #FFFFFF 0%, #F6FAFF 100%); }
+    .transaction-visual-section.v16-realistic-demo::before { content:""; position:absolute; left:50%; bottom:-80px; width:min(760px,92vw); height:130px; transform:translateX(-50%); background: radial-gradient(ellipse, rgba(15,23,42,0.14) 0%, rgba(15,23,42,0.04) 45%, transparent 72%); pointer-events:none; }
+    .desktop-workstation { max-width: 980px; margin: 0 auto; position: relative; padding-bottom: 2.6rem; perspective: 1200px; }
+    .desktop-workstation::after { content:""; position:absolute; left:8%; right:8%; bottom:0.25rem; height:16px; border-radius:999px; background:rgba(15,23,42,0.10); filter: blur(7px); }
+    .desktop-monitor { position: relative; background: linear-gradient(145deg, #050B16 0%, #0B1220 62%, #182233 100%); border-radius: 28px; padding: 0.9rem 0.9rem 1.05rem; box-shadow: 0 35px 90px rgba(11,61,145,0.22), inset 0 0 0 1px rgba(255,255,255,0.12); border: 1px solid rgba(2,6,23,0.95); transform: rotateX(1deg); }
+    .desktop-monitor::before { content:""; position:absolute; top:0.36rem; left:50%; width:7px; height:7px; transform:translateX(-50%); border-radius:999px; background:#111827; box-shadow:0 0 0 2px rgba(148,163,184,0.22), inset 0 0 4px rgba(255,255,255,0.35); z-index:4; }
+    .desktop-monitor::after { content:""; position:absolute; inset:0.9rem; border-radius:20px; background:linear-gradient(118deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.04) 18%, transparent 42%); pointer-events:none; z-index:3; mix-blend-mode:screen; opacity:0.42; }
+    .desktop-browser-bar { height: 44px; display:flex; align-items:center; gap:0.54rem; padding:0 0.55rem; border-radius:18px 18px 0 0; background:linear-gradient(180deg, #172238 0%, #0C1426 100%); border-bottom:1px solid rgba(255,255,255,0.08); }
+    .browser-dot { width: 10px; height:10px; box-shadow: inset 0 -1px 2px rgba(0,0,0,0.24); }
+    .browser-address { height: 28px; background:rgba(255,255,255,0.10); border:1px solid rgba(255,255,255,0.08); color:#DCE8F8; font-size:0.73rem; }
+    .desktop-screen-real { min-height: 456px; aspect-ratio: 16 / 9.2; background: #F8FAFF; border-radius: 0 0 18px 18px; border:1px solid rgba(255,255,255,0.72); box-shadow: inset 0 0 0 1px rgba(15,23,42,0.05); overflow:hidden; }
+    .monitor-stand { position: relative; z-index:2; width: 148px; height: 50px; background: linear-gradient(180deg, #CBD5E1 0%, #94A3B8 100%); margin: 0 auto; border-radius: 0 0 24px 24px; box-shadow: inset 0 10px 18px rgba(255,255,255,0.35); }
+    .monitor-stand::before { content:""; position:absolute; left:16px; right:16px; top:0; height:8px; border-radius:0 0 999px 999px; background:rgba(15,23,42,0.12); }
+    .monitor-base { position: relative; z-index:2; width: 310px; height: 22px; background: linear-gradient(180deg, #EEF4FB 0%, #CBD5E1 100%); margin: 0 auto; border-radius: 999px; box-shadow: 0 18px 26px rgba(15,23,42,0.13), inset 0 2px 8px rgba(255,255,255,0.7); }
+    .demo-app-top { padding:0.82rem 1rem; background:rgba(255,255,255,0.95); backdrop-filter:blur(8px); }
+    .demo-logo-brand img { width:32px; height:32px; }
+    .desktop-slide-stage { min-height: 372px; padding: 1rem; background: linear-gradient(135deg, #F8FAFF 0%, #FFFFFF 48%, #EEF6FF 100%); }
+    .transaction-slide { inset: 1rem; grid-template-columns: 0.82fr 1.18fr; gap: 1rem; transform: translateX(120%) scale(.985); animation: fp-transaction-slides-v16 17.5s cubic-bezier(.25,.8,.25,1) infinite; }
+    .transaction-slide:nth-child(1) { animation-delay: 0s; }
+    .transaction-slide:nth-child(2) { animation-delay: 3.5s; }
+    .transaction-slide:nth-child(3) { animation-delay: 7s; }
+    .transaction-slide:nth-child(4) { animation-delay: 10.5s; }
+    .transaction-slide:nth-child(5) { animation-delay: 14s; }
+    .transaction-summary-card, .transaction-step-card { border-radius: 22px; border:1px solid rgba(203,213,225,0.72); box-shadow: 0 18px 36px rgba(11,61,145,0.10); }
+    .transaction-summary-card { background: linear-gradient(180deg, #FFFFFF 0%, #F8FBFF 100%); }
+    .transaction-summary-card::before { content:"Transaction FP-2026-014"; display:inline-flex; width:max-content; max-width:100%; background:#EEF6FF; color:#0B3D91; border:1px solid #D7E8FF; font-size:0.72rem; font-weight:900; border-radius:999px; padding:0.32rem 0.62rem; }
+    .transaction-step-card { background:linear-gradient(180deg,#FFFFFF 0%,#FBFDFF 100%); align-content:center; }
+    .step-big-icon { box-shadow: inset 0 0 0 1px rgba(26,115,232,.12), 0 10px 22px rgba(26,115,232,.12); }
+    .slide-progress { bottom: 0.78rem; }
+    .slide-progress span::after { animation: fp-progress-v16 17.5s infinite; }
+    .slide-progress span:nth-child(1)::after { animation-delay: 0s; }
+    .slide-progress span:nth-child(2)::after { animation-delay: 3.5s; }
+    .slide-progress span:nth-child(3)::after { animation-delay: 7s; }
+    .slide-progress span:nth-child(4)::after { animation-delay: 10.5s; }
+    .slide-progress span:nth-child(5)::after { animation-delay: 14s; }
+    .iphone-demo { width: min(326px, 88vw); padding: 0.52rem; border: 9px solid #0B1220; background: linear-gradient(145deg, #020617 0%, #111827 100%); border-radius: 50px; box-shadow: 0 36px 84px rgba(2,6,23,0.26), inset 0 0 0 1px rgba(255,255,255,0.08); }
+    .iphone-demo::before { content:""; position:absolute; left:-12px; top:116px; width:4px; height:58px; border-radius:999px 0 0 999px; background:#111827; box-shadow:0 72px 0 #111827; }
+    .iphone-demo::after { content:""; position:absolute; right:-12px; top:145px; width:4px; height:82px; border-radius:0 999px 999px 0; background:#111827; }
+    .iphone-notch { width: 112px; height: 28px; border-radius: 0 0 20px 20px; z-index:8; }
+    .iphone-screen-real { min-height: 584px; border-radius: 38px; background:linear-gradient(180deg,#F7FBFF 0%,#FFFFFF 100%); border:1px solid rgba(255,255,255,0.65); }
+    .iphone-screen-real::after { content:""; position:absolute; inset:0; background:linear-gradient(122deg, rgba(255,255,255,.42) 0%, rgba(255,255,255,.05) 25%, transparent 43%); pointer-events:none; opacity:.5; z-index:4; }
+    .mobile-system-bar { position:relative; z-index:6; display:flex; justify-content:space-between; align-items:center; padding:0.62rem 1.18rem 0.28rem; font-size:0.72rem; font-weight:900; color:#0F172A; }
+    .mobile-system-icons { letter-spacing:-1px; font-size:0.68rem; color:#334155; }
+    .mobile-app-top { position:relative; z-index:5; padding:0.8rem 1rem 0.75rem; }
+    .mobile-slide-stage { min-height: 458px; background:linear-gradient(180deg,#F8FBFF 0%,#FFFFFF 100%); }
+    .mobile-transaction-slide { transform: translateX(120%) scale(.985); animation: fp-mobile-slides-v16 17.5s cubic-bezier(.25,.8,.25,1) infinite; }
+    .mobile-transaction-slide:nth-child(1) { animation-delay: 0s; }
+    .mobile-transaction-slide:nth-child(2) { animation-delay: 3.5s; }
+    .mobile-transaction-slide:nth-child(3) { animation-delay: 7s; }
+    .mobile-transaction-slide:nth-child(4) { animation-delay: 10.5s; }
+    .mobile-transaction-slide:nth-child(5) { animation-delay: 14s; }
+    .mobile-step-card { border-radius: 28px; box-shadow: 0 20px 36px rgba(11,61,145,0.11); border:1px solid rgba(203,213,225,0.75); }
+    .mobile-step-card::before { content:"Transaction FP-2026-014"; display:inline-flex; background:#EEF6FF; color:#0B3D91; border:1px solid #D7E8FF; font-size:0.67rem; font-weight:900; border-radius:999px; padding:0.26rem 0.56rem; margin-bottom:0.9rem; }
+    .iphone-home-indicator { position:absolute; left:50%; bottom:0.52rem; width:106px; height:5px; border-radius:999px; background:#111827; opacity:.86; transform:translateX(-50%); z-index:7; }
+    @keyframes fp-transaction-slides-v16 { 0% { opacity:0; transform:translateX(120%) scale(.985); } 5%, 16% { opacity:1; transform:translateX(0) scale(1); } 20% { opacity:1; transform:translateX(-120%) scale(.985); } 21%, 100% { opacity:0; transform:translateX(-120%) scale(.985); } }
+    @keyframes fp-mobile-slides-v16 { 0% { opacity:0; transform:translateX(120%) scale(.985); } 5%, 16% { opacity:1; transform:translateX(0) scale(1); } 20% { opacity:1; transform:translateX(-120%) scale(.985); } 21%, 100% { opacity:0; transform:translateX(-120%) scale(.985); } }
+    @keyframes fp-progress-v16 { 0% { transform:scaleX(0); } 5%, 16% { transform:scaleX(1); } 20%, 100% { transform:scaleX(0); } }
+    @media (max-width: 640px) { .transaction-visual-section.v16-realistic-demo { padding:1rem .55rem; } .iphone-demo { width:min(312px, 92vw); } .iphone-screen-real { min-height:560px; } }
+    @media (prefers-reduced-motion: reduce) { .transaction-slide, .mobile-transaction-slide, .slide-progress span::after { animation-duration:1ms !important; animation-iteration-count:1 !important; } .transaction-slide:first-child, .mobile-transaction-slide:first-child { opacity:1 !important; transform:none !important; } }
+
+
+    /* V18 — rendu appareils plus réaliste, type photo produit moderne */
+    .transaction-visual-section.v18-photo-devices {
+      overflow: hidden;
+      background:
+        radial-gradient(circle at 18% 10%, rgba(26,115,232,0.10), transparent 32%),
+        radial-gradient(circle at 82% 88%, rgba(11,61,145,0.10), transparent 34%),
+        linear-gradient(180deg, #FFFFFF 0%, #F8FAFF 100%);
+    }
+    .v18-photo-devices .desktop-workstation {
+      max-width: 1040px;
+      padding: 1.25rem 1.1rem 4.2rem;
+      perspective: 1500px;
+    }
+    .v18-photo-devices .desktop-workstation::before {
+      content: "";
+      position: absolute;
+      left: 4%;
+      right: 4%;
+      bottom: 0;
+      height: 98px;
+      border-radius: 50%;
+      background: radial-gradient(ellipse at center, rgba(15,23,42,0.18), rgba(15,23,42,0.06) 45%, transparent 72%);
+      filter: blur(10px);
+      z-index: 0;
+    }
+    .v18-photo-devices .desktop-workstation::after {
+      content: "";
+      position: absolute;
+      left: 16%;
+      right: 16%;
+      bottom: 2.25rem;
+      height: 14px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.13);
+      filter: blur(8px);
+      z-index: 0;
+    }
+    .v18-photo-devices .desktop-monitor {
+      position: relative;
+      z-index: 2;
+      padding: 0.55rem 0.55rem 0.72rem;
+      border-radius: 24px 24px 28px 28px;
+      border: 1px solid rgba(2,6,23,0.96);
+      background:
+        linear-gradient(145deg, #020617 0%, #111827 42%, #050B16 100%);
+      box-shadow:
+        0 42px 95px rgba(2,6,23,0.23),
+        0 12px 28px rgba(11,61,145,0.13),
+        inset 0 1px 0 rgba(255,255,255,0.12),
+        inset 0 -1px 0 rgba(255,255,255,0.06);
+      transform: rotateX(1deg) translateZ(0);
+    }
+    .v18-photo-devices .desktop-monitor::before {
+      content: "";
+      position: absolute;
+      top: 0.42rem;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: radial-gradient(circle at 35% 35%, #94A3B8, #020617 55%, #000 100%);
+      box-shadow: 0 0 0 3px rgba(255,255,255,0.06), inset 0 0 5px rgba(255,255,255,0.35);
+      z-index: 8;
+    }
+    .v18-photo-devices .desktop-monitor::after {
+      content: "";
+      position: absolute;
+      inset: 0.58rem;
+      border-radius: 18px;
+      pointer-events: none;
+      z-index: 7;
+      background:
+        linear-gradient(122deg, rgba(255,255,255,0.22) 0%, rgba(255,255,255,0.07) 17%, transparent 38%),
+        linear-gradient(300deg, transparent 65%, rgba(255,255,255,0.08) 100%);
+      mix-blend-mode: screen;
+      opacity: 0.62;
+    }
+    .v18-photo-devices .desktop-browser-bar {
+      height: 42px;
+      border-radius: 16px 16px 0 0;
+      background: linear-gradient(180deg, #F8FAFC 0%, #E2E8F0 100%);
+      border: 1px solid rgba(148,163,184,0.28);
+      border-bottom: 0;
+      padding: 0 0.65rem;
+    }
+    .v18-photo-devices .browser-address {
+      background: #FFFFFF;
+      border: 1px solid rgba(148,163,184,0.34);
+      color: #475569;
+      box-shadow: inset 0 1px 2px rgba(15,23,42,0.04);
+    }
+    .v18-photo-devices .desktop-screen-real {
+      min-height: 468px;
+      aspect-ratio: 16 / 9.1;
+      border-radius: 0 0 15px 15px;
+      border: 1px solid rgba(148,163,184,0.30);
+      background: linear-gradient(135deg, #F8FAFF 0%, #FFFFFF 58%, #EEF6FF 100%);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.04);
+    }
+    .v18-photo-devices .monitor-stand {
+      position: relative;
+      z-index: 1;
+      width: 132px;
+      height: 76px;
+      margin-top: -1px;
+      border-radius: 0 0 24px 24px;
+      background: linear-gradient(180deg, #D9E2EC 0%, #AAB7C5 54%, #8D9AAA 100%);
+      clip-path: polygon(22% 0, 78% 0, 100% 100%, 0% 100%);
+      box-shadow: inset 0 12px 22px rgba(255,255,255,0.45), inset 0 -8px 16px rgba(15,23,42,0.10);
+    }
+    .v18-photo-devices .monitor-base {
+      position: relative;
+      z-index: 2;
+      width: 340px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #F8FAFC 0%, #CBD5E1 52%, #94A3B8 100%);
+      box-shadow: 0 20px 28px rgba(15,23,42,0.16), inset 0 3px 10px rgba(255,255,255,0.78), inset 0 -2px 6px rgba(15,23,42,0.10);
+    }
+    .v18-photo-devices .iphone-demo {
+      width: min(342px, 88vw);
+      padding: 0.64rem;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 60px;
+      background:
+        linear-gradient(145deg, #354154 0%, #0B1220 23%, #020617 55%, #1F2937 100%);
+      box-shadow:
+        0 42px 95px rgba(2,6,23,0.31),
+        0 18px 34px rgba(11,61,145,0.18),
+        inset 0 0 0 2px rgba(255,255,255,0.06),
+        inset 0 0 0 5px rgba(2,6,23,0.68);
+    }
+    .v18-photo-devices .iphone-demo::before {
+      left: -6px;
+      top: 118px;
+      width: 5px;
+      height: 58px;
+      border-radius: 999px 0 0 999px;
+      background: linear-gradient(180deg, #0F172A, #020617);
+      box-shadow: 0 74px 0 #020617;
+    }
+    .v18-photo-devices .iphone-demo::after {
+      right: -6px;
+      top: 151px;
+      width: 5px;
+      height: 86px;
+      border-radius: 0 999px 999px 0;
+      background: linear-gradient(180deg, #0F172A, #020617);
+    }
+    .v18-photo-devices .iphone-notch {
+      top: 1.02rem;
+      width: 104px;
+      height: 30px;
+      border-radius: 999px;
+      background: linear-gradient(180deg, #030712 0%, #000 100%);
+      box-shadow: inset 0 0 4px rgba(255,255,255,0.15), 0 1px 2px rgba(255,255,255,0.10);
+      z-index: 10;
+    }
+    .v18-photo-devices .iphone-camera-dot {
+      position: absolute;
+      top: 1.62rem;
+      left: calc(50% + 30px);
+      width: 8px;
+      height: 8px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 35% 35%, #64748B 0%, #111827 45%, #000 100%);
+      box-shadow: inset 0 0 4px rgba(96,165,250,0.38);
+      z-index: 11;
+    }
+    .v18-photo-devices .iphone-screen-real {
+      min-height: 612px;
+      border-radius: 48px;
+      border: 1px solid rgba(255,255,255,0.55);
+      background: linear-gradient(180deg, #F8FBFF 0%, #FFFFFF 100%);
+      box-shadow: inset 0 0 0 1px rgba(15,23,42,0.05), inset 0 14px 28px rgba(255,255,255,0.58);
+    }
+    .v18-photo-devices .iphone-screen-real::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(125deg, rgba(255,255,255,0.42) 0%, rgba(255,255,255,0.08) 24%, transparent 45%);
+      pointer-events: none;
+      z-index: 6;
+      opacity: 0.60;
+    }
+    .v18-photo-devices .iphone-screen-real::after {
+      opacity: 0.28;
+    }
+    .v18-photo-devices .mobile-system-bar {
+      padding-top: 1.72rem;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+    .v18-photo-devices .mobile-app-top {
+      padding-top: 0.8rem;
+    }
+    .v18-photo-devices .iphone-home-indicator {
+      bottom: 0.72rem;
+      width: 112px;
+      height: 5px;
+      background: #020617;
+      opacity: 0.78;
+    }
+    @media (max-width: 640px) {
+      .v18-photo-devices .iphone-demo { width: min(320px, 92vw); border-radius: 56px; }
+      .v18-photo-devices .iphone-screen-real { min-height: 582px; border-radius: 44px; }
+    }
+
+
+
+    /* V18c — réduction légère de la taille des appareils pour mieux respirer à l'écran */
+    .v18-photo-devices .desktop-workstation {
+      max-width: 900px;
+      padding: 0.75rem 0.95rem 3.1rem;
+    }
+    .v18-photo-devices .desktop-workstation::before {
+      left: 8%;
+      right: 8%;
+      height: 78px;
+    }
+    .v18-photo-devices .desktop-workstation::after {
+      left: 20%;
+      right: 20%;
+      bottom: 1.65rem;
+    }
+    .v18-photo-devices .desktop-monitor {
+      border-radius: 22px 22px 25px 25px;
+      padding: 0.46rem 0.46rem 0.62rem;
+      box-shadow:
+        0 32px 72px rgba(2,6,23,0.21),
+        0 10px 22px rgba(11,61,145,0.12),
+        inset 0 1px 0 rgba(255,255,255,0.12),
+        inset 0 -1px 0 rgba(255,255,255,0.06);
+    }
+    .v18-photo-devices .desktop-browser-bar {
+      height: 36px;
+      border-radius: 14px 14px 0 0;
+      padding: 0 0.55rem;
+    }
+    .v18-photo-devices .desktop-screen-real {
+      min-height: 390px;
+      aspect-ratio: 16 / 9.15;
+    }
+    .v18-photo-devices .desktop-slide-stage {
+      min-height: 300px;
+      padding: 0.85rem;
+    }
+    .v18-photo-devices .demo-app-top {
+      padding: 0.66rem 0.85rem;
+    }
+    .v18-photo-devices .demo-logo-brand img {
+      width: 26px;
+      height: 26px;
+    }
+    .v18-photo-devices .monitor-stand {
+      width: 112px;
+      height: 58px;
+    }
+    .v18-photo-devices .monitor-base {
+      width: 280px;
+      height: 21px;
+    }
+    .v18-photo-devices .iphone-demo {
+      width: min(302px, 84vw);
+      border-radius: 54px;
+      padding: 0.54rem;
+      box-shadow:
+        0 32px 72px rgba(2,6,23,0.28),
+        0 14px 28px rgba(11,61,145,0.16),
+        inset 0 0 0 2px rgba(255,255,255,0.06),
+        inset 0 0 0 5px rgba(2,6,23,0.68);
+    }
+    .v18-photo-devices .iphone-screen-real {
+      min-height: 540px;
+      border-radius: 43px;
+    }
+    .v18-photo-devices .iphone-notch {
+      width: 96px;
+      height: 26px;
+    }
+    .v18-photo-devices .mobile-slide-stage {
+      min-height: 396px;
+    }
+    @media (max-width: 640px) {
+      .v18-photo-devices .iphone-demo { width: min(292px, 90vw); border-radius: 52px; }
+      .v18-photo-devices .iphone-screen-real { min-height: 520px; border-radius: 41px; }
+      .v18-photo-devices .mobile-slide-stage { min-height: 382px; }
+    }
+
+
+    /* V18d — réduction supplémentaire des appareils pour une section plus compacte */
+    .v18-photo-devices .desktop-workstation {
+      max-width: 780px;
+      padding: 0.35rem 0.75rem 2.45rem;
+    }
+    .v18-photo-devices .desktop-workstation::before {
+      left: 12%;
+      right: 12%;
+      height: 62px;
+    }
+    .v18-photo-devices .desktop-workstation::after {
+      left: 24%;
+      right: 24%;
+      bottom: 1.28rem;
+      height: 11px;
+    }
+    .v18-photo-devices .desktop-monitor {
+      border-radius: 19px 19px 22px 22px;
+      padding: 0.38rem 0.38rem 0.52rem;
+      box-shadow:
+        0 24px 56px rgba(2,6,23,0.19),
+        0 8px 18px rgba(11,61,145,0.10),
+        inset 0 1px 0 rgba(255,255,255,0.12),
+        inset 0 -1px 0 rgba(255,255,255,0.06);
+    }
+    .v18-photo-devices .desktop-monitor::before {
+      top: 0.30rem;
+      width: 6px;
+      height: 6px;
+    }
+    .v18-photo-devices .desktop-monitor::after {
+      inset: 0.42rem;
+      border-radius: 14px;
+      opacity: 0.48;
+    }
+    .v18-photo-devices .desktop-browser-bar {
+      height: 31px;
+      border-radius: 12px 12px 0 0;
+      padding: 0 0.48rem;
+    }
+    .v18-photo-devices .browser-dot { width: 8px; height: 8px; }
+    .v18-photo-devices .browser-address { height: 22px; font-size: 0.65rem; }
+    .v18-photo-devices .desktop-screen-real {
+      min-height: 328px;
+      aspect-ratio: 16 / 9.2;
+      border-radius: 0 0 13px 13px;
+    }
+    .v18-photo-devices .demo-app-top {
+      padding: 0.52rem 0.72rem;
+    }
+    .v18-photo-devices .demo-logo-brand img {
+      width: 22px;
+      height: 22px;
+    }
+    .v18-photo-devices .desktop-slide-stage {
+      min-height: 246px;
+      padding: 0.72rem;
+    }
+    .v18-photo-devices .transaction-slide {
+      inset: 0.72rem;
+      gap: 0.72rem;
+    }
+    .v18-photo-devices .transaction-summary-card,
+    .v18-photo-devices .transaction-step-card {
+      border-radius: 18px;
+    }
+    .v18-photo-devices .step-big-icon {
+      width: 58px;
+      height: 58px;
+      font-size: 1.45rem;
+      border-radius: 18px;
+    }
+    .v18-photo-devices .transaction-step-card h3 {
+      font-size: 1.05rem;
+    }
+    .v18-photo-devices .transaction-step-card p {
+      font-size: 0.88rem;
+      line-height: 1.45;
+    }
+    .v18-photo-devices .monitor-stand {
+      width: 92px;
+      height: 46px;
+    }
+    .v18-photo-devices .monitor-base {
+      width: 230px;
+      height: 17px;
+    }
+    .v18-photo-devices .iphone-demo {
+      width: min(268px, 80vw);
+      border-radius: 46px;
+      padding: 0.44rem;
+      box-shadow:
+        0 24px 56px rgba(2,6,23,0.25),
+        0 10px 22px rgba(11,61,145,0.14),
+        inset 0 0 0 2px rgba(255,255,255,0.06),
+        inset 0 0 0 4px rgba(2,6,23,0.68);
+    }
+    .v18-photo-devices .iphone-demo::before {
+      left: -5px;
+      top: 94px;
+      width: 4px;
+      height: 46px;
+      box-shadow: 0 59px 0 #020617;
+    }
+    .v18-photo-devices .iphone-demo::after {
+      right: -5px;
+      top: 120px;
+      width: 4px;
+      height: 68px;
+    }
+    .v18-photo-devices .iphone-screen-real {
+      min-height: 468px;
+      border-radius: 37px;
+    }
+    .v18-photo-devices .iphone-notch {
+      top: 0.78rem;
+      width: 82px;
+      height: 22px;
+    }
+    .v18-photo-devices .iphone-camera-dot {
+      top: 1.23rem;
+      left: calc(50% + 24px);
+      width: 6px;
+      height: 6px;
+    }
+    .v18-photo-devices .mobile-system-bar {
+      padding-top: 1.26rem;
+      padding-left: 1.12rem;
+      padding-right: 1.12rem;
+      font-size: 0.66rem;
+    }
+    .v18-photo-devices .mobile-app-top {
+      padding: 0.62rem 0.78rem 0.58rem;
+    }
+    .v18-photo-devices .mobile-slide-stage {
+      min-height: 342px;
+    }
+    .v18-photo-devices .mobile-transaction-slide {
+      inset: 0.78rem;
+    }
+    .v18-photo-devices .mobile-step-card {
+      border-radius: 23px;
+      padding: 1.12rem;
+    }
+    .v18-photo-devices .mobile-step-card h3 {
+      font-size: 1.05rem;
+    }
+    .v18-photo-devices .mobile-step-card p {
+      font-size: 0.86rem;
+      line-height: 1.42;
+    }
+    .v18-photo-devices .iphone-home-indicator {
+      bottom: 0.55rem;
+      width: 92px;
+      height: 4px;
+    }
+    @media (max-width: 640px) {
+      .v18-photo-devices .iphone-demo { width: min(258px, 86vw); border-radius: 44px; }
+      .v18-photo-devices .iphone-screen-real { min-height: 448px; border-radius: 35px; }
+      .v18-photo-devices .mobile-slide-stage { min-height: 326px; }
+      .v18-photo-devices .mobile-step-card { padding: 1rem; }
+    }
+
+  </style>
+<meta content="summary_large_image" name="twitter:card"/><meta content="FrikaPay — Pilote Bénin Mobile Money pour achats sécurisés" name="twitter:title"/><meta content="FrikaPay aide les clients et commerçants à sécuriser les achats à distance pendant un pilote initial au Bénin Mobile Money : paiement suivi, confirmation, litiges et règles claires." name="twitter:description"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "FrikaPay",
+  "legalName": "FrikaPay Technologies SARL",
+  "url": "https://frikapay.com",
+  "logo": "https://frikapay.com/logo-og.png",
+  "email": "contact@frikapay.com",
+  "telephone": "+2290166623009",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Natitingou",
+    "addressRegion": "Atacora",
+    "addressCountry": "BJ"
+  },
+  "identifier": [
+    "RCCM RB/NAT/26 B 994",
+    "IFU 3202682983357"
+  ]
+}</script></head>
 <body>
-  <div class="beta-banner"><span>⚡</span> Phase bêta — FrikaPay est en préparation et sera déployé progressivement.</div>
-
-  <header>
-    <div class="nav-container">
-      <a href="#" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"></a>
-      <button class="mobile-menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-      <nav class="nav-links" id="navLinks">
-        <a href="#accueil">Accueil</a>
-        <a href="#a-propos">À propos</a>
-        <a href="#fonctionnement">Comment ça marche</a>
-        <a href="#clients">Clients</a>
-        <a href="#commercants">Commerçants</a>
-        <a href="#tarifs">Tarifs</a>
-        <a href="#securite">Sécurité</a>
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <section id="accueil" class="hero">
-      <div class="container hero-content">
-        <div class="hero-text">
-          <h1>Achetez en ligne sans crainte d'arnaque.</h1>
-          <p>FrikaPay sécurise votre paiement jusqu'à la confirmation de réception de votre commande, avec des partenaires de paiement agréés.</p>
-          <div class="hero-buttons">
-            <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener">💬 Demander l'accès bêta</a>
-            <a href="#fonctionnement" class="btn btn-outline">Voir comment ça marche</a>
-          </div>
-          <div class="trust-grid">
-            <div class="trust-item"><span class="trust-icon">🔒</span> Paiement sécurisé</div>
-            <div class="trust-item"><span class="trust-icon">🛍️</span> Achat protégé</div>
-            <div class="trust-item"><span class="trust-icon">✅</span> Réception confirmée</div>
-            <div class="trust-item"><span class="trust-icon">🛡️</span> Partenaire agréé</div>
-          </div>
-        </div>
-        <div class="hero-visual">
-          <img src="hero-mockup.jpg" alt="Application FrikaPay : suivi d'un achat sécurisé, paiement protégé et libération du paiement via un partenaire de paiement agréé" width="900" height="1124" loading="eager">
-        </div>
-      </div>
-    </section>
-
-    <section id="a-propos">
-      <div class="container">
-        <h2 class="section-title">À propos de FrikaPay</h2>
-        <p class="section-subtitle">Découvrez qui nous sommes, notre objectif et notre mission pour le commerce digital africain.</p>
-        <div class="grid-3">
-          <div class="card"><div class="card-icon">🏢</div><h3>Qui sommes-nous ?</h3><p class="text-secondary">FrikaPay est une plateforme numérique de confiance conçue pour aider les clients et les commerçants à sécuriser leurs transactions en ligne. Nous accompagnons les échanges commerciaux en ajoutant un cadre clair : paiement suivi, confirmation de réception, gestion des réclamations et libération encadrée des fonds.</p></div>
-          <div class="card"><div class="card-icon">🎯</div><h3>Notre objectif</h3><p class="text-secondary">Notre objectif est de réduire le manque de confiance qui freine le commerce en ligne, notamment sur WhatsApp, Facebook, Instagram et les boutiques digitales. FrikaPay aide les clients à payer avec plus de sérénité et les commerçants sérieux à vendre avec plus de confiance.</p></div>
-          <div class="card"><div class="card-icon">🌍</div><h3>Notre mission</h3><p class="text-secondary">Notre mission est de construire une infrastructure de confiance adaptée au commerce digital africain. Nous voulons rendre les transactions plus simples, plus sûres et plus fiables entre clients et commerçants.</p></div>
-        </div>
-        <div class="transparency-note">FrikaPay est actuellement en phase bêta de préparation. Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</div>
-      </div>
-    </section>
-
-    <div class="container"><div class="quote-block"><p>« Nous construisons FrikaPay pour résoudre un vrai problème : le manque de confiance qui bloque les ventes en ligne entre clients et commerçants. »</p><cite>— L'équipe FrikaPay</cite></div></div>
-
-    <section id="fonctionnement" class="bg-light">
-      <div class="container">
-        <h2 class="section-title">Comment ça marche</h2>
-        <div class="steps">
-          <div class="step"><div class="step-num">1</div><div><strong>Création de la transaction</strong><p class="text-secondary">Le client ou le commerçant crée une transaction sécurisée avec le montant, la description et les conditions de livraison.</p></div></div>
-          <div class="step"><div class="step-num">2</div><div><strong>Paiement par le client</strong><p class="text-secondary">Le client paie via FrikaPay. Le paiement est traité par un prestataire de paiement agréé ou habilité.</p></div></div>
-          <div class="step"><div class="step-num">3</div><div><strong>Livraison ou exécution</strong><p class="text-secondary">Le commerçant prépare et livre la commande. Les étapes sont suivies dans FrikaPay.</p></div></div>
-          <div class="step"><div class="step-num">4</div><div><strong>Confirmation et libération</strong><p class="text-secondary">Le client confirme la réception ou signale un problème. Les fonds sont libérés selon les conditions prévues.</p></div></div>
-        </div>
-        <div class="note-box">FrikaPay ne vend pas les produits et ne fournit pas les services. Les produits, prix, descriptions, délais et livraisons restent sous la responsabilité des commerçants.</div>
-      </div>
-    </section>
-
-    <section id="clients">
-      <div class="container">
-        <h2 class="section-title">Payez avec plus de sérénité</h2>
-        <p class="section-subtitle">Avec FrikaPay, vous achetez dans un cadre plus clair. Votre paiement est suivi, la transaction est documentée et les fonds sont libérés selon les conditions prévues.</p>
-        <div class="grid-2">
-          <div class="card"><div class="card-icon">🔐</div><h3>Paiement via prestataire agréé</h3><p class="text-secondary">Votre paiement est traité par un prestataire de paiement agréé ou habilité.</p></div>
-          <div class="card"><div class="card-icon">📋</div><h3>Suivi de la transaction</h3><p class="text-secondary">Chaque étape est visible, de la création à la résolution.</p></div>
-          <div class="card"><div class="card-icon">✅</div><h3>Confirmation de réception</h3><p class="text-secondary">Vous confirmez la réception avant libération des fonds.</p></div>
-          <div class="card"><div class="card-icon">🆘</div><h3>Signalement de problème</h3><p class="text-secondary">Un cadre est prévu pour signaler une difficulté.</p></div>
-          <div class="card"><div class="card-icon">🛡️</div><h3>Buyer Protection</h3><p class="text-secondary">Fonctionnalité préventive en cas de situation suspecte.</p></div>
-          <div class="card"><div class="card-icon">💵</div><h3>Frais affichés avant paiement</h3><p class="text-secondary">Vous voyez le total avant de valider.</p></div>
-        </div>
-        <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top:1.8rem;">💬 Contacter FrikaPay sur WhatsApp</a>
-      </div>
-    </section>
-
-    <section id="commercants" class="bg-light">
-      <div class="container">
-        <h2 class="section-title">Vendez avec plus de confiance</h2>
-        <p class="section-subtitle">FrikaPay aide les commerçants sérieux à rassurer leurs clients, à réduire les clients fantômes et à limiter les déplacements inutiles. Le client paie dans un cadre sécurisé, ce qui montre son engagement réel.</p>
-        <div class="grid-2">
-          <div class="card"><div class="card-icon">🤝</div><h3>Rassurer les clients</h3><p class="text-secondary">Un cadre clair pour les clients qui hésitent.</p></div>
-          <div class="card"><div class="card-icon">🚫</div><h3>Moins de clients fantômes</h3><p class="text-secondary">Le paiement préalable filtre les commandes non sérieuses.</p></div>
-          <div class="card"><div class="card-icon">📍</div><h3>Moins de déplacements inutiles</h3><p class="text-secondary">Vous livrez des commandes confirmées et payées.</p></div>
-          <div class="card"><div class="card-icon">💰</div><h3>Fonds libérés selon les règles</h3><p class="text-secondary">Après confirmation, délai ou résolution de litige.</p></div>
-          <div class="card"><div class="card-icon">⭐</div><h3>Réputation de confiance</h3><p class="text-secondary">Construisez votre crédibilité auprès des clients.</p></div>
-          <div class="card"><div class="card-icon">📦</div><h3>Suivi des commandes</h3><p class="text-secondary">Gardez une trace de chaque transaction.</p></div>
-        </div>
-        <div style="margin-top:2rem;background:white;padding:1.8rem;border-radius:16px;"><h3 style="color:#0B3D91;">Programme Fondateur FrikaPay</h3><p class="text-secondary">Durant la phase bêta, FrikaPay prévoit d'accompagner ses premiers commerçants actifs avec des avantages spécifiques. Les conditions seront communiquées officiellement au lancement.</p></div>
-        <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener" style="margin-top:1.5rem;">💬 Rejoindre la bêta sur WhatsApp</a>
-      </div>
-    </section>
-
-    <section id="tarifs">
-      <div class="container">
-        <h2 class="section-title">Tarifs simples et transparents</h2>
-        <p class="section-subtitle">Grille applicable pendant la phase bêta de préparation. Version Bêta 1.3 — 2026.</p>
-        <div class="grid-2">
-          <div class="card">
-            <h3>👤 Client</h3>
-            <p>Frais de protection FrikaPay, calculés selon le statut de vérification du commerçant :</p>
-            <p><strong>Commerçant vérifié FrikaPay :</strong> 3 % + 100 FCFA (minimum 200 FCFA)</p>
-            <p><strong>Commerçant en cours de vérification ou invité :</strong> 3 % + 200 FCFA (minimum 300 FCFA)</p>
-            <p class="text-secondary" style="font-size:0.9rem;">Affichés avant validation du paiement.</p>
-          </div>
-          <div class="card"><h3>🏪 Commerçant</h3><p>Commission commerçant FrikaPay : <strong>0 %</strong> pendant la phase bêta</p><p>Frais de décaissement agrégateur : <strong>1 %</strong> vers Mobile Money</p><p class="text-secondary" style="font-size:0.85rem;">Les frais de retrait cash après réception sur Mobile Money dépendent de l'opérateur, pas de FrikaPay.</p></div>
-        </div>
-        <div style="margin-top:2rem;background:white;padding:1.5rem;border-radius:16px;">
-          <h3 style="color:#0B3D91;margin-bottom:1rem;">Exemples de calcul — frais client</h3>
-          <table>
-            <thead><tr><th>Montant transaction</th><th>Commerçant vérifié FrikaPay</th><th>Commerçant en cours de vérification / invité</th></tr></thead>
-            <tbody>
-              <tr><td>5 000 FCFA</td><td>250 FCFA — total 5 250 FCFA</td><td>350 FCFA — total 5 350 FCFA</td></tr>
-              <tr><td>10 000 FCFA</td><td>400 FCFA — total 10 400 FCFA</td><td>500 FCFA — total 10 500 FCFA</td></tr>
-              <tr><td>50 000 FCFA</td><td>1 600 FCFA — total 51 600 FCFA</td><td>1 700 FCFA — total 51 700 FCFA</td></tr>
-              <tr><td>100 000 FCFA</td><td>3 100 FCFA — total 103 100 FCFA</td><td>3 200 FCFA — total 103 200 FCFA</td></tr>
-            </tbody>
-          </table>
-          <h3 style="color:#0B3D91;margin:1.5rem 0 1rem;">Exemples de calcul — décaissement commerçant</h3>
-          <table>
-            <thead><tr><th>Montant disponible</th><th>Frais de décaissement agrégateur (1 %)</th><th>Montant envoyé vers Mobile Money</th></tr></thead>
-            <tbody>
-              <tr><td>10 000 FCFA</td><td>100 FCFA</td><td>9 900 FCFA</td></tr>
-              <tr><td>50 000 FCFA</td><td>500 FCFA</td><td>49 500 FCFA</td></tr>
-              <tr><td>100 000 FCFA</td><td>1 000 FCFA</td><td>99 000 FCFA</td></tr>
-            </tbody>
-          </table>
-          <p style="margin-top:1rem;"><a href="grille-tarifaire.html" style="color:#1A73E8;font-weight:600;text-decoration:none;">Lire la Grille Tarifaire Publique complète →</a></p>
-        </div>
-      </div>
-    </section>
-
-    <section id="securite" class="bg-light">
-      <div class="container">
-        <h2 class="section-title">Sécurité et confiance</h2>
-        <p class="section-subtitle">FrikaPay met en place un cadre rigoureux pour sécuriser chaque transaction.</p>
-        <div class="grid-2">
-          <div class="card"><h3>Prestataires agréés</h3><p class="text-secondary">Paiements traités par des prestataires agréés ou habilités lors du déploiement.</p></div>
-          <div class="card"><h3>Suivi transparent</h3><p class="text-secondary">Chaque étape est documentée et consultable.</p></div>
-          <div class="card"><h3>Confirmation de réception</h3><p class="text-secondary">Validation obligatoire avant libération des fonds.</p></div>
-          <div class="card"><h3>Gestion des réclamations</h3><p class="text-secondary">Processus prévu en cas de désaccord.</p></div>
-          <div class="card"><h3>Buyer Protection</h3><p class="text-secondary">Alerte préventive en cas de situation suspecte.</p></div>
-          <div class="card"><h3>Vérification commerçant</h3><p class="text-secondary">KYC avant décaissement lorsque nécessaire.</p></div>
-        </div>
-        <div class="note-box" style="margin-top:2rem;">FrikaPay est une plateforme numérique de confiance et de coordination. Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</div>
-      </div>
-    </section>
-
-    <section id="faq">
-      <div class="container">
-        <h2 class="section-title">FAQ Client</h2>
-        <div class="faq-item"><div class="faq-question">Qu'est-ce que FrikaPay ?</div><p class="text-secondary">Une plateforme numérique de confiance qui sécurise les transactions entre clients et commerçants. Les paiements sont opérés par des prestataires agréés.</p></div>
-        <div class="faq-item"><div class="faq-question">FrikaPay vend-elle les produits ?</div><p class="text-secondary">Non. Les produits, prix et livraisons restent sous la responsabilité des commerçants. FrikaPay fournit le cadre de confiance.</p></div>
-        <div class="faq-item"><div class="faq-question">Quand les fonds sont-ils libérés au commerçant ?</div><p class="text-secondary">Après confirmation de réception, expiration du délai de contestation, ou décision après traitement d'une réclamation.</p></div>
-        <div class="faq-item"><div class="faq-question">Quels sont les frais pour le client ?</div><p class="text-secondary">3 % du montant de la transaction, affichés avant paiement. Ces frais couvrent le service de suivi et de coordination.</p></div>
-        <div class="faq-item"><div class="faq-question">Comment contacter FrikaPay ?</div><p class="text-secondary">Par email à contact@frikapay.com ou sur WhatsApp au +229 01 66 62 30 09.</p></div>
-
-        <h2 class="section-title" style="margin-top:3rem;">FAQ Commerçant</h2>
-        <div class="faq-item"><div class="faq-question">Pourquoi utiliser FrikaPay comme commerçant ?</div><p class="text-secondary">Pour rassurer vos clients, réduire les clients fantômes, limiter les déplacements inutiles et éviter les commandes non sérieuses.</p></div>
-        <div class="faq-item"><div class="faq-question">Quand vais-je recevoir mon argent ?</div><p class="text-secondary">Après confirmation de réception, expiration du délai ou résolution d'une éventuelle réclamation.</p></div>
-        <div class="faq-item"><div class="faq-question">Quels sont les frais pour les commerçants ?</div><p class="text-secondary">0 % de commission commerçant FrikaPay + 1 % de frais de décaissement agrégateur vers Mobile Money.</p></div>
-        <div class="faq-item"><div class="faq-question">Dois-je faire un KYC ?</div><p class="text-secondary">Oui, une vérification d'identité peut être demandée avant le premier décaissement.</p></div>
-        <div class="faq-item"><div class="faq-question">Comment rejoindre la bêta ?</div><p class="text-secondary">Contactez-nous sur WhatsApp au +229 01 66 62 30 09 ou par email à contact@frikapay.com.</p></div>
-      </div>
-    </section>
-
-    <section id="contact" class="bg-light">
-      <div class="container" style="text-align:center;">
-        <h2 class="section-title">Contactez-nous</h2>
-        <p class="section-subtitle" style="margin:0 auto 2rem;">Nous sommes à votre écoute pour toute question, demande d'information ou intérêt pour la phase bêta.</p>
-        <a href="https://wa.me/2290166623009" class="btn btn-whatsapp" target="_blank" rel="noopener" style="font-size:1.1rem;padding:0.9rem 2.2rem;">💬 Nous contacter sur WhatsApp</a>
-        <p style="margin-top:1.5rem;color:#6B7280;">Email : <a href="mailto:contact@frikapay.com" style="color:#1A73E8;text-decoration:none;">contact@frikapay.com</a></p>
-        <p style="color:#6B7280;">WhatsApp : <a href="https://wa.me/2290166623009" style="color:#1A73E8;text-decoration:none;">+229 01 66 62 30 09</a></p>
-        <p style="color:#6B7280;">Site officiel : <a href="https://frikapay.com" style="color:#1A73E8;text-decoration:none;">frikapay.com</a></p>
-        <div class="security-reassurance" style="max-width:600px;margin:2rem auto 0;">
-          <div class="security-item">🔒 Connexion HTTPS</div>
-          <div class="security-item">✅ Prestataires agréés</div>
-          <div class="security-item">📧 contact@frikapay.com</div>
-          <div class="security-item">📱 +229 01 66 62 30 09</div>
-        </div>
-      </div>
-    </section>
+<div class="beta-banner"><span>⚡</span> Pilote initial — Bénin Mobile Money. Déploiement progressif, tests limités et suivis.</div>
+<header>
+<div class="nav-container">
+<a class="logo" href="#"><img alt="FrikaPay" src="logo-frikapay.png"/></a>
+<button aria-label="Menu" class="mobile-menu-btn" id="menuBtn">☰</button>
+<nav class="nav-links" id="navLinks">
+<a href="#accueil">Accueil</a>
+<a href="etude-beta.html">Étude bêta</a>
+<a href="#a-propos">À propos</a>
+<a href="#fonctionnement">Comment ça marche</a>
+<a href="#clients">Clients</a>
+<a href="#commercants">Commerçants</a>
+<a href="#tarifs">Tarifs</a>
+<a href="diaspora.html">Diaspora</a>
+<a href="confiance-conformite.html">Confiance</a>
+<a href="#securite">Sécurité</a>
+<a href="#faq">FAQ</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+<main>
+<section class="hero" id="accueil">
+<div class="container hero-content">
+<div class="hero-text">
+<h1>Achetez à distance au Bénin sans envoyer l’argent directement au commerçant.</h1>
+<p>FrikaPay aide les clients, y compris la diaspora, à sécuriser leurs achats à distance : paiement suivi, confirmation de réception, preuves et traitement des problèmes selon des règles claires.</p>
+<div class="hero-buttons">
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20j%27ai%20un%20achat%20%C3%A0%20distance%20%C3%A0%20s%C3%A9curiser." rel="noopener" target="_blank">💬 J’ai un achat à sécuriser</a>
+<a class="btn btn-outline" href="diaspora.html">Voir l’offre diaspora</a>
+<a class="btn btn-outline" href="etude-beta.html">Participer à l’étude</a>
+</div>
+<div class="trust-grid">
+<div class="trust-item"><span class="trust-icon">🏢</span> Société immatriculée</div>
+<div class="trust-item"><span class="trust-icon">📄</span> Documents publics</div>
+<div class="trust-item"><span class="trust-icon">✅</span> Réception confirmée</div>
+<div class="trust-item"><span class="trust-icon">🛡️</span> Paiement encadré</div>
+</div>
+</div>
+<div class="hero-visual">
+<img alt="Application FrikaPay : suivi d'un achat sécurisé, paiement protégé et libération du paiement via un partenaire de paiement agréé" height="1124" loading="eager" src="hero-mockup.jpg" width="900"/>
+</div>
+</div>
+</section>
+<section id="a-propos">
+<div class="container">
+<h2 class="section-title">À propos de FrikaPay</h2>
+<p class="section-subtitle">Découvrez qui nous sommes, notre objectif et notre mission pour le commerce digital africain.</p>
+<div class="grid-3">
+<div class="card"><div class="card-icon">🏢</div><h3>Qui sommes-nous ?</h3><p class="text-secondary">FrikaPay est une plateforme numérique de confiance conçue pour aider les clients et les commerçants à sécuriser leurs transactions en ligne. Nous accompagnons les échanges commerciaux en ajoutant un cadre clair : paiement suivi, confirmation de réception, gestion des réclamations et libération encadrée des fonds.</p></div>
+<div class="card"><div class="card-icon">🎯</div><h3>Notre objectif</h3><p class="text-secondary">Notre objectif est de réduire le manque de confiance qui freine le commerce en ligne, notamment sur WhatsApp, Facebook, Instagram et les boutiques digitales. FrikaPay aide les clients à payer avec plus de sérénité et les commerçants sérieux à vendre avec plus de confiance.</p></div>
+<div class="card"><div class="card-icon">🌍</div><h3>Notre mission</h3><p class="text-secondary">Notre mission est de construire une infrastructure de confiance adaptée au commerce digital africain. Nous voulons rendre les transactions plus simples, plus sûres et plus fiables entre clients et commerçants.</p></div>
+</div>
+<div class="transparency-note"><strong>Identité officielle :</strong> FrikaPay Technologies SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357 — Natitingou, Bénin. Service en phase pilote contrôlée, avec un démarrage prioritaire sur le Bénin Mobile Money. Les paiements sont opérés via des prestataires de paiement agréés ou habilités, avec FeexPay retenu pour l’intégration pilote sous réserve de validation contractuelle.</div>
+<div class="note-box" style="margin-top:1rem;"><strong>Pendant le pilote contrôlé :</strong> avant toute transaction réelle, le client voit le montant, les frais de protection, l’identité du commerçant, les conditions prévues et le moyen de paiement disponible. FrikaPay suit ensuite la transaction jusqu’à confirmation, demande de vérification, litige éventuel ou libération selon les règles prévues.</div>
+</div>
+</section>
+<section class="founder-section" id="mot-du-fondateur">
+<div class="container">
+<div class="founder-card">
+<div aria-label="Daniel Wibo NARA, fondateur de FrikaPay Technologies" class="founder-photo" draggable="false" oncontextmenu="return false" role="img"></div>
+<div class="founder-copy">
+<span class="founder-eyebrow">Le mot du fondateur</span>
+<h2>La confiance doit devenir une infrastructure du commerce africain.</h2>
+<p class="founder-quote">FrikaPay est né d’un problème simple que j’ai moi-même vécu lorsque je faisais de la vente en ligne : beaucoup de clients hésitent à payer avant livraison, et beaucoup de commerçants sérieux perdent des ventes à cause du manque de confiance. Notre mission est de créer un cadre de transaction plus clair, plus sûr et plus professionnel.</p>
+<div class="founder-signature">
+<div class="founder-name">Daniel Wibo NARA</div>
+<div class="founder-title">Fondateur &amp; Représentant légal</div>
+<div class="founder-company">FrikaPay Technologies SARL</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="bg-light" id="fonctionnement">
+<div class="container">
+<h2 class="section-title">Comment ça marche</h2>
+<p class="section-subtitle">Une transaction FrikaPay doit toujours montrer où se trouve l’argent, qui doit agir et quelle est la prochaine étape.</p>
+<div class="process-showcase">
+<div class="process-copy">
+<div class="steps">
+<div class="step"><div class="step-num">1</div><div><strong>Création de la transaction</strong><p class="text-secondary">Le client ou le commerçant renseigne le montant, la description et les conditions de livraison.</p></div></div>
+<div class="step"><div class="step-num">2</div><div><strong>Acceptation de la partie invitée</strong><p class="text-secondary">Selon le parcours, le commerçant accepte la demande du client, ou le client accepte le lien envoyé par le commerçant.</p></div></div>
+<div class="step"><div class="step-num">3</div><div><strong>Preuve de livraison</strong><p class="text-secondary">Le commerçant ajoute une preuve vérifiable : reçu, bordereau, numéro de suivi ou informations du livreur.</p></div></div>
+<div class="step"><div class="step-num">4</div><div><strong>Confirmation du client</strong><p class="text-secondary">Le client confirme la réception, demande une vérification ou ouvre un litige si nécessaire.</p></div></div>
+<div class="step"><div class="step-num">5</div><div><strong>Fonds libérés</strong><p class="text-secondary">Lorsque les conditions sont remplies, les fonds sont libérés au commerçant selon les règles FrikaPay.</p></div></div>
+</div>
+</div>
+</div>
+<div aria-label="Démonstration animée du suivi d’une transaction FrikaPay" class="transaction-visual-section v16-realistic-demo v18-photo-devices">
+<div class="transaction-visual-header">
+<h3>Suivi visuel d’une transaction FrikaPay</h3>
+<p>Une démonstration plus proche d’un vrai écran : sur ordinateur ou smartphone, les étapes défilent dans l’interface FrikaPay comme un suivi de transaction réel.</p>
+</div>
+<div aria-label="Affichage desktop FrikaPay" class="device-desktop-demo">
+<div class="desktop-workstation">
+<div class="desktop-monitor">
+<div class="desktop-browser-bar">
+<span class="browser-dot"></span><span class="browser-dot"></span><span class="browser-dot"></span>
+<span class="browser-address">app.frikapay.com/transaction/FP-2026-014</span>
+</div>
+<div class="desktop-screen-real">
+<div class="demo-app-top">
+<div class="demo-logo-brand"><img alt="Logo FrikaPay" src="logo-frikapay.png"/> FrikaPay</div>
+<span class="demo-status-pill">Suivi sécurisé en cours</span>
+</div>
+<div class="desktop-slide-stage">
+<div class="transaction-slide">
+<div class="transaction-summary-card">
+<div><div class="demo-label">Transaction</div><div class="demo-product">Sculpture artisanale</div></div>
+<div><div class="demo-label">Montant sécurisé</div><div class="demo-amount">125 000 FCFA</div></div>
+<div class="safe-mini-card">🛡️ FrikaPay affiche le montant, les frais, le commerçant et l’étape en cours.</div>
+</div>
+<div class="transaction-step-card"><div class="step-big-icon">🔗</div><div class="step-content"><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée avec le montant, la description et les conditions prévues. La partie invitée reçoit le lien pour accepter.</p><span class="step-tag">Étape 1 · Invitation envoyée</span></div></div>
+</div>
+<div class="transaction-slide">
+<div class="transaction-summary-card">
+<div><div class="demo-label">Commerçant</div><div class="demo-product">Artisan de Cotonou</div></div>
+<div><div class="demo-label">Action attendue</div><div class="demo-amount">Acceptée</div></div>
+<div class="safe-mini-card">✅ Le commerçant confirme la commande dans le cadre FrikaPay.</div>
+</div>
+<div class="transaction-step-card"><div class="step-big-icon">🤝</div><div class="step-content"><h4>Transaction acceptée</h4><p>La partie invitée accepte la transaction et confirme que la commande peut être préparée selon les conditions prévues.</p><span class="step-tag">Étape 2 · Commande acceptée</span></div></div>
+</div>
+<div class="transaction-slide">
+<div class="transaction-summary-card">
+<div><div class="demo-label">Preuve ajoutée</div><div class="demo-product">Reçu + numéro de suivi</div></div>
+<div><div class="demo-label">Statut</div><div class="demo-amount">Livraison</div></div>
+<div class="safe-mini-card">📦 Les preuves restent visibles dans l’historique de la transaction.</div>
+</div>
+<div class="transaction-step-card"><div class="step-big-icon">📦</div><div class="step-content"><h4>Preuve de livraison envoyée</h4><p>Le commerçant ajoute une preuve vérifiable : reçu, bordereau, numéro de suivi ou informations du livreur.</p><span class="step-tag">Étape 3 · Preuve enregistrée</span></div></div>
+</div>
+<div class="transaction-slide">
+<div class="transaction-summary-card">
+<div><div class="demo-label">Client</div><div class="demo-product">Réception confirmée</div></div>
+<div><div class="demo-label">Décision</div><div class="demo-amount">OK</div></div>
+<div class="safe-mini-card">✅ Le client confirme la réception ou signale un problème si nécessaire.</div>
+</div>
+<div class="transaction-step-card"><div class="step-big-icon">✅</div><div class="step-content"><h4>Livraison confirmée</h4><p>Le client confirme qu’il a reçu la commande. En cas de problème, il peut demander une vérification ou ouvrir un litige.</p><span class="step-tag">Étape 4 · Réception validée</span></div></div>
+</div>
+<div class="transaction-slide">
+<div class="transaction-summary-card">
+<div><div class="demo-label">Versement</div><div class="demo-product">Commerçant</div></div>
+<div><div class="demo-label">Statut final</div><div class="demo-amount">Libéré</div></div>
+<div class="safe-mini-card">💰 Les fonds sont libérés au commerçant selon les règles prévues.</div>
+</div>
+<div class="transaction-step-card"><div class="step-big-icon">💰</div><div class="step-content"><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée. Le commerçant peut recevoir les fonds via le partenaire de paiement agréé.</p><span class="step-tag">Étape 5 · Transaction terminée</span></div></div>
+</div>
+<div class="slide-progress"><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+</div>
+</div>
+<div class="monitor-stand"></div><div class="monitor-base"></div>
+</div>
+</div>
+<div aria-label="Affichage mobile FrikaPay" class="device-mobile-demo">
+<div class="iphone-demo">
+<div class="iphone-notch"></div>
+<div class="iphone-camera-dot"></div>
+<div class="iphone-screen-real">
+<div class="mobile-system-bar"><span>9:41</span><span class="mobile-system-icons">●●◐</span></div>
+<div class="mobile-app-top">
+<div style="display:flex;align-items:center;gap:.55rem;"><img alt="Logo FrikaPay" src="logo-frikapay.png"/><span class="mobile-brand-text">FrikaPay</span></div>
+<span class="demo-status-pill">Suivi</span>
+</div>
+<div class="mobile-slide-stage">
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">🔗</div><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée et la partie invitée reçoit la demande.</p><div class="mobile-amount-card">Montant sécurisé : 125 000 FCFA</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">🤝</div><h4>Transaction acceptée</h4><p>La partie invitée accepte et la commande peut être préparée.</p><div class="mobile-amount-card">Statut : commande acceptée</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">📦</div><h4>Preuve de livraison envoyée</h4><p>Une preuve vérifiable est ajoutée à la transaction.</p><div class="mobile-amount-card">Preuve : reçu ou suivi transporteur</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">✅</div><h4>Livraison confirmée</h4><p>Le client confirme la réception ou signale un problème.</p><div class="mobile-amount-card">Action client : réception validée</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">💰</div><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée selon les règles FrikaPay.</p><div class="mobile-amount-card">Final : versement commerçant</div></div></div>
+</div>
+<div class="iphone-home-indicator"></div>
+</div>
+</div>
+</div>
+<div class="note-box">FrikaPay ne vend pas les produits, ne livre pas les commandes et ne remplace pas les commerçants. FrikaPay sécurise le cadre de paiement, le suivi de la transaction, les preuves et le traitement des problèmes.</div>
+</div></section>
+<section id="clients">
+<div class="container">
+<h2 class="section-title">Payez avec plus de sérénité</h2>
+<p class="section-subtitle">Avec FrikaPay, vous achetez dans un cadre plus clair. Votre paiement est suivi, la transaction est documentée et les fonds sont libérés selon les conditions prévues.</p>
+<div class="grid-2">
+<div class="card"><div class="card-icon">🔐</div><h3>Paiement encadré</h3><p class="text-secondary">Votre paiement est encadré par FrikaPay et traité via le partenaire de paiement activé pour la transaction.</p></div>
+<div class="card"><div class="card-icon">📋</div><h3>Suivi de la transaction</h3><p class="text-secondary">Chaque étape est visible, de la création à la résolution.</p></div>
+<div class="card"><div class="card-icon">✅</div><h3>Confirmation de réception</h3><p class="text-secondary">Vous confirmez la réception avant libération des fonds.</p></div>
+<div class="card"><div class="card-icon">🆘</div><h3>Signalement de problème</h3><p class="text-secondary">Un cadre est prévu pour signaler une difficulté.</p></div>
+<div class="card"><div class="card-icon">🛡️</div><h3>Protection client</h3><p class="text-secondary">Fonctionnalité préventive en cas de situation suspecte.</p></div>
+<div class="card"><div class="card-icon">💵</div><h3>Frais affichés avant paiement</h3><p class="text-secondary">Vous voyez le total avant de valider.</p></div>
+</div>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.8rem;" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+</div>
+</section>
+<section class="bg-light" id="diaspora">
+<div class="container">
+<h2 class="section-title">Pour la diaspora : acheter au Bénin sans payer dans le vide</h2>
+<p class="section-subtitle">Vous vivez à l’étranger et vous souhaitez acheter un objet d’art, une création artisanale, un produit du terroir béninois ou une commande spéciale pour un proche au Bénin ? FrikaPay vous aide à encadrer la transaction avant d’envoyer directement l’argent au commerçant.</p>
+<div class="grid-3">
+<div class="card"><div class="card-icon">🌍</div><h3>Achat depuis l’étranger</h3><p class="text-secondary">Vous pouvez initier une transaction pour un proche au Bénin, avec un suivi clair des étapes.</p></div>
+<div class="card"><div class="card-icon">📱</div><h3>Commerçant WhatsApp ou Facebook</h3><p class="text-secondary">Le commerçant est invité à accepter la transaction dans un cadre FrikaPay avant livraison ou exécution.</p></div>
+<div class="card"><div class="card-icon">🧾</div><h3>Règles visibles</h3><p class="text-secondary">Montant, frais, livraison, preuve, confirmation, litige et remboursement sont encadrés par des règles publiées.</p></div>
+</div>
+<div class="transparency-note">Service en phase pilote : les premiers tests doivent rester contrôlés, avec des montants, catégories et commerçants sélectionnés pour limiter les risques opérationnels.</div>
+<div style="margin-top:1.5rem;display:flex;gap:0.8rem;flex-wrap:wrap;">
+<a class="btn btn-primary" href="diaspora.html">Voir la page diaspora</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20je%20vis%20%C3%A0%20l%27%C3%A9tranger%20et%20je%20veux%20s%C3%A9curiser%20un%20achat%20au%20B%C3%A9nin." rel="noopener" target="_blank">💬 Sécuriser un achat</a>
+</div>
+</div>
+</section>
+<section class="bg-light" id="commercants">
+<div class="container">
+<h2 class="section-title">Vendez avec plus de confiance</h2>
+<p class="section-subtitle">FrikaPay aide les commerçants sérieux à rassurer leurs clients, à réduire les clients fantômes et à limiter les déplacements inutiles. Le client paie dans un cadre sécurisé, ce qui montre son engagement réel.</p>
+<div class="grid-2">
+<div class="card"><div class="card-icon">🤝</div><h3>Rassurer les clients</h3><p class="text-secondary">Un cadre clair pour les clients qui hésitent.</p></div>
+<div class="card"><div class="card-icon">🚫</div><h3>Moins de clients fantômes</h3><p class="text-secondary">Le paiement préalable filtre les commandes non sérieuses.</p></div>
+<div class="card"><div class="card-icon">📍</div><h3>Moins de déplacements inutiles</h3><p class="text-secondary">Vous livrez des commandes confirmées et payées.</p></div>
+<div class="card"><div class="card-icon">💰</div><h3>Fonds libérés selon les règles</h3><p class="text-secondary">Après confirmation, délai ou résolution de litige.</p></div>
+<div class="card"><div class="card-icon">⭐</div><h3>Réputation de confiance</h3><p class="text-secondary">Construisez votre crédibilité auprès des clients.</p></div>
+<div class="card"><div class="card-icon">📦</div><h3>Suivi des commandes</h3><p class="text-secondary">Gardez une trace de chaque transaction.</p></div>
+</div>
+<div style="margin-top:2rem;background:white;padding:1.8rem;border-radius:16px;"><h3 style="color:#0B3D91;">Programme Fondateur FrikaPay</h3><p class="text-secondary">Durant la phase bêta, FrikaPay prévoit d'accompagner ses premiers commerçants actifs avec des avantages spécifiques. Les conditions seront communiquées officiellement au lancement.</p></div>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.5rem;" target="_blank">💬 Rejoindre la bêta sur WhatsApp</a>
+</div>
+</section>
+<section id="tarifs">
+<div class="container">
+<h2 class="section-title">Tarifs simples et transparents</h2>
+<p class="section-subtitle">Tarifs bêta — pilote Bénin Mobile Money. Version Bêta 1.3 — 2026. Les tarifs affichés concernent le pilote initial au Bénin ; toute extension vers d’autres pays fera l’objet d’une validation technique, tarifaire et contractuelle.</p>
+<div class="grid-2">
+<div class="card">
+<h3>👤 Client</h3>
+<p>Frais de protection FrikaPay, calculés selon le statut de vérification du commerçant :</p>
+<p><strong>Commerçant vérifié FrikaPay :</strong> 3 % + 100 FCFA (minimum 200 FCFA)</p>
+<p><strong>Commerçant en cours de vérification ou invité :</strong> 3 % + 200 FCFA (minimum 300 FCFA)</p>
+<p class="text-secondary" style="font-size:0.9rem;">Affichés avant validation du paiement.</p>
+</div>
+<div class="card"><h3>🏪 Commerçant</h3><p>Commission commerçant FrikaPay : <strong>0 %</strong> pendant la phase bêta</p><p>Frais de décaissement agrégateur : <strong>variables selon le pays et le moyen de décaissement</strong></p><p class="text-secondary" style="font-size:0.85rem;">Pour le pilote Bénin Mobile Money, l’hypothèse de référence reste 1 %. Les frais de retrait cash après réception sur Mobile Money dépendent de l'opérateur, pas de FrikaPay.</p></div>
+</div>
+<div style="margin-top:2rem;background:white;padding:1.5rem;border-radius:16px;">
+<h3 style="color:#0B3D91;margin-bottom:1rem;">Exemples de calcul — frais client</h3>
+<table>
+<thead><tr><th>Montant transaction</th><th>Commerçant vérifié FrikaPay</th><th>Commerçant en cours de vérification / invité</th></tr></thead>
+<tbody>
+<tr><td>5 000 FCFA</td><td>250 FCFA — total 5 250 FCFA</td><td>350 FCFA — total 5 350 FCFA</td></tr>
+<tr><td>10 000 FCFA</td><td>400 FCFA — total 10 400 FCFA</td><td>500 FCFA — total 10 500 FCFA</td></tr>
+<tr><td>50 000 FCFA</td><td>1 600 FCFA — total 51 600 FCFA</td><td>1 700 FCFA — total 51 700 FCFA</td></tr>
+<tr><td>100 000 FCFA</td><td>3 100 FCFA — total 103 100 FCFA</td><td>3 200 FCFA — total 103 200 FCFA</td></tr>
+</tbody>
+</table>
+<h3 style="color:#0B3D91;margin:1.5rem 0 1rem;">Exemples de calcul — décaissement commerçant au Bénin</h3>
+<table>
+<thead><tr><th>Montant disponible</th><th>Exemple frais décaissement agrégateur Bénin Mobile Money (1 %)</th><th>Montant envoyé vers Mobile Money</th></tr></thead>
+<tbody>
+<tr><td>10 000 FCFA</td><td>100 FCFA</td><td>9 900 FCFA</td></tr>
+<tr><td>50 000 FCFA</td><td>500 FCFA</td><td>49 500 FCFA</td></tr>
+<tr><td>100 000 FCFA</td><td>1 000 FCFA</td><td>99 000 FCFA</td></tr>
+</tbody>
+</table>
+<div class="note-box" style="margin-top:1rem;"><strong>À retenir :</strong> les frais FrikaPay sont affichés avant paiement. Selon le pays, le réseau Mobile Money, le moyen de paiement ou le prestataire utilisé, des frais techniques ou opérateurs peuvent varier. Le montant total réellement payable doit toujours être affiché avant validation.</div>
+<p style="margin-top:1rem;"><a href="grille-tarifaire.html" style="color:#1A73E8;font-weight:600;text-decoration:none;">Lire la Grille Tarifaire Publique complète →</a></p>
+</div>
+</div>
+</section>
+<section class="bg-light" id="securite">
+<div class="container">
+<h2 class="section-title">Sécurité et confiance</h2>
+<p class="section-subtitle">FrikaPay met en place un cadre rigoureux pour sécuriser chaque transaction.</p>
+<div class="grid-2">
+<div class="card"><h3>Prestataires agréés</h3><p class="text-secondary">Paiements traités via des prestataires agréés ou habilités, avec moyens disponibles affichés avant validation.</p></div>
+<div class="card"><h3>Suivi transparent</h3><p class="text-secondary">Chaque étape est documentée et consultable.</p></div>
+<div class="card"><h3>Confirmation de réception</h3><p class="text-secondary">Validation obligatoire avant libération des fonds.</p></div>
+<div class="card"><h3>Gestion des réclamations</h3><p class="text-secondary">Processus prévu en cas de désaccord.</p></div>
+<div class="card"><h3>Protection client</h3><p class="text-secondary">Alerte préventive en cas de situation suspecte.</p></div>
+<div class="card"><h3>Vérification commerçant</h3><p class="text-secondary">KYC avant décaissement lorsque nécessaire.</p></div>
+</div>
+<div class="note-box" style="margin-top:2rem;">FrikaPay est une plateforme numérique de confiance et de coordination. Elle ne se présente pas comme banque, opérateur Mobile Money ou société de livraison. Les paiements sont opérés via des prestataires de paiement agréés ou habilités, selon les moyens activés au moment de la transaction.</div>
+<p style="margin-top:1rem;"><a href="confiance-conformite.html" style="color:#1A73E8;font-weight:600;text-decoration:none;">Consulter le Centre de confiance FrikaPay →</a></p>
+</div>
+</section>
+<section class="partner-ecosystem" id="ecosysteme-confiance">
+<div class="container">
+<h2 class="section-title">Écosystème de confiance</h2>
+<p class="section-subtitle">FrikaPay avance dans un cadre formalisé au Bénin et construit progressivement son réseau administratif, financier et technique.</p>
+<div class="partner-logo-grid">
+<article class="partner-logo-card">
+<div class="partner-logo-frame apiex"><img alt="Logo APIEx" loading="lazy" src="assets/images/partners/partner-apiex.webp"/></div>
+<h3>APIEx</h3>
+<p class="partner-role">Formalisation administrative et documents d’existence de FrikaPay Technologies au Bénin. <a class="partner-proof" href="https://monentreprise.bj/" rel="noopener" target="_blank">Contacter APIEx pour les vérifications</a>.</p>
+</article>
+<article class="partner-logo-card">
+<div class="partner-logo-frame"><img alt="Logo FeexPay" loading="lazy" src="assets/images/partners/partner-feexpay.webp"/></div>
+<h3>FeexPay</h3>
+<p class="partner-role">Solution de paiement retenue pour l’intégration pilote : collecte et décaissement activés après validation contractuelle du dossier. <a class="partner-proof" href="https://feexpay.me/fr" rel="noopener" target="_blank">Site FeexPay</a>.</p>
+</article>
+<article class="partner-logo-card">
+<div class="partner-logo-frame"><img alt="Logo Emini Labs" loading="lazy" src="assets/images/partners/partner-emini.webp"/></div>
+<h3>Emini Labs</h3>
+<p class="partner-role">Appui technique, conseil et accompagnement ponctuel sur la construction du MVP.</p>
+</article>
+</div>
+<p class="partner-disclaimer">Cette section présente l’écosystème administratif, financier et technique autour de FrikaPay. Elle ne constitue pas une déclaration d’agrément, de garantie ou d’engagement commercial de chaque entité affichée.</p>
+</div>
+</section>
+<section id="faq">
+<div class="container">
+<h2 class="section-title">FAQ Diaspora</h2>
+<div class="faq-item"><div class="faq-question">Puis-je payer depuis l’étranger aujourd’hui ?</div><p class="text-secondary">Pas encore pendant le pilote initial. FrikaPay prépare les cas d’usage diaspora, mais les paiements depuis l’étranger et les cartes bancaires internationales seront étudiés dans une phase ultérieure, selon la disponibilité technique et les conditions des partenaires de paiement.</p></div>
+<div class="faq-item"><div class="faq-question">FrikaPay est-il disponible dans toute la sous-région ?</div><p class="text-secondary">Non. Le pilote initial est prioritairement centré sur le Bénin Mobile Money. Une extension vers d’autres pays pourra être étudiée progressivement après validation des frais, moyens de paiement, délais de reversement et contraintes réglementaires.</p></div>
+<div class="faq-item"><div class="faq-question">Les frais sont-ils les mêmes dans tous les pays ?</div><p class="text-secondary">Non. Les frais peuvent varier selon le pays, l’opérateur Mobile Money, le moyen de paiement ou le prestataire utilisé. Les grilles multi-pays restent internes tant qu’un pays n’est pas officiellement ouvert au public.</p></div>
+<div class="faq-item"><div class="faq-question">Que se passe-t-il pendant le pilote contrôlé ?</div><p class="text-secondary">FrikaPay travaille avec un nombre limité de transactions suivies. Chaque paiement doit être encadré par des informations claires : commerçant, montant, frais, moyen de paiement disponible, conditions, preuve et étape suivante.</p></div>
+<h2 class="section-title">FAQ Client</h2>
+<div class="faq-item"><div class="faq-question">Qu'est-ce que FrikaPay ?</div><p class="text-secondary">Une plateforme numérique de confiance qui sécurise les transactions entre clients et commerçants. Les paiements sont opérés par des prestataires agréés.</p></div>
+<div class="faq-item"><div class="faq-question">FrikaPay vend-elle les produits ?</div><p class="text-secondary">Non. Les produits, prix et livraisons restent sous la responsabilité des commerçants. FrikaPay fournit le cadre de confiance.</p></div>
+<div class="faq-item"><div class="faq-question">Quand les fonds sont-ils libérés au commerçant ?</div><p class="text-secondary">Après confirmation de réception, expiration du délai de contestation, ou décision après traitement d'une réclamation.</p></div>
+<div class="faq-item"><div class="faq-question">Quels sont les frais pour le client ?</div><p class="text-secondary">Commerçant vérifié : 3 % + 100 FCFA, minimum 200 FCFA. Commerçant en cours de vérification ou invité : 3 % + 200 FCFA, minimum 300 FCFA. Les frais sont affichés avant paiement.</p></div>
+<div class="faq-item"><div class="faq-question">Comment contacter FrikaPay ?</div><p class="text-secondary">Par email à contact@frikapay.com ou sur WhatsApp au +229 01 66 62 30 09.</p></div>
+<h2 class="section-title" style="margin-top:3rem;">FAQ Commerçant</h2>
+<div class="faq-item"><div class="faq-question">Pourquoi utiliser FrikaPay comme commerçant ?</div><p class="text-secondary">Pour rassurer vos clients, réduire les clients fantômes, limiter les déplacements inutiles et éviter les commandes non sérieuses.</p></div>
+<div class="faq-item"><div class="faq-question">Quand vais-je recevoir mon argent ?</div><p class="text-secondary">Après confirmation de réception, expiration du délai ou résolution d'une éventuelle réclamation.</p></div>
+<div class="faq-item"><div class="faq-question">Quels sont les frais pour les commerçants ?</div><p class="text-secondary">0 % de commission commerçant FrikaPay pendant la bêta. Les frais de décaissement agrégateur varient selon le pays et le moyen de décaissement ; pour le pilote Bénin Mobile Money, l’hypothèse de référence reste 1 %.</p></div>
+<div class="faq-item"><div class="faq-question">Dois-je faire un KYC ?</div><p class="text-secondary">Oui, une vérification d'identité peut être demandée avant le premier décaissement.</p></div>
+<div class="faq-item"><div class="faq-question">Comment rejoindre la bêta ?</div><p class="text-secondary">Contactez-nous sur WhatsApp au +229 01 66 62 30 09 ou par email à contact@frikapay.com.</p></div>
+</div>
+</section>
+<section class="bg-light" id="contact">
+<div class="container" style="text-align:center;">
+<h2 class="section-title">Contactez-nous</h2>
+<p class="section-subtitle" style="margin:0 auto 2rem;">Nous sommes à votre écoute pour toute question, demande d'information ou intérêt pour la phase bêta.</p>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="font-size:1.1rem;padding:0.9rem 2.2rem;" target="_blank">💬 Nous contacter sur WhatsApp</a>
+<p style="margin-top:1.5rem;color:#6B7280;">Email : <a href="mailto:contact@frikapay.com" style="color:#1A73E8;text-decoration:none;">contact@frikapay.com</a></p>
+<p style="color:#6B7280;">WhatsApp : <a href="https://wa.me/2290166623009" style="color:#1A73E8;text-decoration:none;">+229 01 66 62 30 09</a></p>
+<p style="color:#6B7280;">Site officiel : <a href="https://frikapay.com" style="color:#1A73E8;text-decoration:none;">frikapay.com</a></p>
+<p style="color:#6B7280;">FrikaPay Technologies SARL · RCCM RB/NAT/26 B 994 · IFU 3202682983357 · Bénin</p>
+<div class="security-reassurance" style="max-width:600px;margin:2rem auto 0;">
+<div class="security-item">🔒 Connexion HTTPS</div>
+<div class="security-item">🏢 Société immatriculée</div>
+<div class="security-item">📧 contact@frikapay.com</div>
+<div class="security-item">📱 +229 01 66 62 30 09</div>
+</div>
+</div>
+</section>
 </main>
-
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <img src="logo-frikapay.png" alt="FrikaPay" style="height:32px;margin-bottom:0.5rem;">
-          <p style="font-weight:500;">Sûr • Simple • Fiable</p>
-          <p style="margin-top:0.5rem;">FrikaPay est une plateforme numérique de confiance pour le commerce digital africain. Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement.</p>
-          <p class="footer-contact">
-            📧 <a href="mailto:contact@frikapay.com">contact@frikapay.com</a><br>
-            📱 <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a><br>
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<img alt="FrikaPay" src="logo-frikapay.png" style="height:32px;margin-bottom:0.5rem;"/>
+<p style="font-weight:500;">Sûr • Simple • Fiable</p>
+<p style="margin-top:0.5rem;">FrikaPay est une plateforme numérique de confiance pour le commerce digital africain. Les paiements sont opérés via des prestataires de paiement agréés ou habilités, selon les moyens activés au moment de la transaction.</p>
+<p class="footer-contact">
+            📧 <a href="mailto:contact@frikapay.com">contact@frikapay.com</a><br/>
+            📱 <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a><br/>
             🌐 <a href="https://frikapay.com">frikapay.com</a>
-          </p>
-        </div>
-        <div class="footer-links">
-          <strong style="color:white;">Navigation</strong>
-          <a href="#accueil">Accueil</a><a href="#a-propos">À propos</a><a href="#fonctionnement">Comment ça marche</a><a href="#clients">Clients</a><a href="#commercants">Commerçants</a><a href="#tarifs">Tarifs</a><a href="#securite">Sécurité</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
-        </div>
-        <div class="footer-links">
-          <strong style="color:white;">Légal</strong>
-          <a href="cgu-client.html">CGU Client</a><a href="cgu-commercant.html">CGU Commerçant</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="mentions-legales.html">Mentions légales</a><a href="grille-tarifaire.html">Grille tarifaire</a>
-        </div>
-        <div class="footer-links">
-          <strong style="color:white;">Réassurance</strong>
-          <span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">🔒 Connexion HTTPS</span>
-          <span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">✅ Prestataires agréés</span>
-          <span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">📧 Contact vérifié</span>
-          <span style="display:block;color:#CBD5E1;">📱 WhatsApp officiel</span>
-        </div>
-      </div>
-      <div class="footer-bottom">© 2026 FrikaPay. Tous droits réservés. Phase bêta de préparation.</div>
-    </div>
-  </footer>
-
-  <script>
+</p>
+</div>
+<div class="footer-links">
+<strong style="color:white;">Navigation</strong>
+<a href="#accueil">Accueil</a><a href="etude-beta.html">Étude bêta</a><a href="#a-propos">À propos</a><a href="#fonctionnement">Comment ça marche</a><a href="#clients">Clients</a><a href="#diaspora">Diaspora</a><a href="#commercants">Commerçants</a><a href="#tarifs">Tarifs</a><a href="confiance-conformite.html">Confiance</a><a href="#faq">FAQ</a><a href="#contact">Contact</a>
+</div>
+<div class="footer-links">
+<strong style="color:white;">Légal</strong>
+<a href="documents.html">Documents officiels</a><a href="cgu-client.html">CGU Client</a><a href="cgu-commercant.html">CGU Commerçant</a><a href="politique-confidentialite.html">Politique de confidentialité</a><a href="mentions-legales.html">Mentions légales</a><a href="grille-tarifaire.html">Grille tarifaire</a><a href="faq-diaspora.html">FAQ Diaspora</a>
+</div>
+<div class="footer-links">
+<strong style="color:white;">Réassurance</strong>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">🔒 Connexion HTTPS</span>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">🏢 Société immatriculée</span>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">📄 RCCM vérifiable</span>
+<span style="display:block;color:#CBD5E1;">📱 Contact WhatsApp officiel</span>
+</div>
+</div>
+<div class="footer-bottom">© 2026 FrikaPay. Tous droits réservés. Phase bêta de préparation.</div>
+</div>
+</footer>
+<script>
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
 
@@ -416,7 +1251,7 @@
       }
     });
   </script>
-  <script>
+<script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var targets = document.querySelectorAll('.card, .faq-item, .quote-block');

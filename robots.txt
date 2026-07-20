@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /buyer-dashboard.html
+Disallow: /buyer-signup.html
+Disallow: /checkout.html
+Disallow: /merchant-accept.html
+Disallow: /merchant-dashboard.html
+Disallow: /merchant-signup.html
+Sitemap: https://frikapay.com/sitemap.xml

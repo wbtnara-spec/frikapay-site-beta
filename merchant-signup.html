@@ -1,18 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
-  <title>Création compte commerçant — FrikaPay</title>
-  <meta name="description" content="Créez votre compte commerçant FrikaPay pour accepter la transaction.">
-  <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#1A73E8">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" name="viewport"/>
+<title>Création compte commerçant — FrikaPay</title>
+<meta content="Créez votre compte commerçant FrikaPay pour accepter la transaction." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<meta content="#1A73E8" name="theme-color"/>
+<link href="favicon.png" rel="icon" type="image/png"/>
+<link href="favicon.png" rel="apple-touch-icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&amp;display=swap" rel="stylesheet"/>
+<style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body { font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif; background:#F8FAFF; color:#1F2937; line-height:1.6; -webkit-font-smoothing:antialiased; min-height:100vh; }
     .container { max-width:520px; margin:0 auto; padding:0 1rem; }
@@ -65,51 +66,51 @@
 </style>
 </head>
 <body>
-  <div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
-  <header class="header">
-    <a href="index.html" class="logo"><img src="logo-frikapay.png" alt="FrikaPay"><span class="beta-tag">Phase bêta</span></a>
-    <span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">Création compte commerçant</span>
-  </header>
-  <main>
-    <div class="container" id="container">
-      <div id="step-form">
-        <div class="card">
-          <h2>📝 Créez votre compte commerçant FrikaPay</h2>
-          <p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Votre compte commerçant permet d'accepter la transaction, de suivre la commande et d'accéder au dashboard commerçant FrikaPay.</p>
-          <div class="info-box">
-            <strong>Transaction :</strong> <span id="linkedTxRef">FP-DEMO-001</span><br>
-            <strong>Montant :</strong> <span id="linkedTxAmount">10 000 FCFA</span><br>
-            <strong>Client :</strong> <span id="linkedTxClient">Client Exemple</span><br>
-            <strong>Produit :</strong> <span id="linkedTxProduct">Chaussures urbaines</span>
-          </div>
-          <div class="form-group"><label>Nom du commerce <span style="color:#DC2626;">*</span></label><input type="text" id="shopName" placeholder="Nom de votre boutique" required></div>
-          <div class="form-group"><label>Nom du responsable <span style="color:#DC2626;">*</span></label><input type="text" id="ownerName" placeholder="Votre nom et prénom" required></div>
-          <div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input type="tel" id="phone" placeholder="Ex : +229 01 66 62 30 09" required></div>
-          <div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input type="text" id="city" placeholder="Ville d'activité" required></div>
-          <div class="form-group"><label>Moyen de décaissement Mobile Money <span style="color:#DC2626;">*</span></label><select id="mobileMoney" required><option value="">— Sélectionnez —</option><option value="mtn">MTN Mobile Money</option><option value="moov">Moov Money</option><option value="orange">Orange Money</option><option value="autre">Autre</option></select></div>
-          <div class="form-group"><label>Mot de passe <span style="color:#DC2626;">*</span></label><input type="password" id="password" placeholder="Minimum 8 caractères" minlength="8" required></div>
-          <div class="form-group"><label>Note au client <span style="font-weight:400;color:#9CA3AF;font-size:0.78rem;">(optionnelle)</span></label><input type="text" id="noteToClient" placeholder="Message pour le client"></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreeIdentity"><label for="agreeIdentity">Je confirme être le commerçant concerné par cette transaction.</label></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreeCapacity"><label for="agreeCapacity">Je confirme pouvoir traiter ou livrer cette commande selon les conditions indiquées.</label></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreeCGU"><label for="agreeCGU">J'accepte les <a href="cgu-commercant.html">Conditions Générales d'Utilisation Commerçant</a>.</label></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreePrivacy"><label for="agreePrivacy">J'accepte la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
-          <div class="checkbox-group"><input type="checkbox" id="agreeKYC"><label for="agreeKYC">Je comprends que le décaissement des fonds pourra nécessiter une vérification minimale du compte commerçant.</label></div>
-          <div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
-          <button class="btn btn-primary" onclick="createAccount()">✅ Créer mon compte et accepter la transaction</button>
-          <p style="text-align:center;font-size:0.85rem;color:#6B7280;margin-top:1rem;">
-            <a href="merchant-dashboard.html?transactionId=FP-DEMO-001&accountStatus=MERCHANT_VERIFIED&transactionStatus=SELLER_ACCEPTED" style="color:#1A73E8;">🔑 J'ai déjà un compte commerçant FrikaPay</a>
-          </p>
-        </div>
-      </div>
-      <div id="step-processing" style="display:none;"><div class="state-message"><h2>⏳ Création du compte en cours</h2><p><span class="spinner"></span>Veuillez patienter...</p></div></div>
-    </div>
-  </main>
-  <footer>
-    <p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
-    <p style="margin-top:0.3rem;"><a href="cgu-commercant.html">CGU Commerçant</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
-    <p style="margin-top:0.3rem;"><a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
-  </footer>
-  <script>
+<div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+<header class="header">
+<a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
+<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">Création compte commerçant</span>
+</header>
+<main>
+<div class="container" id="container">
+<div id="step-form">
+<div class="card">
+<h2>📝 Créez votre compte commerçant FrikaPay</h2>
+<p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Votre compte commerçant permet d'accepter la transaction, de suivre la commande et d'accéder au dashboard commerçant FrikaPay.</p>
+<div class="info-box">
+<strong>Transaction :</strong> <span id="linkedTxRef">FP-DEMO-001</span><br/>
+<strong>Montant :</strong> <span id="linkedTxAmount">10 000 FCFA</span><br/>
+<strong>Client :</strong> <span id="linkedTxClient">Client Exemple</span><br/>
+<strong>Produit :</strong> <span id="linkedTxProduct">Chaussures urbaines</span>
+</div>
+<div class="form-group"><label>Nom du commerce <span style="color:#DC2626;">*</span></label><input id="shopName" placeholder="Nom de votre boutique" required="" type="text"/></div>
+<div class="form-group"><label>Nom du responsable <span style="color:#DC2626;">*</span></label><input id="ownerName" placeholder="Votre nom et prénom" required="" type="text"/></div>
+<div class="form-group"><label>Numéro WhatsApp / Téléphone <span style="color:#DC2626;">*</span></label><input id="phone" placeholder="Ex : +229 01 66 62 30 09" required="" type="tel"/></div>
+<div class="form-group"><label>Ville <span style="color:#DC2626;">*</span></label><input id="city" placeholder="Ville d'activité" required="" type="text"/></div>
+<div class="form-group"><label>Moyen de décaissement Mobile Money <span style="color:#DC2626;">*</span></label><select id="mobileMoney" required=""><option value="">— Sélectionnez —</option><option value="mtn">MTN Mobile Money</option><option value="moov">Moov Money</option><option value="orange">Orange Money</option><option value="autre">Autre</option></select></div>
+<div class="form-group"><label>Mot de passe <span style="color:#DC2626;">*</span></label><input id="password" minlength="8" placeholder="Minimum 8 caractères" required="" type="password"/></div>
+<div class="form-group"><label>Note au client <span style="font-weight:400;color:#9CA3AF;font-size:0.78rem;">(optionnelle)</span></label><input id="noteToClient" placeholder="Message pour le client" type="text"/></div>
+<div class="checkbox-group"><input id="agreeIdentity" type="checkbox"/><label for="agreeIdentity">Je confirme être le commerçant concerné par cette transaction.</label></div>
+<div class="checkbox-group"><input id="agreeCapacity" type="checkbox"/><label for="agreeCapacity">Je confirme pouvoir traiter ou livrer cette commande selon les conditions indiquées.</label></div>
+<div class="checkbox-group"><input id="agreeCGU" type="checkbox"/><label for="agreeCGU">J'accepte les <a href="cgu-commercant.html">Conditions Générales d'Utilisation Commerçant</a>.</label></div>
+<div class="checkbox-group"><input id="agreePrivacy" type="checkbox"/><label for="agreePrivacy">J'accepte la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
+<div class="checkbox-group"><input id="agreeKYC" type="checkbox"/><label for="agreeKYC">Je comprends que le décaissement des fonds pourra nécessiter une vérification minimale du compte commerçant.</label></div>
+<div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
+<button class="btn btn-primary" onclick="createAccount()">✅ Créer mon compte et accepter la transaction</button>
+<p style="text-align:center;font-size:0.85rem;color:#6B7280;margin-top:1rem;">
+<a href="merchant-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=MERCHANT_VERIFIED&amp;transactionStatus=SELLER_ACCEPTED" style="color:#1A73E8;">🔑 J'ai déjà un compte commerçant FrikaPay</a>
+</p>
+</div>
+</div>
+<div id="step-processing" style="display:none;"><div class="state-message"><h2>⏳ Création du compte en cours</h2><p><span class="spinner"></span>Veuillez patienter...</p></div></div>
+</div>
+</main>
+<footer>
+<p>© 2026 FrikaPay. Sûr • Simple • Fiable.</p>
+<p style="margin-top:0.3rem;"><a href="cgu-commercant.html">CGU Commerçant</a> · <a href="politique-confidentialite.html">Confidentialité</a> · <a href="mentions-legales.html">Mentions légales</a></p>
+<p style="margin-top:0.3rem;"><a href="mailto:contact@frikapay.com">contact@frikapay.com</a></p>
+</footer>
+<script>
     const params = new URLSearchParams(window.location.search);
     const token = params.get('inviteToken') || 'FP-DEMO-001';
     const hasAccount = params.get('hasAccount') === '1';
@@ -129,7 +130,7 @@
       }, 2000);
     }
   </script>
-  <script>
+<script>
   (function(){
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
     var targets = document.querySelectorAll('.card, .faq-item, .quote-block');
