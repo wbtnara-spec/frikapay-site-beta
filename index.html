@@ -639,168 +639,23 @@
     }
 
 
-    /* V18d — réduction supplémentaire des appareils pour une section plus compacte */
+    /* V18e (corrigé) — réduction UNIFORME des appareils.
+       On repart des proportions V18c (dernière version correcte avant v18e) et on
+       applique un seul facteur par appareil, qui réduit largeur ET hauteur du même
+       montant (zoom = mise à l'échelle uniforme prise en compte dans le flux,
+       donc le parent réserve la taille réduite : pas de vide ni de débordement).
+       Aucune règle ne modifie la largeur et la hauteur indépendamment. */
+    .v18-photo-devices {
+      --desktop-device-scale: 0.82;
+      --phone-device-scale: 0.85;
+    }
     .v18-photo-devices .desktop-workstation {
-      max-width: 780px;
-      padding: 0.35rem 0.75rem 2.45rem;
-    }
-    .v18-photo-devices .desktop-workstation::before {
-      left: 12%;
-      right: 12%;
-      height: 62px;
-    }
-    .v18-photo-devices .desktop-workstation::after {
-      left: 24%;
-      right: 24%;
-      bottom: 1.28rem;
-      height: 11px;
-    }
-    .v18-photo-devices .desktop-monitor {
-      border-radius: 19px 19px 22px 22px;
-      padding: 0.38rem 0.38rem 0.52rem;
-      box-shadow:
-        0 24px 56px rgba(2,6,23,0.19),
-        0 8px 18px rgba(11,61,145,0.10),
-        inset 0 1px 0 rgba(255,255,255,0.12),
-        inset 0 -1px 0 rgba(255,255,255,0.06);
-    }
-    .v18-photo-devices .desktop-monitor::before {
-      top: 0.30rem;
-      width: 6px;
-      height: 6px;
-    }
-    .v18-photo-devices .desktop-monitor::after {
-      inset: 0.42rem;
-      border-radius: 14px;
-      opacity: 0.48;
-    }
-    .v18-photo-devices .desktop-browser-bar {
-      height: 31px;
-      border-radius: 12px 12px 0 0;
-      padding: 0 0.48rem;
-    }
-    .v18-photo-devices .browser-dot { width: 8px; height: 8px; }
-    .v18-photo-devices .browser-address { height: 22px; font-size: 0.65rem; }
-    .v18-photo-devices .desktop-screen-real {
-      min-height: 328px;
-      aspect-ratio: 16 / 9.2;
-      border-radius: 0 0 13px 13px;
-    }
-    .v18-photo-devices .demo-app-top {
-      padding: 0.52rem 0.72rem;
-    }
-    .v18-photo-devices .demo-logo-brand img {
-      width: 22px;
-      height: 22px;
-    }
-    .v18-photo-devices .desktop-slide-stage {
-      min-height: 246px;
-      padding: 0.72rem;
-    }
-    .v18-photo-devices .transaction-slide {
-      inset: 0.72rem;
-      gap: 0.72rem;
-    }
-    .v18-photo-devices .transaction-summary-card,
-    .v18-photo-devices .transaction-step-card {
-      border-radius: 18px;
-    }
-    .v18-photo-devices .step-big-icon {
-      width: 58px;
-      height: 58px;
-      font-size: 1.45rem;
-      border-radius: 18px;
-    }
-    .v18-photo-devices .transaction-step-card h3 {
-      font-size: 1.05rem;
-    }
-    .v18-photo-devices .transaction-step-card p {
-      font-size: 0.88rem;
-      line-height: 1.45;
-    }
-    .v18-photo-devices .monitor-stand {
-      width: 92px;
-      height: 46px;
-    }
-    .v18-photo-devices .monitor-base {
-      width: 230px;
-      height: 17px;
+      zoom: var(--desktop-device-scale);
     }
     .v18-photo-devices .iphone-demo {
-      width: min(268px, 80vw);
-      border-radius: 46px;
-      padding: 0.44rem;
-      box-shadow:
-        0 24px 56px rgba(2,6,23,0.25),
-        0 10px 22px rgba(11,61,145,0.14),
-        inset 0 0 0 2px rgba(255,255,255,0.06),
-        inset 0 0 0 4px rgba(2,6,23,0.68);
+      zoom: var(--phone-device-scale);
     }
-    .v18-photo-devices .iphone-demo::before {
-      left: -5px;
-      top: 94px;
-      width: 4px;
-      height: 46px;
-      box-shadow: 0 59px 0 #020617;
-    }
-    .v18-photo-devices .iphone-demo::after {
-      right: -5px;
-      top: 120px;
-      width: 4px;
-      height: 68px;
-    }
-    .v18-photo-devices .iphone-screen-real {
-      min-height: 468px;
-      border-radius: 37px;
-    }
-    .v18-photo-devices .iphone-notch {
-      top: 0.78rem;
-      width: 82px;
-      height: 22px;
-    }
-    .v18-photo-devices .iphone-camera-dot {
-      top: 1.23rem;
-      left: calc(50% + 24px);
-      width: 6px;
-      height: 6px;
-    }
-    .v18-photo-devices .mobile-system-bar {
-      padding-top: 1.26rem;
-      padding-left: 1.12rem;
-      padding-right: 1.12rem;
-      font-size: 0.66rem;
-    }
-    .v18-photo-devices .mobile-app-top {
-      padding: 0.62rem 0.78rem 0.58rem;
-    }
-    .v18-photo-devices .mobile-slide-stage {
-      min-height: 342px;
-    }
-    .v18-photo-devices .mobile-transaction-slide {
-      inset: 0.78rem;
-    }
-    .v18-photo-devices .mobile-step-card {
-      border-radius: 23px;
-      padding: 1.12rem;
-    }
-    .v18-photo-devices .mobile-step-card h3 {
-      font-size: 1.05rem;
-    }
-    .v18-photo-devices .mobile-step-card p {
-      font-size: 0.86rem;
-      line-height: 1.42;
-    }
-    .v18-photo-devices .iphone-home-indicator {
-      bottom: 0.55rem;
-      width: 92px;
-      height: 4px;
-    }
-    @media (max-width: 640px) {
-      .v18-photo-devices .iphone-demo { width: min(258px, 86vw); border-radius: 44px; }
-      .v18-photo-devices .iphone-screen-real { min-height: 448px; border-radius: 35px; }
-      .v18-photo-devices .mobile-slide-stage { min-height: 326px; }
-      .v18-photo-devices .mobile-step-card { padding: 1rem; }
-    }
+
 
   </style>
 <meta content="summary_large_image" name="twitter:card"/><meta content="FrikaPay — Pilote Bénin Mobile Money pour achats sécurisés" name="twitter:title"/><meta content="FrikaPay aide les clients et commerçants à sécuriser les achats à distance pendant un pilote initial au Bénin Mobile Money : paiement suivi, confirmation, litiges et règles claires." name="twitter:description"/><script type="application/ld+json">{
@@ -822,13 +677,14 @@
     "RCCM RB/NAT/26 B 994",
     "IFU 3202682983357"
   ]
-}</script></head>
+}</script><link href="/assets/css/frikapay.css" rel="stylesheet"/>
+</head>
 <body>
-<div class="beta-banner"><span>⚡</span> Pilote initial — Bénin Mobile Money. Déploiement progressif, tests limités et suivis.</div>
+<div class="beta-banner"><span><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg></span> Pilote initial — Bénin Mobile Money. Déploiement progressif, tests limités et suivis.</div>
 <header>
 <div class="nav-container">
 <a class="logo" href="#"><img alt="FrikaPay" src="logo-frikapay.png"/></a>
-<button aria-label="Menu" class="mobile-menu-btn" id="menuBtn">☰</button>
+<button aria-label="Menu" class="mobile-menu-btn" id="menuBtn"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
 <nav class="nav-links" id="navLinks">
 <a href="#accueil">Accueil</a>
 <a href="etude-beta.html">Étude bêta</a>
@@ -852,20 +708,20 @@
 <h1>Achetez à distance au Bénin sans envoyer l’argent directement au commerçant.</h1>
 <p>FrikaPay aide les clients, y compris la diaspora, à sécuriser leurs achats à distance : paiement suivi, confirmation de réception, preuves et traitement des problèmes selon des règles claires.</p>
 <div class="hero-buttons">
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20j%27ai%20un%20achat%20%C3%A0%20distance%20%C3%A0%20s%C3%A9curiser." rel="noopener" target="_blank">💬 J’ai un achat à sécuriser</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20j%27ai%20un%20achat%20%C3%A0%20distance%20%C3%A0%20s%C3%A9curiser." rel="noopener" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> J’ai un achat à sécuriser</a>
 <a class="btn btn-outline" href="diaspora.html">Voir l’offre diaspora</a>
 <a class="btn btn-outline" href="etude-beta.html">Participer à l’étude</a>
 </div>
 <div class="trust-grid">
-<div class="trust-item"><span class="trust-icon">🏢</span> Société immatriculée</div>
-<div class="trust-item"><span class="trust-icon">📄</span> Documents publics</div>
-<div class="trust-item"><span class="trust-icon">✅</span> Réception confirmée</div>
-<div class="trust-item"><span class="trust-icon">🛡️</span> Paiement encadré</div>
+<div class="trust-item"><span class="trust-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18M3 22h18M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 22v-4h4v4"/></svg></span> Société immatriculée</div>
+<div class="trust-item"><span class="trust-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Zm0 0v5h5M9 13h6M9 17h4"/></svg></span> Documents publics</div>
+<div class="trust-item"><span class="trust-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></span> Réception confirmée</div>
+<div class="trust-item"><span class="trust-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.7 7.5-9.4V5.3L12 2.5 4.5 5.3v6.8c0 5.7 7.5 9.4 7.5 9.4Zm-2.7-9.6 1.9 1.9 3.6-3.6"/></svg></span> Paiement encadré</div>
 </div>
 </div>
 <div class="hero-visual">
 <img alt="Application FrikaPay : suivi d'un achat sécurisé, paiement protégé et libération du paiement via un partenaire de paiement agréé" height="1124" loading="eager" src="hero-mockup.jpg" width="900"/>
-</div>
+<div class="fp-flow" data-fp-flow role="img" aria-label="Un paiement client passe par une étape de sécurisation FrikaPay avant d’être versé au commerçant."><div class="fp-flow-title">Sûr · Simple · Fiable</div><div class="fp-flow-rail"><div class="fp-flow-node" data-state="off"><span class="fp-flow-bubble"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg></span><span>Client</span></div><div class="fp-flow-track" data-state="off"><i class="fp-flow-token"></i></div><div class="fp-flow-node fp-flow-node--shield" data-state="off"><span class="fp-flow-bubble"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.7 7.5-9.4V5.3L12 2.5 4.5 5.3v6.8c0 5.7 7.5 9.4 7.5 9.4Zm-2.7-9.6 1.9 1.9 3.6-3.6"/></svg></span><span>Paiement sécurisé</span></div><div class="fp-flow-track" data-state="off"><i class="fp-flow-token"></i></div><div class="fp-flow-node" data-state="off"><span class="fp-flow-bubble"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9.5h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1ZM3.4 9.5 5 3.5h14l1.6 6M9.5 20.5v-6h5v6"/></svg></span><span>Commerçant</span></div></div><p class="fp-flow-caption"><strong>Le client paie.</strong> Le montant est envoyé dans le cadre FrikaPay, pas directement au commerçant.</p></div></div>
 </div>
 </section>
 <section id="a-propos">
@@ -873,9 +729,9 @@
 <h2 class="section-title">À propos de FrikaPay</h2>
 <p class="section-subtitle">Découvrez qui nous sommes, notre objectif et notre mission pour le commerce digital africain.</p>
 <div class="grid-3">
-<div class="card"><div class="card-icon">🏢</div><h3>Qui sommes-nous ?</h3><p class="text-secondary">FrikaPay est une plateforme numérique de confiance conçue pour aider les clients et les commerçants à sécuriser leurs transactions en ligne. Nous accompagnons les échanges commerciaux en ajoutant un cadre clair : paiement suivi, confirmation de réception, gestion des réclamations et libération encadrée des fonds.</p></div>
-<div class="card"><div class="card-icon">🎯</div><h3>Notre objectif</h3><p class="text-secondary">Notre objectif est de réduire le manque de confiance qui freine le commerce en ligne, notamment sur WhatsApp, Facebook, Instagram et les boutiques digitales. FrikaPay aide les clients à payer avec plus de sérénité et les commerçants sérieux à vendre avec plus de confiance.</p></div>
-<div class="card"><div class="card-icon">🌍</div><h3>Notre mission</h3><p class="text-secondary">Notre mission est de construire une infrastructure de confiance adaptée au commerce digital africain. Nous voulons rendre les transactions plus simples, plus sûres et plus fiables entre clients et commerçants.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18M3 22h18M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 22v-4h4v4"/></svg></div><h3>Qui sommes-nous ?</h3><p class="text-secondary">FrikaPay est une plateforme numérique de confiance conçue pour aider les clients et les commerçants à sécuriser leurs transactions en ligne. Nous accompagnons les échanges commerciaux en ajoutant un cadre clair : paiement suivi, confirmation de réception, gestion des réclamations et libération encadrée des fonds.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19Zm0-4.2a5.3 5.3 0 1 0 0-10.6 5.3 5.3 0 0 0 0 10.6Zm0-3.7a1.6 1.6 0 1 0 0-3.2 1.6 1.6 0 0 0 0 3.2Z"/></svg></div><h3>Notre objectif</h3><p class="text-secondary">Notre objectif est de réduire le manque de confiance qui freine le commerce en ligne, notamment sur WhatsApp, Facebook, Instagram et les boutiques digitales. FrikaPay aide les clients à payer avec plus de sérénité et les commerçants sérieux à vendre avec plus de confiance.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM2.8 12h18.4M12 2.5c2.3 2.5 3.6 5.9 3.6 9.5S14.3 19 12 21.5C9.7 19 8.4 15.6 8.4 12S9.7 5 12 2.5Z"/></svg></div><h3>Notre mission</h3><p class="text-secondary">Notre mission est de construire une infrastructure de confiance adaptée au commerce digital africain. Nous voulons rendre les transactions plus simples, plus sûres et plus fiables entre clients et commerçants.</p></div>
 </div>
 <div class="transparency-note"><strong>Identité officielle :</strong> FrikaPay Technologies SARL — RCCM RB/NAT/26 B 994 — IFU 3202682983357 — Natitingou, Bénin. Service en phase pilote contrôlée, avec un démarrage prioritaire sur le Bénin Mobile Money. Les paiements sont opérés via des prestataires de paiement agréés ou habilités, avec FeexPay retenu pour l’intégration pilote sous réserve de validation contractuelle.</div>
 <div class="note-box" style="margin-top:1rem;"><strong>Pendant le pilote contrôlé :</strong> avant toute transaction réelle, le client voit le montant, les frais de protection, l’identité du commerçant, les conditions prévues et le moyen de paiement disponible. FrikaPay suit ensuite la transaction jusqu’à confirmation, demande de vérification, litige éventuel ou libération selon les règles prévues.</div>
@@ -935,41 +791,41 @@
 <div class="transaction-summary-card">
 <div><div class="demo-label">Transaction</div><div class="demo-product">Sculpture artisanale</div></div>
 <div><div class="demo-label">Montant sécurisé</div><div class="demo-amount">125 000 FCFA</div></div>
-<div class="safe-mini-card">🛡️ FrikaPay affiche le montant, les frais, le commerçant et l’étape en cours.</div>
+<div class="safe-mini-card"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.7 7.5-9.4V5.3L12 2.5 4.5 5.3v6.8c0 5.7 7.5 9.4 7.5 9.4Zm-2.7-9.6 1.9 1.9 3.6-3.6"/></svg> FrikaPay affiche le montant, les frais, le commerçant et l’étape en cours.</div>
 </div>
-<div class="transaction-step-card"><div class="step-big-icon">🔗</div><div class="step-content"><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée avec le montant, la description et les conditions prévues. La partie invitée reçoit le lien pour accepter.</p><span class="step-tag">Étape 1 · Invitation envoyée</span></div></div>
+<div class="transaction-step-card"><div class="step-big-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.2 13.4a4.5 4.5 0 0 0 6.8.5l2.7-2.7a4.5 4.5 0 0 0-6.4-6.4l-1.5 1.5M13.8 10.6a4.5 4.5 0 0 0-6.8-.5l-2.7 2.7a4.5 4.5 0 0 0 6.4 6.4l1.5-1.5"/></svg></div><div class="step-content"><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée avec le montant, la description et les conditions prévues. La partie invitée reçoit le lien pour accepter.</p><span class="step-tag">Étape 1 · Invitation envoyée</span></div></div>
 </div>
 <div class="transaction-slide">
 <div class="transaction-summary-card">
 <div><div class="demo-label">Commerçant</div><div class="demo-product">Artisan de Cotonou</div></div>
 <div><div class="demo-label">Action attendue</div><div class="demo-amount">Acceptée</div></div>
-<div class="safe-mini-card">✅ Le commerçant confirme la commande dans le cadre FrikaPay.</div>
+<div class="safe-mini-card"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Le commerçant confirme la commande dans le cadre FrikaPay.</div>
 </div>
-<div class="transaction-step-card"><div class="step-big-icon">🤝</div><div class="step-content"><h4>Transaction acceptée</h4><p>La partie invitée accepte la transaction et confirme que la commande peut être préparée selon les conditions prévues.</p><span class="step-tag">Étape 2 · Commande acceptée</span></div></div>
+<div class="transaction-step-card"><div class="step-big-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.2 9.8 4.4a2 2 0 0 0-2.4 0L3 8v7.5l2.6 2.3M12 6.2l2.2-1.8a2 2 0 0 1 2.4 0L21 8v7.5l-2.6 2.3M12 6.2 8.6 9.4a1.6 1.6 0 0 0 2.2 2.3l1.2-1.1 3.4 3.1M12 10.6l3.4 3.1M9 14.5l2 1.9M12 17l1.6 1.5"/></svg></div><div class="step-content"><h4>Transaction acceptée</h4><p>La partie invitée accepte la transaction et confirme que la commande peut être préparée selon les conditions prévues.</p><span class="step-tag">Étape 2 · Commande acceptée</span></div></div>
 </div>
 <div class="transaction-slide">
 <div class="transaction-summary-card">
 <div><div class="demo-label">Preuve ajoutée</div><div class="demo-product">Reçu + numéro de suivi</div></div>
 <div><div class="demo-label">Statut</div><div class="demo-amount">Livraison</div></div>
-<div class="safe-mini-card">📦 Les preuves restent visibles dans l’historique de la transaction.</div>
+<div class="safe-mini-card"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg> Les preuves restent visibles dans l’historique de la transaction.</div>
 </div>
-<div class="transaction-step-card"><div class="step-big-icon">📦</div><div class="step-content"><h4>Preuve de livraison envoyée</h4><p>Le commerçant ajoute une preuve vérifiable : reçu, bordereau, numéro de suivi ou informations du livreur.</p><span class="step-tag">Étape 3 · Preuve enregistrée</span></div></div>
+<div class="transaction-step-card"><div class="step-big-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg></div><div class="step-content"><h4>Preuve de livraison envoyée</h4><p>Le commerçant ajoute une preuve vérifiable : reçu, bordereau, numéro de suivi ou informations du livreur.</p><span class="step-tag">Étape 3 · Preuve enregistrée</span></div></div>
 </div>
 <div class="transaction-slide">
 <div class="transaction-summary-card">
 <div><div class="demo-label">Client</div><div class="demo-product">Réception confirmée</div></div>
 <div><div class="demo-label">Décision</div><div class="demo-amount">OK</div></div>
-<div class="safe-mini-card">✅ Le client confirme la réception ou signale un problème si nécessaire.</div>
+<div class="safe-mini-card"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Le client confirme la réception ou signale un problème si nécessaire.</div>
 </div>
-<div class="transaction-step-card"><div class="step-big-icon">✅</div><div class="step-content"><h4>Livraison confirmée</h4><p>Le client confirme qu’il a reçu la commande. En cas de problème, il peut demander une vérification ou ouvrir un litige.</p><span class="step-tag">Étape 4 · Réception validée</span></div></div>
+<div class="transaction-step-card"><div class="step-big-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></div><div class="step-content"><h4>Livraison confirmée</h4><p>Le client confirme qu’il a reçu la commande. En cas de problème, il peut demander une vérification ou ouvrir un litige.</p><span class="step-tag">Étape 4 · Réception validée</span></div></div>
 </div>
 <div class="transaction-slide">
 <div class="transaction-summary-card">
 <div><div class="demo-label">Versement</div><div class="demo-product">Commerçant</div></div>
 <div><div class="demo-label">Statut final</div><div class="demo-amount">Libéré</div></div>
-<div class="safe-mini-card">💰 Les fonds sont libérés au commerçant selon les règles prévues.</div>
+<div class="safe-mini-card"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg> Les fonds sont libérés au commerçant selon les règles prévues.</div>
 </div>
-<div class="transaction-step-card"><div class="step-big-icon">💰</div><div class="step-content"><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée. Le commerçant peut recevoir les fonds via le partenaire de paiement agréé.</p><span class="step-tag">Étape 5 · Transaction terminée</span></div></div>
+<div class="transaction-step-card"><div class="step-big-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></div><div class="step-content"><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée. Le commerçant peut recevoir les fonds via le partenaire de paiement agréé.</p><span class="step-tag">Étape 5 · Transaction terminée</span></div></div>
 </div>
 <div class="slide-progress"><span></span><span></span><span></span><span></span><span></span></div>
 </div>
@@ -989,11 +845,11 @@
 <span class="demo-status-pill">Suivi</span>
 </div>
 <div class="mobile-slide-stage">
-<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">🔗</div><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée et la partie invitée reçoit la demande.</p><div class="mobile-amount-card">Montant sécurisé : 125 000 FCFA</div></div></div>
-<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">🤝</div><h4>Transaction acceptée</h4><p>La partie invitée accepte et la commande peut être préparée.</p><div class="mobile-amount-card">Statut : commande acceptée</div></div></div>
-<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">📦</div><h4>Preuve de livraison envoyée</h4><p>Une preuve vérifiable est ajoutée à la transaction.</p><div class="mobile-amount-card">Preuve : reçu ou suivi transporteur</div></div></div>
-<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">✅</div><h4>Livraison confirmée</h4><p>Le client confirme la réception ou signale un problème.</p><div class="mobile-amount-card">Action client : réception validée</div></div></div>
-<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon">💰</div><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée selon les règles FrikaPay.</p><div class="mobile-amount-card">Final : versement commerçant</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.2 13.4a4.5 4.5 0 0 0 6.8.5l2.7-2.7a4.5 4.5 0 0 0-6.4-6.4l-1.5 1.5M13.8 10.6a4.5 4.5 0 0 0-6.8-.5l-2.7 2.7a4.5 4.5 0 0 0 6.4 6.4l1.5-1.5"/></svg></div><h4>Lien créé et envoyé au commerçant</h4><p>La transaction est créée et la partie invitée reçoit la demande.</p><div class="mobile-amount-card">Montant sécurisé : 125 000 FCFA</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.2 9.8 4.4a2 2 0 0 0-2.4 0L3 8v7.5l2.6 2.3M12 6.2l2.2-1.8a2 2 0 0 1 2.4 0L21 8v7.5l-2.6 2.3M12 6.2 8.6 9.4a1.6 1.6 0 0 0 2.2 2.3l1.2-1.1 3.4 3.1M12 10.6l3.4 3.1M9 14.5l2 1.9M12 17l1.6 1.5"/></svg></div><h4>Transaction acceptée</h4><p>La partie invitée accepte et la commande peut être préparée.</p><div class="mobile-amount-card">Statut : commande acceptée</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg></div><h4>Preuve de livraison envoyée</h4><p>Une preuve vérifiable est ajoutée à la transaction.</p><div class="mobile-amount-card">Preuve : reçu ou suivi transporteur</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></div><h4>Livraison confirmée</h4><p>Le client confirme la réception ou signale un problème.</p><div class="mobile-amount-card">Action client : réception validée</div></div></div>
+<div class="mobile-transaction-slide"><div class="mobile-step-card"><div class="mobile-step-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></div><h4>Fonds libérés au commerçant</h4><p>La transaction est clôturée selon les règles FrikaPay.</p><div class="mobile-amount-card">Final : versement commerçant</div></div></div>
 </div>
 <div class="iphone-home-indicator"></div>
 </div>
@@ -1006,14 +862,14 @@
 <h2 class="section-title">Payez avec plus de sérénité</h2>
 <p class="section-subtitle">Avec FrikaPay, vous achetez dans un cadre plus clair. Votre paiement est suivi, la transaction est documentée et les fonds sont libérés selon les conditions prévues.</p>
 <div class="grid-2">
-<div class="card"><div class="card-icon">🔐</div><h3>Paiement encadré</h3><p class="text-secondary">Votre paiement est encadré par FrikaPay et traité via le partenaire de paiement activé pour la transaction.</p></div>
-<div class="card"><div class="card-icon">📋</div><h3>Suivi de la transaction</h3><p class="text-secondary">Chaque étape est visible, de la création à la résolution.</p></div>
-<div class="card"><div class="card-icon">✅</div><h3>Confirmation de réception</h3><p class="text-secondary">Vous confirmez la réception avant libération des fonds.</p></div>
-<div class="card"><div class="card-icon">🆘</div><h3>Signalement de problème</h3><p class="text-secondary">Un cadre est prévu pour signaler une difficulté.</p></div>
-<div class="card"><div class="card-icon">🛡️</div><h3>Protection client</h3><p class="text-secondary">Fonctionnalité préventive en cas de situation suspecte.</p></div>
-<div class="card"><div class="card-icon">💵</div><h3>Frais affichés avant paiement</h3><p class="text-secondary">Vous voyez le total avant de valider.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.8 10.4h10.4a1.3 1.3 0 0 1 1.3 1.3v8a1.3 1.3 0 0 1-1.3 1.3H6.8a1.3 1.3 0 0 1-1.3-1.3v-8a1.3 1.3 0 0 1 1.3-1.3Zm1.5 0V7.2a3.7 3.7 0 0 1 7.4 0v3.2M12 15v2.2"/></svg></div><h3>Paiement encadré</h3><p class="text-secondary">Votre paiement est encadré par FrikaPay et traité via le partenaire de paiement activé pour la transaction.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg></div><h3>Suivi de la transaction</h3><p class="text-secondary">Chaque étape est visible, de la création à la résolution.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></div><h3>Confirmation de réception</h3><p class="text-secondary">Vous confirmez la réception avant libération des fonds.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19Zm0-5.6a3.9 3.9 0 1 0 0-7.8 3.9 3.9 0 0 0 0 7.8ZM5.3 5.3l3.9 3.9M14.8 14.8l3.9 3.9M18.7 5.3l-3.9 3.9M9.2 14.8l-3.9 3.9"/></svg></div><h3>Signalement de problème</h3><p class="text-secondary">Un cadre est prévu pour signaler une difficulté.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.7 7.5-9.4V5.3L12 2.5 4.5 5.3v6.8c0 5.7 7.5 9.4 7.5 9.4Zm-2.7-9.6 1.9 1.9 3.6-3.6"/></svg></div><h3>Protection client</h3><p class="text-secondary">Fonctionnalité préventive en cas de situation suspecte.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></div><h3>Frais affichés avant paiement</h3><p class="text-secondary">Vous voyez le total avant de valider.</p></div>
 </div>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.8rem;" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.8rem;" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay sur WhatsApp</a>
 </div>
 </section>
 <section class="bg-light" id="diaspora">
@@ -1021,14 +877,14 @@
 <h2 class="section-title">Pour la diaspora : acheter au Bénin sans payer dans le vide</h2>
 <p class="section-subtitle">Vous vivez à l’étranger et vous souhaitez acheter un objet d’art, une création artisanale, un produit du terroir béninois ou une commande spéciale pour un proche au Bénin ? FrikaPay vous aide à encadrer la transaction avant d’envoyer directement l’argent au commerçant.</p>
 <div class="grid-3">
-<div class="card"><div class="card-icon">🌍</div><h3>Achat depuis l’étranger</h3><p class="text-secondary">Vous pouvez initier une transaction pour un proche au Bénin, avec un suivi clair des étapes.</p></div>
-<div class="card"><div class="card-icon">📱</div><h3>Commerçant WhatsApp ou Facebook</h3><p class="text-secondary">Le commerçant est invité à accepter la transaction dans un cadre FrikaPay avant livraison ou exécution.</p></div>
-<div class="card"><div class="card-icon">🧾</div><h3>Règles visibles</h3><p class="text-secondary">Montant, frais, livraison, preuve, confirmation, litige et remboursement sont encadrés par des règles publiées.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM2.8 12h18.4M12 2.5c2.3 2.5 3.6 5.9 3.6 9.5S14.3 19 12 21.5C9.7 19 8.4 15.6 8.4 12S9.7 5 12 2.5Z"/></svg></div><h3>Achat depuis l’étranger</h3><p class="text-secondary">Vous pouvez initier une transaction pour un proche au Bénin, avec un suivi clair des étapes.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2.5h10a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5Zm3 2.6h4M12 18.4h.01"/></svg></div><h3>Commerçant WhatsApp ou Facebook</h3><p class="text-secondary">Le commerçant est invité à accepter la transaction dans un cadre FrikaPay avant livraison ou exécution.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 2.5h12v19l-2.4-1.6-2.4 1.6-2.4-1.6L8.4 21.5 6 19.9Zm3 5h6M9 11h6M9 14.5h4"/></svg></div><h3>Règles visibles</h3><p class="text-secondary">Montant, frais, livraison, preuve, confirmation, litige et remboursement sont encadrés par des règles publiées.</p></div>
 </div>
 <div class="transparency-note">Service en phase pilote : les premiers tests doivent rester contrôlés, avec des montants, catégories et commerçants sélectionnés pour limiter les risques opérationnels.</div>
 <div style="margin-top:1.5rem;display:flex;gap:0.8rem;flex-wrap:wrap;">
 <a class="btn btn-primary" href="diaspora.html">Voir la page diaspora</a>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20je%20vis%20%C3%A0%20l%27%C3%A9tranger%20et%20je%20veux%20s%C3%A9curiser%20un%20achat%20au%20B%C3%A9nin." rel="noopener" target="_blank">💬 Sécuriser un achat</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009?text=Bonjour%20FrikaPay%2C%20je%20vis%20%C3%A0%20l%27%C3%A9tranger%20et%20je%20veux%20s%C3%A9curiser%20un%20achat%20au%20B%C3%A9nin." rel="noopener" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Sécuriser un achat</a>
 </div>
 </div>
 </section>
@@ -1037,15 +893,15 @@
 <h2 class="section-title">Vendez avec plus de confiance</h2>
 <p class="section-subtitle">FrikaPay aide les commerçants sérieux à rassurer leurs clients, à réduire les clients fantômes et à limiter les déplacements inutiles. Le client paie dans un cadre sécurisé, ce qui montre son engagement réel.</p>
 <div class="grid-2">
-<div class="card"><div class="card-icon">🤝</div><h3>Rassurer les clients</h3><p class="text-secondary">Un cadre clair pour les clients qui hésitent.</p></div>
-<div class="card"><div class="card-icon">🚫</div><h3>Moins de clients fantômes</h3><p class="text-secondary">Le paiement préalable filtre les commandes non sérieuses.</p></div>
-<div class="card"><div class="card-icon">📍</div><h3>Moins de déplacements inutiles</h3><p class="text-secondary">Vous livrez des commandes confirmées et payées.</p></div>
-<div class="card"><div class="card-icon">💰</div><h3>Fonds libérés selon les règles</h3><p class="text-secondary">Après confirmation, délai ou résolution de litige.</p></div>
-<div class="card"><div class="card-icon">⭐</div><h3>Réputation de confiance</h3><p class="text-secondary">Construisez votre crédibilité auprès des clients.</p></div>
-<div class="card"><div class="card-icon">📦</div><h3>Suivi des commandes</h3><p class="text-secondary">Gardez une trace de chaque transaction.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.2 9.8 4.4a2 2 0 0 0-2.4 0L3 8v7.5l2.6 2.3M12 6.2l2.2-1.8a2 2 0 0 1 2.4 0L21 8v7.5l-2.6 2.3M12 6.2 8.6 9.4a1.6 1.6 0 0 0 2.2 2.3l1.2-1.1 3.4 3.1M12 10.6l3.4 3.1M9 14.5l2 1.9M12 17l1.6 1.5"/></svg></div><h3>Rassurer les clients</h3><p class="text-secondary">Un cadre clair pour les clients qui hésitent.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM5.3 5.3l13.4 13.4"/></svg></div><h3>Moins de clients fantômes</h3><p class="text-secondary">Le paiement préalable filtre les commandes non sérieuses.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 10.3c0 5.4-7.5 11.2-7.5 11.2S4.5 15.7 4.5 10.3a7.5 7.5 0 0 1 15 0Zm-7.5 2.6a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6Z"/></svg></div><h3>Moins de déplacements inutiles</h3><p class="text-secondary">Vous livrez des commandes confirmées et payées.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></div><h3>Fonds libérés selon les règles</h3><p class="text-secondary">Après confirmation, délai ou résolution de litige.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.1 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3-5.6-3-5.6 3 1.1-6.3L2.9 9.7l6.3-.9Z"/></svg></div><h3>Réputation de confiance</h3><p class="text-secondary">Construisez votre crédibilité auprès des clients.</p></div>
+<div class="card"><div class="card-icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg></div><h3>Suivi des commandes</h3><p class="text-secondary">Gardez une trace de chaque transaction.</p></div>
 </div>
 <div style="margin-top:2rem;background:white;padding:1.8rem;border-radius:16px;"><h3 style="color:#0B3D91;">Programme Fondateur FrikaPay</h3><p class="text-secondary">Durant la phase bêta, FrikaPay prévoit d'accompagner ses premiers commerçants actifs avec des avantages spécifiques. Les conditions seront communiquées officiellement au lancement.</p></div>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.5rem;" target="_blank">💬 Rejoindre la bêta sur WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:1.5rem;" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Rejoindre la bêta sur WhatsApp</a>
 </div>
 </section>
 <section id="tarifs">
@@ -1054,13 +910,13 @@
 <p class="section-subtitle">Tarifs bêta — pilote Bénin Mobile Money. Version Bêta 1.3 — 2026. Les tarifs affichés concernent le pilote initial au Bénin ; toute extension vers d’autres pays fera l’objet d’une validation technique, tarifaire et contractuelle.</p>
 <div class="grid-2">
 <div class="card">
-<h3>👤 Client</h3>
+<h3><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Client</h3>
 <p>Frais de protection FrikaPay, calculés selon le statut de vérification du commerçant :</p>
 <p><strong>Commerçant vérifié FrikaPay :</strong> 3 % + 100 FCFA (minimum 200 FCFA)</p>
 <p><strong>Commerçant en cours de vérification ou invité :</strong> 3 % + 200 FCFA (minimum 300 FCFA)</p>
 <p class="text-secondary" style="font-size:0.9rem;">Affichés avant validation du paiement.</p>
 </div>
-<div class="card"><h3>🏪 Commerçant</h3><p>Commission commerçant FrikaPay : <strong>0 %</strong> pendant la phase bêta</p><p>Frais de décaissement agrégateur : <strong>variables selon le pays et le moyen de décaissement</strong></p><p class="text-secondary" style="font-size:0.85rem;">Pour le pilote Bénin Mobile Money, l’hypothèse de référence reste 1 %. Les frais de retrait cash après réception sur Mobile Money dépendent de l'opérateur, pas de FrikaPay.</p></div>
+<div class="card"><h3><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 9.5h16v10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1ZM3.4 9.5 5 3.5h14l1.6 6M9.5 20.5v-6h5v6"/></svg> Commerçant</h3><p>Commission commerçant FrikaPay : <strong>0 %</strong> pendant la phase bêta</p><p>Frais de décaissement agrégateur : <strong>variables selon le pays et le moyen de décaissement</strong></p><p class="text-secondary" style="font-size:0.85rem;">Pour le pilote Bénin Mobile Money, l’hypothèse de référence reste 1 %. Les frais de retrait cash après réception sur Mobile Money dépendent de l'opérateur, pas de FrikaPay.</p></div>
 </div>
 <div style="margin-top:2rem;background:white;padding:1.5rem;border-radius:16px;">
 <h3 style="color:#0B3D91;margin-bottom:1rem;">Exemples de calcul — frais client</h3>
@@ -1152,16 +1008,16 @@
 <div class="container" style="text-align:center;">
 <h2 class="section-title">Contactez-nous</h2>
 <p class="section-subtitle" style="margin:0 auto 2rem;">Nous sommes à votre écoute pour toute question, demande d'information ou intérêt pour la phase bêta.</p>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="font-size:1.1rem;padding:0.9rem 2.2rem;" target="_blank">💬 Nous contacter sur WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="font-size:1.1rem;padding:0.9rem 2.2rem;" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Nous contacter sur WhatsApp</a>
 <p style="margin-top:1.5rem;color:#6B7280;">Email : <a href="mailto:contact@frikapay.com" style="color:#1A73E8;text-decoration:none;">contact@frikapay.com</a></p>
 <p style="color:#6B7280;">WhatsApp : <a href="https://wa.me/2290166623009" style="color:#1A73E8;text-decoration:none;">+229 01 66 62 30 09</a></p>
 <p style="color:#6B7280;">Site officiel : <a href="https://frikapay.com" style="color:#1A73E8;text-decoration:none;">frikapay.com</a></p>
 <p style="color:#6B7280;">FrikaPay Technologies SARL · RCCM RB/NAT/26 B 994 · IFU 3202682983357 · Bénin</p>
 <div class="security-reassurance" style="max-width:600px;margin:2rem auto 0;">
-<div class="security-item">🔒 Connexion HTTPS</div>
-<div class="security-item">🏢 Société immatriculée</div>
-<div class="security-item">📧 contact@frikapay.com</div>
-<div class="security-item">📱 +229 01 66 62 30 09</div>
+<div class="security-item"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.8 10.4h10.4a1.3 1.3 0 0 1 1.3 1.3v8a1.3 1.3 0 0 1-1.3 1.3H6.8a1.3 1.3 0 0 1-1.3-1.3v-8a1.3 1.3 0 0 1 1.3-1.3Zm1.5 0V7.2a3.7 3.7 0 0 1 7.4 0v3.2M12 15v2.2"/></svg> Connexion HTTPS</div>
+<div class="security-item"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18M3 22h18M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 22v-4h4v4"/></svg> Société immatriculée</div>
+<div class="security-item"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 17V7A1.5 1.5 0 0 1 4 5.5Zm-1.2 1.2 9.2 6.4 9.2-6.4"/></svg> contact@frikapay.com</div>
+<div class="security-item"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2.5h10a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5Zm3 2.6h4M12 18.4h.01"/></svg> +229 01 66 62 30 09</div>
 </div>
 </div>
 </section>
@@ -1174,9 +1030,9 @@
 <p style="font-weight:500;">Sûr • Simple • Fiable</p>
 <p style="margin-top:0.5rem;">FrikaPay est une plateforme numérique de confiance pour le commerce digital africain. Les paiements sont opérés via des prestataires de paiement agréés ou habilités, selon les moyens activés au moment de la transaction.</p>
 <p class="footer-contact">
-            📧 <a href="mailto:contact@frikapay.com">contact@frikapay.com</a><br/>
-            📱 <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a><br/>
-            🌐 <a href="https://frikapay.com">frikapay.com</a>
+            <svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 5.5h16a1.5 1.5 0 0 1 1.5 1.5v10a1.5 1.5 0 0 1-1.5 1.5H4A1.5 1.5 0 0 1 2.5 17V7A1.5 1.5 0 0 1 4 5.5Zm-1.2 1.2 9.2 6.4 9.2-6.4"/></svg> <a href="mailto:contact@frikapay.com">contact@frikapay.com</a><br/>
+            <svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2.5h10a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5Zm3 2.6h4M12 18.4h.01"/></svg> <a href="https://wa.me/2290166623009">+229 01 66 62 30 09</a><br/>
+            <svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM2.8 12h18.4M12 2.5c2.3 2.5 3.6 5.9 3.6 9.5S14.3 19 12 21.5C9.7 19 8.4 15.6 8.4 12S9.7 5 12 2.5Z"/></svg> <a href="https://frikapay.com">frikapay.com</a>
 </p>
 </div>
 <div class="footer-links">
@@ -1189,87 +1045,17 @@
 </div>
 <div class="footer-links">
 <strong style="color:white;">Réassurance</strong>
-<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">🔒 Connexion HTTPS</span>
-<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">🏢 Société immatriculée</span>
-<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;">📄 RCCM vérifiable</span>
-<span style="display:block;color:#CBD5E1;">📱 Contact WhatsApp officiel</span>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.8 10.4h10.4a1.3 1.3 0 0 1 1.3 1.3v8a1.3 1.3 0 0 1-1.3 1.3H6.8a1.3 1.3 0 0 1-1.3-1.3v-8a1.3 1.3 0 0 1 1.3-1.3Zm1.5 0V7.2a3.7 3.7 0 0 1 7.4 0v3.2M12 15v2.2"/></svg> Connexion HTTPS</span>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V4a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v18M3 22h18M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M10 22v-4h4v4"/></svg> Société immatriculée</span>
+<span style="display:block;color:#CBD5E1;margin-bottom:0.4rem;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Zm0 0v5h5M9 13h6M9 17h4"/></svg> RCCM vérifiable</span>
+<span style="display:block;color:#CBD5E1;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2.5h10a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5Zm3 2.6h4M12 18.4h.01"/></svg> Contact WhatsApp officiel</span>
 </div>
 </div>
 <div class="footer-bottom">© 2026 FrikaPay. Tous droits réservés. Phase bêta de préparation.</div>
 </div>
 </footer>
-<script>
-    const menuBtn = document.getElementById('menuBtn');
-    const navLinks = document.getElementById('navLinks');
 
-    function openMenu() {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-      navLinks.style.position = 'absolute';
-      navLinks.style.top = '60px';
-      navLinks.style.left = '0';
-      navLinks.style.right = '0';
-      navLinks.style.background = 'white';
-      navLinks.style.padding = '1.5rem';
-      navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.05)';
-      navLinks.style.zIndex = '40';
-    }
 
-    function closeMenu() {
-      navLinks.style.display = 'none';
-    }
-
-    menuBtn.addEventListener('click', () => {
-      if (navLinks.style.display === 'flex') {
-        closeMenu();
-      } else {
-        openMenu();
-      }
-    });
-
-    const allNavLinks = navLinks.querySelectorAll('a');
-    allNavLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth < 768) {
-          closeMenu();
-        }
-      });
-    });
-
-    window.addEventListener('resize', () => {
-      if (window.innerWidth >= 768) {
-        navLinks.style.display = '';
-        navLinks.style.flexDirection = '';
-        navLinks.style.position = '';
-        navLinks.style.top = '';
-        navLinks.style.left = '';
-        navLinks.style.right = '';
-        navLinks.style.background = '';
-        navLinks.style.padding = '';
-        navLinks.style.boxShadow = '';
-        navLinks.style.zIndex = '';
-      }
-    });
-  </script>
-<script>
-  (function(){
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    var targets = document.querySelectorAll('.card, .faq-item, .quote-block');
-    if (!targets.length || !('IntersectionObserver' in window)) return;
-    targets.forEach(function(el, i){
-      el.classList.add('fp-reveal');
-      el.style.transitionDelay = (Math.min(i % 4, 3) * 0.08) + 's';
-    });
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(entry){
-        if (entry.isIntersecting) {
-          entry.target.classList.add('fp-visible');
-          io.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
-    targets.forEach(function(el){ io.observe(el); });
-  })();
-  </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>

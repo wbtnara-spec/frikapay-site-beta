@@ -68,17 +68,18 @@
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
 </style>
+<link href="/assets/css/frikapay.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
 <a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
-<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">👤 Dashboard commerçant</span>
+<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Dashboard commerçant</span>
 </header>
 <main>
 <div class="container">
 <div class="alert-banner"><span class="icon">🔔</span><span><strong>Action requise :</strong> vous avez une transaction à traiter.</span></div>
 <div class="card">
-<h2>📋 Transaction en attente</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg> Transaction en attente</h2>
 <div class="tx-row"><span class="label">Référence</span><span class="value" id="txRef" style="font-family:monospace;">FP-DEMO-001</span></div>
 <div class="tx-row"><span class="label">Client</span><span class="value" id="txClient">Client Exemple</span></div>
 <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="txProduct">Chaussures urbaines</span></div>
@@ -87,10 +88,10 @@
 <div class="tx-row"><span class="label">Statut compte</span><span class="value"><span class="status-badge status-pending" id="accountStatus">SELLER_ACCOUNT_CREATED</span></span></div>
 <div class="tx-row"><span class="label">Prochaine étape</span><span class="value">Préparer ou livrer la commande</span></div>
 <div class="btn-group" style="margin-top:1rem;">
-<a class="btn btn-primary" href="#">📦 Préparer / livrer la commande</a>
-<a class="btn btn-outline" href="#">💬 Contacter le client</a>
+<a class="btn btn-primary" href="#"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg> Préparer / livrer la commande</a>
+<a class="btn btn-outline" href="#"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter le client</a>
 </div>
-<a class="btn btn-outline" href="#" style="margin-top:0.3rem;">📋 Voir la transaction</a>
+<a class="btn btn-outline" href="#" style="margin-top:0.3rem;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg> Voir la transaction</a>
 </div>
 <div class="info-box">
         Votre compte commerçant est créé. Une vérification minimale sera requise avant décaissement.
@@ -99,17 +100,17 @@
 <div class="card">
 <h2>📊 Modules du dashboard</h2>
 <div class="module-grid">
-<a class="module-item" href="#"><span class="icon">📋</span>Transactions</a>
-<a class="module-item" href="#"><span class="icon">📦</span>Commandes</a>
-<a class="module-item" href="#"><span class="icon">💰</span>Décaissements</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg></span>Transactions</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg></span>Commandes</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></span>Décaissements</a>
 <a class="module-item" href="#"><span class="icon">⚠️</span>Litiges</a>
-<a class="module-item" href="#"><span class="icon">👤</span>Profil</a>
-<a class="module-item" href="#"><span class="icon">✅</span>Vérification</a>
-<a class="module-item" href="#"><span class="icon">💬</span>Support</a>
-<a class="module-item" href="https://wa.me/2290166623009"><span class="icon">📱</span>WhatsApp</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg></span>Profil</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></span>Vérification</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg></span>Support</a>
+<a class="module-item" href="https://wa.me/2290166623009"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7 2.5h10a1.5 1.5 0 0 1 1.5 1.5v16a1.5 1.5 0 0 1-1.5 1.5H7A1.5 1.5 0 0 1 5.5 20V4A1.5 1.5 0 0 1 7 2.5Zm3 2.6h4M12 18.4h.01"/></svg></span>WhatsApp</a>
 </div>
 </div>
-<div class="prototype-note">⚡ Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
+<div class="prototype-note"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg> Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
 </div>
 </main>
 <footer>
@@ -148,5 +149,6 @@
     targets.forEach(function(el){ io.observe(el); });
   })();
   </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>

@@ -68,9 +68,10 @@
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
 </style>
+<link href="/assets/css/frikapay.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+<div class="prep-banner"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg> Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
 <header class="header">
 <a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
 <span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">Compléter mon compte</span>
@@ -79,7 +80,7 @@
 <div class="container" id="container">
 <div id="step-form">
 <div class="card">
-<h2>👤 Complétez votre compte client FrikaPay</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Complétez votre compte client FrikaPay</h2>
 <p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Votre paiement a été pris en compte dans le parcours FrikaPay. Complétez votre compte pour suivre votre transaction, recevoir les notifications et accéder à votre espace client.</p>
 <div class="info-box">
 <strong>Rappel de votre transaction :</strong>
@@ -98,7 +99,7 @@
 <div class="checkbox-group"><input id="agreePrivacy" type="checkbox"/><label for="agreePrivacy">J'accepte la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
 <div class="checkbox-group"><input id="agreeFollow" type="checkbox"/><label for="agreeFollow">Je confirme vouloir suivre cette transaction dans mon espace client FrikaPay.</label></div>
 <div class="info-box">Votre compte client vous permet de suivre vos transactions FrikaPay. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</div>
-<button class="btn btn-primary" onclick="createAccount()">✅ Créer mon compte et suivre ma transaction</button>
+<button class="btn btn-primary" onclick="createAccount()"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Créer mon compte et suivre ma transaction</button>
 <p style="text-align:center;font-size:0.85rem;color:#6B7280;margin-top:1rem;">
 <a href="buyer-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=BUYER_ACCOUNT_CREATED&amp;transactionStatus=PAYMENT_CONFIRMED" style="color:#1A73E8;">🔑 J'ai déjà un compte client FrikaPay</a>
 </p>
@@ -145,5 +146,6 @@
     targets.forEach(function(el){ io.observe(el); });
   })();
   </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>

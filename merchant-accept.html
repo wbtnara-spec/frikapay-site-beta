@@ -77,9 +77,10 @@
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
 </style>
+<link href="/assets/css/frikapay.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="prep-banner">⚡ FrikaPay est en phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+<div class="prep-banner"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg> FrikaPay est en phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
 <header class="header">
 <a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
 <div class="badge">📨 Invitation commerçant</div>
@@ -89,11 +90,11 @@
 <!-- ÉTAT : VALIDE -->
 <div id="state-valid">
 <div class="card">
-<h2>🤝 Un client souhaite sécuriser une transaction avec vous</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 6.2 9.8 4.4a2 2 0 0 0-2.4 0L3 8v7.5l2.6 2.3M12 6.2l2.2-1.8a2 2 0 0 1 2.4 0L21 8v7.5l-2.6 2.3M12 6.2 8.6 9.4a1.6 1.6 0 0 0 2.2 2.3l1.2-1.1 3.4 3.1M12 10.6l3.4 3.1M9 14.5l2 1.9M12 17l1.6 1.5"/></svg> Un client souhaite sécuriser une transaction avec vous</h2>
 <p style="font-size:0.9rem;color:#6B7280;">Vous avez reçu cette invitation parce qu'un client souhaite effectuer une transaction encadrée avec vous via FrikaPay.</p>
 </div>
 <div class="card">
-<h2>📋 Détail de la transaction</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg> Détail de la transaction</h2>
 <div class="tx-row"><span class="label">Client</span><span class="value" id="clientName">Client Exemple</span></div>
 <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="productName">Produit démo</span></div>
 <div class="tx-row"><span class="label">Description</span><span class="value" id="productDesc" style="font-weight:400;font-size:0.83rem;">—</span></div>
@@ -105,35 +106,35 @@
 <span class="status-badge status-pending">⏳ En attente d'acceptation</span>
 </div>
 <div class="card">
-<h2>🛡️ Pourquoi accepter cette transaction ?</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5s7.5-3.7 7.5-9.4V5.3L12 2.5 4.5 5.3v6.8c0 5.7 7.5 9.4 7.5 9.4Zm-2.7-9.6 1.9 1.9 3.6-3.6"/></svg> Pourquoi accepter cette transaction ?</h2>
 <div class="trust-grid">
-<div class="trust-item"><span class="icon">🚫</span> Moins de clients fantômes</div>
-<div class="trust-item"><span class="icon">📍</span> Moins de livraisons inutiles</div>
+<div class="trust-item"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM5.3 5.3l13.4 13.4"/></svg></span> Moins de clients fantômes</div>
+<div class="trust-item"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 10.3c0 5.4-7.5 11.2-7.5 11.2S4.5 15.7 4.5 10.3a7.5 7.5 0 0 1 15 0Zm-7.5 2.6a2.8 2.8 0 1 0 0-5.6 2.8 2.8 0 0 0 0 5.6Z"/></svg></span> Moins de livraisons inutiles</div>
 <div class="trust-item"><span class="icon">👁️</span> Transaction suivie</div>
-<div class="trust-item"><span class="icon">💬</span> Communication encadrée</div>
-<div class="trust-item"><span class="icon">💰</span> Décaissement selon règles</div>
-<div class="trust-item"><span class="icon">⭐</span> Réputation de confiance</div>
+<div class="trust-item"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg></span> Communication encadrée</div>
+<div class="trust-item"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19 7.5V5.6a1 1 0 0 0-1.2-1L4.5 6.3A1.8 1.8 0 0 0 3 8.1v9.6a2 2 0 0 0 2 2h13a2 2 0 0 0 2-2v-2.2M3 8.3h15.2M21 11.2h-3.6a2.2 2.2 0 0 0 0 4.4H21Z"/></svg></span> Décaissement selon règles</div>
+<div class="trust-item"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3.1 2.8 5.7 6.3.9-4.6 4.4 1.1 6.3-5.6-3-5.6 3 1.1-6.3L2.9 9.7l6.3-.9Z"/></svg></span> Réputation de confiance</div>
 </div>
 <p class="trust-note">Les paiements seront opérés par des prestataires de paiement agréés ou habilités dans le cadre du déploiement. FrikaPay assure le suivi, la coordination et l'application des règles de transaction.</p>
 </div>
 <div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
 <div class="card">
-<h2>✅ Acceptez et créez votre compte</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Acceptez et créez votre compte</h2>
 <p style="font-size:0.85rem;color:#6B7280;margin-bottom:1rem;">Pour accepter cette transaction, vous devez créer un compte commerçant FrikaPay.</p>
 <a class="btn btn-primary" href="merchant-signup.html?inviteToken=FP-DEMO-001">📝 Accepter et créer mon compte commerçant</a>
 <div style="text-align:center;margin:1.2rem 0;color:#9CA3AF;font-size:0.85rem;">— ou —</div>
 <a class="btn btn-outline" href="merchant-signup.html?inviteToken=FP-DEMO-001&amp;hasAccount=1">🔑 J'ai déjà un compte commerçant FrikaPay</a>
 <div style="margin-top:1.2rem;padding-top:1rem;border-top:1px solid #F3F4F6;">
 <button class="btn btn-refuse" onclick="refuseTransaction()">❌ Refuser la transaction</button>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay sur WhatsApp</a>
 </div>
 </div>
 </div>
 <!-- ÉTATS ALTERNATIFS -->
-<div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Invitation expirée</h2><p>Le délai d'acceptation de 48h est dépassé.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
-<div id="state-already-accepted" style="display:none;"><div class="state-message"><div class="icon-large">✅</div><h2>Transaction déjà acceptée</h2><p>Vous avez déjà répondu à cette invitation.</p><a class="btn btn-primary" href="merchant-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=SELLER_ACCOUNT_CREATED&amp;transactionStatus=SELLER_ACCEPTED">👤 Accéder au dashboard</a></div></div>
-<div id="state-refused" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Transaction refusée</h2><p>Le client sera informé selon les règles prévues.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
-<div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large">🚫</div><h2>Transaction annulée par le client</h2><p>Aucune action requise.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009">💬 Contacter FrikaPay</a></div></div>
+<div id="state-expired" style="display:none;"><div class="state-message"><div class="icon-large">⏰</div><h2>Invitation expirée</h2><p>Le délai d'acceptation de 48h est dépassé.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay</a></div></div>
+<div id="state-already-accepted" style="display:none;"><div class="state-message"><div class="icon-large"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg></div><h2>Transaction déjà acceptée</h2><p>Vous avez déjà répondu à cette invitation.</p><a class="btn btn-primary" href="merchant-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=SELLER_ACCOUNT_CREATED&amp;transactionStatus=SELLER_ACCEPTED"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Accéder au dashboard</a></div></div>
+<div id="state-refused" style="display:none;"><div class="state-message"><div class="icon-large">❌</div><h2>Transaction refusée</h2><p>Le client sera informé selon les règles prévues.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay</a></div></div>
+<div id="state-cancelled" style="display:none;"><div class="state-message"><div class="icon-large"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 21.5a9.5 9.5 0 1 0 0-19 9.5 9.5 0 0 0 0 19ZM5.3 5.3l13.4 13.4"/></svg></div><h2>Transaction annulée par le client</h2><p>Aucune action requise.</p><a class="btn btn-whatsapp" href="https://wa.me/2290166623009"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay</a></div></div>
 </div>
 </main>
 <footer>
@@ -177,5 +178,6 @@
     targets.forEach(function(el){ io.observe(el); });
   })();
   </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>
