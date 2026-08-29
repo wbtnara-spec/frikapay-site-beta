@@ -64,9 +64,10 @@
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
 </style>
+<link href="/assets/css/frikapay.css" rel="stylesheet"/>
 </head>
 <body>
-<div class="prep-banner">⚡ Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
+<div class="prep-banner"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg> Phase bêta de préparation. Les paiements seront opérés par des prestataires agréés ou habilités dans le cadre du déploiement.</div>
 <header class="header">
 <a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
 <span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">Création compte commerçant</span>
@@ -96,7 +97,7 @@
 <div class="checkbox-group"><input id="agreePrivacy" type="checkbox"/><label for="agreePrivacy">J'accepte la <a href="politique-confidentialite.html">Politique de Confidentialité</a>.</label></div>
 <div class="checkbox-group"><input id="agreeKYC" type="checkbox"/><label for="agreeKYC">Je comprends que le décaissement des fonds pourra nécessiter une vérification minimale du compte commerçant.</label></div>
 <div class="info-box">Votre compte commerçant peut être créé rapidement pour accepter la transaction. Le décaissement des fonds pourra nécessiter une vérification minimale avant retrait.</div>
-<button class="btn btn-primary" onclick="createAccount()">✅ Créer mon compte et accepter la transaction</button>
+<button class="btn btn-primary" onclick="createAccount()"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Créer mon compte et accepter la transaction</button>
 <p style="text-align:center;font-size:0.85rem;color:#6B7280;margin-top:1rem;">
 <a href="merchant-dashboard.html?transactionId=FP-DEMO-001&amp;accountStatus=MERCHANT_VERIFIED&amp;transactionStatus=SELLER_ACCEPTED" style="color:#1A73E8;">🔑 J'ai déjà un compte commerçant FrikaPay</a>
 </p>
@@ -150,5 +151,6 @@
     targets.forEach(function(el){ io.observe(el); });
   })();
   </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>

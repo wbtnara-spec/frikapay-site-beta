@@ -74,18 +74,19 @@
     .logo:hover img { transform: scale(1.04); }
     .btn:active { transform: scale(0.97); }
 </style>
+<link href="/assets/css/frikapay.css" rel="stylesheet"/>
 </head>
 <body>
 <header class="header">
 <a class="logo" href="index.html"><img alt="FrikaPay" src="logo-frikapay.png"/><span class="beta-tag">Phase bêta</span></a>
-<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;">👤 Dashboard client</span>
+<span style="font-weight:600;font-size:0.85rem;color:#0B3D91;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Dashboard client</span>
 </header>
 <main>
 <div class="container">
-<div class="alert-banner"><span class="icon">📋</span><span><strong>Transaction en cours :</strong> suivez votre commande.</span></div>
+<div class="alert-banner"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg></span><span><strong>Transaction en cours :</strong> suivez votre commande.</span></div>
 <!-- Carte transaction -->
 <div class="card">
-<h2>📋 Ma transaction</h2>
+<h2><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg> Ma transaction</h2>
 <div class="tx-row"><span class="label">Référence</span><span class="value" id="txRef" style="font-family:monospace;">FP-DEMO-001</span></div>
 <div class="tx-row"><span class="label">Commerçant</span><span class="value" id="txMerchant">Boutique Exemple</span></div>
 <div class="tx-row"><span class="label">Produit / Service</span><span class="value" id="txProduct">Chaussures urbaines</span></div>
@@ -95,8 +96,8 @@
 <div class="tx-row"><span class="label">Statut compte</span><span class="value"><span class="status-badge status-created" id="accountStatus">BUYER_ACCOUNT_CREATED</span></span></div>
 <div class="tx-row"><span class="label">Prochaine étape</span><span class="value">Attente de traitement par le commerçant</span></div>
 <div class="btn-group" style="margin-top:1rem;">
-<a class="btn btn-primary" href="#">📋 Suivre ma transaction</a>
-<a class="btn btn-outline" href="#">✅ Confirmer la réception</a>
+<a class="btn btn-primary" href="#"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg> Suivre ma transaction</a>
+<a class="btn btn-outline" href="#"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M21.5 11.1V12a9.5 9.5 0 1 1-5.63-8.68M21.5 5 12 14.5l-2.8-2.8"/></svg> Confirmer la réception</a>
 </div>
 <a class="btn btn-outline" href="#" style="margin-top:0.3rem;">⚠️ Signaler un problème</a>
 </div>
@@ -117,17 +118,17 @@
 <div class="card">
 <h2>📊 Mon espace client</h2>
 <div class="module-grid">
-<a class="module-item" href="#"><span class="icon">📋</span>Transactions</a>
-<a class="module-item" href="#"><span class="icon">📦</span>Commandes</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 3.5h6a1 1 0 0 1 1 1v1H8v-1a1 1 0 0 1 1-1ZM8 5.5H6.5a1.5 1.5 0 0 0-1.5 1.5v13a1.5 1.5 0 0 0 1.5 1.5h11a1.5 1.5 0 0 0 1.5-1.5V7a1.5 1.5 0 0 0-1.5-1.5H16M9 12h6M9 16h4"/></svg></span>Transactions</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.6 4.4 16.5 9.5M20.5 8.3a1.8 1.8 0 0 0-.9-1.5l-6.7-3.9a1.8 1.8 0 0 0-1.8 0L4.4 6.8a1.8 1.8 0 0 0-.9 1.5v7.4c0 .6.3 1.2.9 1.5l6.7 3.9c.6.3 1.2.3 1.8 0l6.7-3.9c.6-.3.9-.9.9-1.5ZM3.7 7.6l8.3 4.8 8.3-4.8M12 21.4V12.4"/></svg></span>Commandes</a>
 <a class="module-item" href="#"><span class="icon">📜</span>Historique</a>
 <a class="module-item" href="#"><span class="icon">⚠️</span>Signalements</a>
-<a class="module-item" href="#"><span class="icon">👤</span>Profil</a>
-<a class="module-item" href="https://wa.me/2290166623009"><span class="icon">💬</span>Support</a>
+<a class="module-item" href="#"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg></span>Profil</a>
+<a class="module-item" href="https://wa.me/2290166623009"><span class="icon"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg></span>Support</a>
 </div>
-<a class="btn btn-outline" href="#" style="margin-top:1rem;">👤 Compléter mon profil</a>
-<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:0.3rem;" target="_blank">💬 Contacter FrikaPay sur WhatsApp</a>
+<a class="btn btn-outline" href="#" style="margin-top:1rem;"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.5 20.5v-1.8a4 4 0 0 0-4-4h-7a4 4 0 0 0-4 4v1.8M12 11.2a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/></svg> Compléter mon profil</a>
+<a class="btn btn-whatsapp" href="https://wa.me/2290166623009" rel="noopener" style="margin-top:0.3rem;" target="_blank"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.5 11.8a8 8 0 0 1-11.6 7.1L4 20.5l1.7-4.7A8 8 0 1 1 20.5 11.8Z"/></svg> Contacter FrikaPay sur WhatsApp</a>
 </div>
-<div class="prototype-note">⚡ Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
+<div class="prototype-note"><svg class="fp-i" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.2 2.5 4.6 13.4h6.2l-.9 8.1 8.8-11H12Z"/></svg> Dans la version finale de FrikaPay, ce dashboard sera protégé par connexion. Cette page est un prototype visuel préparatoire.</div>
 </div>
 </main>
 <footer>
@@ -165,5 +166,6 @@
     targets.forEach(function(el){ io.observe(el); });
   })();
   </script>
+<script defer src="/assets/js/frikapay.js"></script>
 </body>
 </html>
